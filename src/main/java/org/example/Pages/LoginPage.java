@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginPage extends CoffeePage {
+public class LoginPage extends CoffeePanel {
 	
 	public CoffeeLabel appName = new CoffeeLabel("Coffee Shop sa tabe tabe");
 	public CoffeeLabel employeeLabel = new CoffeeLabel("Employee name");
