@@ -10,8 +10,10 @@ public class OrderPanel extends CoffeePanel {
 	
 	private int currentSale = 0;
 	private CoffeeLabel currentItemLabel = new CoffeeLabel("Current Items " + "(" + currentSale + ")");
-	
 	private CoffeePanel checkListPanel = new CoffeePanel();
+	
+	JList<CoffeePanel> myList = new JList<>();
+	
 	
 	
 	public OrderPanel(){

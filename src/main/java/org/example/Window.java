@@ -10,6 +10,10 @@ public class Window extends JFrame {
 	public DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
+	
+	//TODO#1: Make an instance of your class here
+	// ex: public ExampleClass name = new ExampleClass();
+	
 	public Window(int width, int height){
 		
 		setSize(width, height);
@@ -19,6 +23,9 @@ public class Window extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		
+		//TODO#2: add it to the to frame
+		// ex: add(name);
+		
 //		add(debugPage);
 //		add(loginPage);
 		add(menuPage);
@@ -26,9 +33,18 @@ public class Window extends JFrame {
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
 		
+		//TODO#3: make sure to setVisible() to true
+		// and set this to false so that you can see own class
+		// ex: menuPage.setVisible(false);
+		// ex: name.setVisible(true);
+		
+		
 		menuPage.setVisible(true);
 		
 		setTitle("Coffee Shop sa tabe tabe");
+		
+		
+		
 		
 	}
 
