@@ -1,18 +1,26 @@
 package org.example.Pages.MenuPage;
 
 import org.example.UIComponents.CoffeeButton;
-import org.example.UIComponents.CoffeeLabel;
 import org.example.UIComponents.CoffeePanel;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class MenuHeader extends CoffeePanel {
 
 	public CoffeeButton buttonHotDrinks = new CoffeeButton();
 	public CoffeeButton buttonColdDrinks = new CoffeeButton();
+	public JScrollPane container = new JScrollPane();
+	
+	
 	public MenuHeader(){
 		setBounds(0, 0, 976, 60);
 		setBackground(new Color(166, 138, 121));
+		
+		container.setBounds(10, 0, 956, 60);
+		container.getViewport().setBackground(new Color(166, 138, 121));
+		container.setBorder(BorderFactory.createLineBorder(new Color(166, 138, 121)));
+		container.getViewport().setLayout(null);
 		
 		buttonHotDrinks.setText("Hot Drinks");
 		buttonHotDrinks.setFontColor(new Color(59, 46, 37));
@@ -28,9 +36,11 @@ public class MenuHeader extends CoffeePanel {
 		buttonColdDrinks.setBorderColor(new Color(0, 0, 0));
 		buttonColdDrinks.setFontSize(16);
 		
-		
-		
-		add(buttonHotDrinks);
-		add(buttonColdDrinks);
+	
+		//TODO: Hey future me, Read this you fucker https://www.geeksforgeeks.org/java-jscrollpane/
+		container.add(buttonHotDrinks);
+		container.add(buttonColdDrinks);
+		container.add(buttonColdDrinks);
+		add(container);
 	}
 }
