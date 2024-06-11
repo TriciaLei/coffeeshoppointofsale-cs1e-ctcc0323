@@ -26,10 +26,10 @@ public class Window extends JFrame {
 		//TODO#2: add it to the to frame
 		// ex: add(name);
 
-//		add(loginPage);
+		add(loginPage);
 //		add(debugPage);
-		add(menuPage);
-		
+//		add(menuPage);
+
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
 		

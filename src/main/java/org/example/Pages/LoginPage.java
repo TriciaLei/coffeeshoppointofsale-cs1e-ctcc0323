@@ -3,9 +3,12 @@ package org.example.Pages;
 import org.example.UIComponents.*;
 import org.example.Window;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class LoginPage extends CoffeePanel {
 	
@@ -16,6 +19,10 @@ public class LoginPage extends CoffeePanel {
 	public CoffeePasswordField passwordField = new CoffeePasswordField();
 
 	public CoffeeButton loginButton = new CoffeeButton("Login");
+
+	public CoffeeImage table1 = new CoffeeImage(new ImageIcon("C:\\Dev\\Java\\coffeeshoppointofsale-cs1e-ctcc0323\\example.png"));
+
+
 	
 	public LoginPage(){
 	
@@ -55,6 +62,45 @@ public class LoginPage extends CoffeePanel {
 		loginButton.setBackground(new Color(228, 197, 158));
 		loginButton.setFontColor(new Color(128, 61, 59));
 		loginButton.setFontSize(30);
+
+		table1.setBounds(415, 300, 200, 200);
+//		table1.setIcon(new ImageIcon("C:\\Dev\\Java\\coffeeshoppointofsale-cs1e-ctcc0323\\src\\main\\java\\org\\example\\Window.java"));
+
+		table1.addMouseListener(new MouseListener() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(getBackground() == Color.WHITE){
+					setBackground(Color.BLACK);
+				}else{
+					setBackground(Color.white);
+				}
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				setBackground(Color.BLUE);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				setBackground(Color.PINK);
+			}
+		});
+
+		add(table1);
+
+
+
 
 
 		loginButton.addActionListener(new ActionListener() {
