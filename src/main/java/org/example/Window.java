@@ -2,14 +2,17 @@ package org.example;
 import org.example.Pages.DebugPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
+import org.example.Pages.Table;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Window extends JFrame {
 	
 	public DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
+	public Table table = new Table();
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
@@ -28,8 +31,8 @@ public class Window extends JFrame {
 		
 //		add(debugPage);
 //		add(loginPage);
-		add(menuPage);
-		
+       add(table);
+
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
 		
