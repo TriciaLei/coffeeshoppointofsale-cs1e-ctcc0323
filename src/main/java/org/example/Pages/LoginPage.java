@@ -3,9 +3,12 @@ package org.example.Pages;
 import org.example.UIComponents.*;
 import org.example.Window;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class LoginPage extends CoffeePanel {
 	
@@ -16,6 +19,9 @@ public class LoginPage extends CoffeePanel {
 	public CoffeePasswordField passwordField = new CoffeePasswordField();
 
 	public CoffeeButton loginButton = new CoffeeButton("Login");
+
+
+
 	
 	public LoginPage(){
 	
@@ -55,6 +61,9 @@ public class LoginPage extends CoffeePanel {
 		loginButton.setBackground(new Color(228, 197, 158));
 		loginButton.setFontColor(new Color(128, 61, 59));
 		loginButton.setFontSize(30);
+
+		
+
 
 
 		loginButton.addActionListener(new ActionListener() {
