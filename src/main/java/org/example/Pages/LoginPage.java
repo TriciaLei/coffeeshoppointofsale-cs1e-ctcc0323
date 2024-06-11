@@ -20,7 +20,6 @@ public class LoginPage extends CoffeePanel {
 
 	public CoffeeButton loginButton = new CoffeeButton("Login");
 
-	public CoffeeImage table1 = new CoffeeImage(new ImageIcon("C:\\Dev\\Java\\coffeeshoppointofsale-cs1e-ctcc0323\\example.png"));
 
 
 	
@@ -63,43 +62,7 @@ public class LoginPage extends CoffeePanel {
 		loginButton.setFontColor(new Color(128, 61, 59));
 		loginButton.setFontSize(30);
 
-		table1.setBounds(415, 300, 200, 200);
-//		table1.setIcon(new ImageIcon("C:\\Dev\\Java\\coffeeshoppointofsale-cs1e-ctcc0323\\src\\main\\java\\org\\example\\Window.java"));
-
-		table1.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(getBackground() == Color.WHITE){
-					setBackground(Color.BLACK);
-				}else{
-					setBackground(Color.white);
-				}
-			}
-
-			@Override
-			public void mousePressed(MouseEvent e) {
-
-			}
-
-			@Override
-			public void mouseReleased(MouseEvent e) {
-
-			}
-
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				setBackground(Color.BLUE);
-			}
-
-			@Override
-			public void mouseExited(MouseEvent e) {
-				setBackground(Color.PINK);
-			}
-		});
-
-		add(table1);
-
-
+		
 
 
 
