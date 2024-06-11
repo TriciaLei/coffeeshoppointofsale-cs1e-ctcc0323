@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Objects;
 
 public class CoffeeCard extends CoffeePanel {
 	
@@ -51,7 +52,6 @@ public class CoffeeCard extends CoffeePanel {
 		itemName = new CoffeeLabel(name);
 		itemPrice = new CoffeeLabel(price);
 		
-		
 		image.setLocation(40, 45);
 
 		itemName.setBounds(50, 10, getWidth(), 30);
@@ -59,7 +59,7 @@ public class CoffeeCard extends CoffeePanel {
 		itemName.setFontSize(20);
 		
 		
-		if(price != null){
+		if(!Objects.equals(price, "null")){
 			itemPrice.setBounds(70, 150, getWidth(), 30);
 			itemPrice.setFontColor(new Color(59, 46, 37));
 		}
