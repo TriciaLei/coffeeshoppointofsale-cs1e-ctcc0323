@@ -33,10 +33,9 @@ public class OrderPanel extends CoffeePanel {
 		currentItemLabel.setFontColor(new Color(59, 46, 37));
 
 
-		checkListPanel.setBounds(16, 60, 254, 720);
-		checkListPanel.setPreferredSize(new Dimension(254, 720));
+		checkListPanel.setBounds(16, 60, 254, 500);
+		checkListPanel.setPreferredSize(new Dimension(254, 500));
 		checkListPanel.setBackground(new Color(240, 230, 214));
-//		checkListPanel.setLayout(new BoxLayout(checkListPanel, BoxLayout.Y_AXIS));
 		
 		orderScroll.setBounds(checkListPanel.getX(), checkListPanel.getY(), checkListPanel.getWidth(), 520);
 		orderScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -64,10 +63,12 @@ public class OrderPanel extends CoffeePanel {
 			tmp.setLocation(tmp.getX(), 20);
 		}
 		
-		
-		checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + (tmp.getHeight() * checkListPanel.getComponentCount()));
-		System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
-		checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
+		//If the order list is full of items expand the checklistPanel
+		if(currentSale % 8 == 0){
+			checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + (tmp.getHeight() * checkListPanel.getComponentCount()));
+			checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
+			System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
+		}
 		
 		tmp.addMouseListener(new MouseListener() {
 			@Override
