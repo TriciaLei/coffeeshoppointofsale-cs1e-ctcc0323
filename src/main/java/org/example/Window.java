@@ -43,7 +43,7 @@ public class Window extends JFrame {
 		debugPage.setVisible(false);
 		
 		setTitle("Coffee Shop sa tabe tabe");
-		
+		setLocationRelativeTo(null);
 		
 		
 		
