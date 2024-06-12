@@ -7,10 +7,13 @@ public class OrderCard extends CoffeePanel{
 	public CoffeeLabel quantity = new CoffeeLabel("hehe");
 	public CoffeeLabel itemName = new CoffeeLabel("hehe");
 	public CoffeeLabel itemPrice = new CoffeeLabel("hehe");
+	public int index = 0;
 	
-	public OrderCard(String n, String q, String p){
+	public OrderCard(String n, String q, String p, int i){
 		setBounds(10, 10, 224, 30);
 		setBorderColor(new Color(59, 46, 37));
+		
+		index = i;
 		
 
 		quantity.setBounds(10, 5, 10, 10);
