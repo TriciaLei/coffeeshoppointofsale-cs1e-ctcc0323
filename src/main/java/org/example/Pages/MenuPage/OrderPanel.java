@@ -36,7 +36,7 @@ public class OrderPanel extends CoffeePanel {
 		checkListPanel.setBounds(16, 60, 254, 720);
 		checkListPanel.setPreferredSize(new Dimension(254, 720));
 		checkListPanel.setBackground(new Color(240, 230, 214));
-		checkListPanel.setLayout(new BoxLayout(checkListPanel, BoxLayout.Y_AXIS));
+//		checkListPanel.setLayout(new BoxLayout(checkListPanel, BoxLayout.Y_AXIS));
 		
 		orderScroll.setBounds(checkListPanel.getX(), checkListPanel.getY(), checkListPanel.getWidth(), 520);
 		orderScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -72,11 +72,18 @@ public class OrderPanel extends CoffeePanel {
 		tmp.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				// Remove the item
 				RemoveOrderItem(tmp.index);
-				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() - (tmp.getHeight() * checkListPanel.getComponentCount()));
-				System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
-				checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
-//				tmp.index
+				
+				// Adjust the index of each item
+				int i = 0;
+				for (Component c : checkListPanel.getComponents()){
+					
+					if(c instanceof OrderCard){
+						((OrderCard) c).index = i;
+					}
+					i++;
+				}
 			}
 			
 			@Override
@@ -107,27 +114,42 @@ public class OrderPanel extends CoffeePanel {
 		
 	}
 	
+	
+	// Fuck this code I'm sorry future me HAHAHAHA, there might be some better way of doing this
+	// like for example making the layout manager a box layout, but I'm too high rn so cant think lmao
+	
+	// So basically what I did here is
+	// Firstly, I removed the desired order item to the panel
+	// Then, I stored that state to a temporary variable
+	// I then remove all the components to the checkList panel
+	// adjusted all the position then add it to the check list panel
 	public void RemoveOrderItem(int index){
 		
 		
 		checkListPanel.remove(index);
 		checkListPanel.updateUI();
 		
+		var tmp = checkListPanel.getComponents();
 		
+		checkListPanel.removeAll();
 		
 		currentSale--;
 		currentItemLabel.setText("Current Items " + "(" + currentSale + ")");
 		
-//		int i = 0;
-//		for (OrderCard c : (OrderCard[]) checkListPanel.getComponents()){
-//			if(i == 0){
-//				c.setLocation(c.getX(), 20);
-//			}else{
-//				c.setLocation(c.getX(), checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + c.getHeight() + 10);
-//				c.index = i;
-//			}
-//			i++;
+		int i = 0;
+		for (Component c :  tmp) {
+			if (i != 0) {
+				c.setLocation(c.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + c.getHeight()) + 10);
+			} else {
+				c.setLocation(c.getX(), 20);
+			}
+			i++;
+			
+			System.out.println(c.getX() +" : " + c.getY());
+			
+			checkListPanel.add(c);
+		}
 
-//		checkListPanel.updateUI();
+		checkListPanel.updateUI();
 	}
 }

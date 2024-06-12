@@ -14,7 +14,6 @@ public class OrderCard extends CoffeePanel{
 		setBorderColor(new Color(59, 46, 37));
 		
 		index = i;
-		
 
 		quantity.setBounds(10, 5, 10, 10);
 		itemName.setBounds(30, 5, 60 ,10);
