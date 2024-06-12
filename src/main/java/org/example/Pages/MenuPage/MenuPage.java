@@ -12,16 +12,27 @@ public class MenuPage extends CoffeePanel {
 	
 	public CoffeeButton backButton = new CoffeeButton();
 	public OrderPanel orderPanel = new OrderPanel();
-	public MenuTypePanel menuTypePanel = new MenuTypePanel();
-	public MenuItemsPanel menuItemsPanel = new MenuItemsPanel();
+	public MenuTypePanel menuTypePanel = new MenuTypePanel(this);
+	public  MenuItemsPanel menuItemsPanel = new MenuItemsPanel();
+	
+	public JScrollPane menuTypeScroll = new JScrollPane(menuTypePanel);
+	public JScrollPane menuItemScroll = new JScrollPane(menuItemsPanel);
+	
 	public MenuPage(){
 		this.setBackground(new Color(166, 138, 121));
 		
-		JScrollPane menuPanelScroll = new JScrollPane(menuTypePanel);
-		menuPanelScroll.setBounds(10, 60, 956, 600);
-		menuPanelScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-		menuPanelScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		menuPanelScroll.setWheelScrollingEnabled(true);
+		menuTypeScroll.setBounds(10, 60, 956, 600);
+		menuTypeScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+		menuTypeScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		menuTypeScroll.setWheelScrollingEnabled(true);
+		menuTypeScroll.setVisible(true);
+		
+		menuItemScroll.setBounds(10, 60, 956, 600);
+		menuItemScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
+		menuItemScroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		menuItemScroll.setWheelScrollingEnabled(true);
+		menuItemScroll.setVisible(false);
+		
 		
 		backButton.setText("Back");
 		backButton.setFontColor(new Color(59, 46, 37));
@@ -30,22 +41,39 @@ public class MenuPage extends CoffeePanel {
 		backButton.setBorderColor(new Color(0, 0, 0));
 		backButton.setFontSize(16);
 		
+		
 		backButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(menuTypePanel.isVisible()){
+				if(menuTypeScroll.isVisible()){
 					//back to the dine in or take out page
-				}else if(!menuTypePanel.isVisible()){
-					menuTypePanel.setVisible(true);
-					menuItemsPanel.setVisible(false);
+				}else if(!menuTypeScroll.isVisible()){
+					changeMenuPanelToTypes();
 				}
 			}
 		});
 		
-		add(menuPanelScroll);
+		add(menuTypeScroll);
+		add(menuItemScroll);
 		add(backButton);
 		add(orderPanel);
 		
 		
+		
+		
+	}
+	
+	
+	public void changeMenuPanelToItems(String type){
+		menuItemsPanel.SetUpCards(type);
+		
+		menuItemScroll.setVisible(true);
+		menuTypeScroll.setVisible(false);
+	}
+	public void changeMenuPanelToTypes(){
+		menuItemsPanel.RemoveCards();
+		
+		menuItemScroll.setVisible(false);
+		menuTypeScroll.setVisible(true);
 	}
 }

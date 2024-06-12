@@ -1,0 +1,196 @@
+Espresso - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+10
+50
+
+Espresso - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+10
+50
+
+Espresso - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+10
+50
+
+Espresso - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+10
+50
+
+Americano - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+260
+50
+
+Americano - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+260
+50
+
+Americano - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+260
+50
+
+Americano - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+260
+50
+
+Cappuccino - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+490
+50
+
+Cappuccino - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+490
+50
+
+Cappuccino - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+490
+50
+
+Cappuccino - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+490
+50
+
+Latte - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+720
+50
+
+Latte - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+720
+50
+
+Latte - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+720
+50
+
+Latte - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+720
+50
+
+Flat White - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+970
+50
+
+Flat White - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+970
+50
+
+Flat White - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+970
+50
+
+Flat White - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+970
+50
+
+Mocha - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+1220
+50
+
+Mocha - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+1220
+50
+
+Mocha - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+1220
+50
+
+Mocha - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+1220
+50
+
+Macchiato - Small
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+20
+1470
+50
+
+Macchiato - Medium
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+260
+1470
+50
+
+Macchiato - Large
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+490
+1470
+50
+
+Macchiato - Grande
+C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
+null
+720
+1470
+50
+
