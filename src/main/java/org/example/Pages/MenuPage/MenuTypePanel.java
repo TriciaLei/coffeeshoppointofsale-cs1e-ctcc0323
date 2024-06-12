@@ -112,7 +112,11 @@ public class MenuTypePanel extends CoffeePanel {
 						i++;
 						break;
 					case 2:
-						price = line;
+						if(line.equals("null")){
+							price = null;
+						}else{
+							price = line;
+						}
 						i++;
 						break;
 					case 3:
@@ -138,10 +142,10 @@ public class MenuTypePanel extends CoffeePanel {
 				}
 			}
 			
-		
-			for(int x = 1; x < coffeeCards.size() + 1; x++){
+			
+			for (CoffeeCard coffeeCard : coffeeCards) {
 				
-				add(coffeeCards.get(x - 1));
+				add(coffeeCard);
 			}
 		
 		

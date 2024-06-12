@@ -59,7 +59,7 @@ public class CoffeeCard extends CoffeePanel {
 		itemName.setFontSize(20);
 		
 		
-		if(!Objects.equals(price, "null")){
+		if(price != null){
 			itemPrice.setBounds(70, 150, getWidth(), 30);
 			itemPrice.setFontColor(new Color(59, 46, 37));
 		}
