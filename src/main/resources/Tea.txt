@@ -1,0 +1,112 @@
+Chai Latte - Small
+src/main/resources/Menu/espresso.png
+null
+20
+10
+25
+
+Chai Latte - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+10
+20
+
+Chai Latte - Large
+src/main/resources/Menu/espresso.png
+null
+490
+10
+25
+
+Chai Latte - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+10
+25
+
+Matcha Latte - Small
+src/main/resources/Menu/espresso.png
+null
+20
+260
+20
+
+Matcha Latte - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+260
+5
+
+Matcha Latte - Large
+src/main/resources/Menu/espresso.png
+null
+490
+260
+15
+
+Matcha Latte - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+260
+10
+
+Herbal Tea - Small
+src/main/resources/Menu/espresso.png
+null
+20
+490
+20
+
+Herbal Tea - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+490
+10
+
+Herbal Tea - Large
+src/main/resources/Menu/espresso.png
+null
+490
+490
+20
+
+Herbal Tea - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+490
+15
+
+Iced Tea - Small
+src/main/resources/Menu/espresso.png
+null
+20
+720
+30
+
+Iced Tea - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+720
+25
+
+Iced Tea - Large
+src/main/resources/Menu/espresso.png
+null
+490
+720
+35
+
+Iced Tea - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+720
+30
+

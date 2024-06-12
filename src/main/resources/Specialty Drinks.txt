@@ -1,0 +1,112 @@
+Hot Chocolate - Small
+src/main/resources/Menu/espresso.png
+null
+20
+10
+10
+
+Hot Chocolate - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+10
+10
+
+Hot Chocolate - Large
+src/main/resources/Menu/espresso.png
+null
+490
+10
+10
+
+Hot Chocolate - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+10
+5
+
+Golden Milk Latte - Small
+src/main/resources/Menu/espresso.png
+null
+20
+260
+10
+
+Golden Milk Latte - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+260
+10
+
+Golden Milk Latte - Large
+src/main/resources/Menu/espresso.png
+null
+490
+260
+10
+
+Golden Milk Latte - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+260
+5
+
+Turmeric Latte - Small
+src/main/resources/Menu/espresso.png
+null
+20
+490
+10
+
+Turmeric Latte - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+490
+10
+
+Turmeric Latte - Large
+src/main/resources/Menu/espresso.png
+null
+490
+490
+10
+
+Turmeric Latte - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+490
+5
+
+Affogato - Small
+src/main/resources/Menu/espresso.png
+null
+20
+720
+30
+
+Affogato - Medium
+src/main/resources/Menu/espresso.png
+null
+260
+720
+25
+
+Affogato - Large
+src/main/resources/Menu/espresso.png
+null
+490
+720
+30
+
+Affogato - Grande
+src/main/resources/Menu/espresso.png
+null
+720
+720
+30
+

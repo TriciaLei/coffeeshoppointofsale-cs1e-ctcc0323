@@ -54,10 +54,3 @@ null
 260
 55
 
-Extras
-C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\coffee-cup.png
-null
-20
-490
-70
-
