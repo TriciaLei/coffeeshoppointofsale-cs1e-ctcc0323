@@ -1,13 +1,8 @@
 package org.example.UIComponents;
 
-import org.example.Pages.MenuPage.MenuPage;
-import org.example.Window;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.util.Objects;
+
 
 public class CoffeeCard extends CoffeePanel {
 	
@@ -25,9 +20,6 @@ public class CoffeeCard extends CoffeePanel {
 		image = new CoffeeImage(icon);
 		itemName = new CoffeeLabel(name);
 		itemPrice = new CoffeeLabel(price);
-		
-		
-		JLabel exampleImage = new JLabel(new ImageIcon("kung saan nakalagay yung .png mo yung path"));
 		
 		image.setLocation(40, 45);
 

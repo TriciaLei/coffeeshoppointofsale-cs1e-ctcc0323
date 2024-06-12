@@ -17,41 +17,17 @@ public class MenuItemsPanel extends CoffeePanel {
 	private String type;
 	
 	private ArrayList<CoffeeCard> coffeeCards = new ArrayList<>();
-	MouseListener mouseListener;
+	private OrderPanel orderPanel;
+	private String[] order = new String[1024];
+	private ArrayList<String> orderList = new ArrayList<>();
 	
-	public MenuItemsPanel(){
+	public MenuItemsPanel(OrderPanel panel){
 		setBounds(10, 60, 956, 720);
 		setPreferredSize(new Dimension(956, 720));
 		setBackground(new Color(240, 230, 214));
 		
-		mouseListener = new MouseListener() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				System.out.println("Hello World");
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-			
-			}
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-			
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-			
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-			
-			}
-		};
+		orderPanel = panel;
 		
-//		SetUpCards();
 	}
 	
 	public void SetUpCards(String type) {
@@ -108,6 +84,42 @@ public class MenuItemsPanel extends CoffeePanel {
 			
 			
 			for (CoffeeCard coffeeCard : coffeeCards) {
+				
+				MouseListener mouseListener = new MouseListener() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						
+						orderList.add(String.valueOf(orderList.size()) + coffeeCard.itemName.getText() + "          " + "Price: " + coffeeCard.itemPrice.getText());
+						
+						for (int i = 0; i < orderList.size(); i++){
+							order[i] = orderList.get(i);
+						}
+						
+						orderPanel.addOrderList(order);
+						
+					}
+					
+					@Override
+					public void mousePressed(MouseEvent e) {
+					
+					}
+					
+					@Override
+					public void mouseReleased(MouseEvent e) {
+					
+					}
+					
+					@Override
+					public void mouseEntered(MouseEvent e) {
+					
+					}
+					
+					@Override
+					public void mouseExited(MouseEvent e) {
+					
+					}
+				};
+				
 				coffeeCard.addMouseListener(mouseListener);
 				coffeeCard.image.addMouseListener(mouseListener);
 				add(coffeeCard);

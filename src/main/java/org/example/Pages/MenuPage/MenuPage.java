@@ -13,7 +13,7 @@ public class MenuPage extends CoffeePanel {
 	public CoffeeButton backButton = new CoffeeButton();
 	public OrderPanel orderPanel = new OrderPanel();
 	public MenuTypePanel menuTypePanel = new MenuTypePanel(this);
-	public  MenuItemsPanel menuItemsPanel = new MenuItemsPanel();
+	public  MenuItemsPanel menuItemsPanel = new MenuItemsPanel(orderPanel);
 	
 	public JScrollPane menuTypeScroll = new JScrollPane(menuTypePanel);
 	public JScrollPane menuItemScroll = new JScrollPane(menuItemsPanel);
@@ -36,6 +36,10 @@ public class MenuPage extends CoffeePanel {
 		menuItemScroll.setWheelScrollingEnabled(true);
 		menuItemScroll.getVerticalScrollBar().setUnitIncrement(scrollSpeed);
 		menuItemScroll.setVisible(false);
+		
+		
+		
+		
 		
 		
 		backButton.setText("Back");
