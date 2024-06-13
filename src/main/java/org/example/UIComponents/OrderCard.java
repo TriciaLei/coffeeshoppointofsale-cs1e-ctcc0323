@@ -26,11 +26,11 @@ public class OrderCard extends CoffeePanel{
 		quantity.setText(q);
 		itemPrice.setText(p);
 		
-		
-		itemPrice.setBounds(200 - (itemPrice.getText().length() * 6), 25, 224, 20);
-		System.out.println(itemPrice.getText().length());
-		itemPrice.setBackground(Color.CYAN);
-		itemPrice.setFontSize(16);
+		if(itemPrice.getText() != null){
+			itemPrice.setBounds(200 - (itemPrice.getText().length() * 6), 25, 224, 20);
+			itemPrice.setBackground(Color.CYAN);
+			itemPrice.setFontSize(16);
+		}
 		
 		
 		add(itemName);

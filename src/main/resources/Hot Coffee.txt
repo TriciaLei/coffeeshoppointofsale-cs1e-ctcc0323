@@ -14,14 +14,14 @@ src/main/resources/Menu/espresso.png
 
 Espresso - Large
 src/main/resources/Menu/espresso.png
-null
+30
 490
 10
 30
 
 Espresso - Grande
 src/main/resources/Menu/espresso.png
-null
+3
 720
 10
 30

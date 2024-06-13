@@ -2,6 +2,7 @@ package org.example.UIComponents;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Locale;
 
 
 public class CoffeeCard extends CoffeePanel {
@@ -29,8 +30,10 @@ public class CoffeeCard extends CoffeePanel {
 		
 		
 		if(price != null){
-			itemPrice.setBounds(70, 150, getWidth(), 30);
+			itemPrice.setBounds(80 - itemPrice.getText().length(), 170, getWidth(), 30);
+			itemPrice.setFontSize(16);
 			itemPrice.setFontColor(new Color(59, 46, 37));
+			itemPrice.setText("P" + price + ".00");
 		}
 		
 		
