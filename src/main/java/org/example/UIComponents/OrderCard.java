@@ -4,9 +4,9 @@ import java.awt.*;
 
 public class OrderCard extends CoffeePanel{
 	
-	public CoffeeLabel quantity = new CoffeeLabel("hehe");
-	public CoffeeLabel itemName = new CoffeeLabel("hehe");
-	public CoffeeLabel itemPrice = new CoffeeLabel("hehe");
+	public CoffeeLabel quantity = new CoffeeLabel("");
+	public CoffeeLabel itemName = new CoffeeLabel("");
+	public CoffeeLabel itemPrice = new CoffeeLabel("");
 	public CoffeeButton plus = new CoffeeButton();
 	public CoffeeButton minus = new CoffeeButton();
 	public int index = 0;
