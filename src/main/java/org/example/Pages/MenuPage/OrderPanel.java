@@ -54,63 +54,76 @@ public class OrderPanel extends CoffeePanel {
 	}
 	
 	public void addOrderList(String quantity, String name, String price){
-		
-		OrderCard tmp = new OrderCard(name, quantity, price, currentSale);
-		
-		if(currentSale != 0){
-			tmp.setLocation(tmp.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + tmp.getHeight()) + 10);
-		}else{
-			tmp.setLocation(tmp.getX(), 20);
+
+		boolean isDuplicate = false;
+
+		for (Component c :  checkListPanel.getComponents()){
+			if(c instanceof OrderCard && ((OrderCard) c).itemName.getText() == name){
+				int num = Integer.parseInt(((OrderCard) c).quantity.getText());
+				num++;
+				((OrderCard) c).quantity.setText(String.valueOf(num));
+				isDuplicate = true;
+			}
 		}
-		
-		//If the order list is full of items expand the checklistPanel
-		if(currentSale % 8 == 0){
-			checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + (tmp.getHeight() * checkListPanel.getComponentCount()));
-			checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
-			System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
-		}
-		
-		tmp.addMouseListener(new MouseListener() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// Remove the item
-				RemoveOrderItem(tmp.index);
-				
-				// Adjust the index of each item
-				int i = 0;
-				for (Component c : checkListPanel.getComponents()){
-					
-					if(c instanceof OrderCard){
-						((OrderCard) c).index = i;
+
+		if(!isDuplicate){
+			OrderCard tmp = new OrderCard(name, quantity, price, currentSale);
+			if(currentSale != 0){
+				tmp.setLocation(tmp.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + tmp.getHeight()) + 10);
+			}else{
+				tmp.setLocation(tmp.getX(), 20);
+			}
+
+			//If the order list is full of items expand the checklistPanel
+			if(currentSale % 8 == 0){
+				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + (tmp.getHeight() * checkListPanel.getComponentCount()));
+				checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
+				System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
+			}
+
+			tmp.addMouseListener(new MouseListener() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					// Remove the item
+					RemoveOrderItem(tmp.index, tmp.itemName.getText());
+
+					// Adjust the index of each item
+					int i = 0;
+					for (Component c : checkListPanel.getComponents()){
+
+						if(c instanceof OrderCard){
+							((OrderCard) c).index = i;
+						}
+						i++;
 					}
-					i++;
 				}
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-			
-			}
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-			
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				tmp.setBackground(Color.RED);
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				tmp.setBackground(Color.white);
-			}
-		});
-		checkListPanel.add(tmp);
-		currentSale++;
-		currentItemLabel.setText("Current Items " + "(" + currentSale + ")");
-		checkListPanel.updateUI();
+
+				@Override
+				public void mousePressed(MouseEvent e) {
+
+				}
+
+				@Override
+				public void mouseReleased(MouseEvent e) {
+
+				}
+
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					tmp.setBackground(Color.RED);
+				}
+
+				@Override
+				public void mouseExited(MouseEvent e) {
+					tmp.setBackground(Color.white);
+				}
+			});
+			checkListPanel.add(tmp);
+			currentSale++;
+			currentItemLabel.setText("Current Items " + "(" + currentSale + ")");
+			checkListPanel.updateUI();
+		}
+
 		
 		
 	}
@@ -124,33 +137,54 @@ public class OrderPanel extends CoffeePanel {
 	// Then, I stored that state to a temporary variable
 	// I then remove all the components to the checkList panel
 	// adjusted all the position then add it to the check list panel
-	public void RemoveOrderItem(int index){
+	public void RemoveOrderItem(int index, String name){
 		
-		
-		checkListPanel.remove(index);
-		checkListPanel.updateUI();
-		
-		var tmp = checkListPanel.getComponents();
-		
-		checkListPanel.removeAll();
-		
-		currentSale--;
-		currentItemLabel.setText("Current Items " + "(" + currentSale + ")");
-		
-		int i = 0;
-		for (Component c :  tmp) {
-			if (i != 0) {
-				c.setLocation(c.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + c.getHeight()) + 10);
-			} else {
-				c.setLocation(c.getX(), 20);
+		boolean isDuplicate = false;
+
+		for (Component c : checkListPanel.getComponents()){
+			if(c instanceof OrderCard && ((OrderCard) c).itemName.getText() == name){
+				int num = Integer.parseInt(((OrderCard) c).quantity.getText());
+
+				if(num <= 1){
+					isDuplicate = false;
+					break;
+				}else{
+					num--;
+					((OrderCard) c).quantity.setText(String.valueOf(num));
+					isDuplicate = true;
+				}
+
 			}
-			i++;
-			
-			System.out.println(c.getX() +" : " + c.getY());
-			
-			checkListPanel.add(c);
 		}
 
-		checkListPanel.updateUI();
+
+		if(!isDuplicate){
+			checkListPanel.remove(index);
+			checkListPanel.updateUI();
+
+			var tmp = checkListPanel.getComponents();
+
+			checkListPanel.removeAll();
+
+			currentSale--;
+			currentItemLabel.setText("Current Items " + "(" + currentSale + ")");
+
+			int i = 0;
+			for (Component c :  tmp) {
+				if (i != 0) {
+					c.setLocation(c.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + c.getHeight()) + 10);
+				} else {
+					c.setLocation(c.getX(), 20);
+				}
+				i++;
+
+				System.out.println(c.getX() +" : " + c.getY());
+
+				checkListPanel.add(c);
+			}
+
+			checkListPanel.updateUI();
+		}
+
 	}
 }

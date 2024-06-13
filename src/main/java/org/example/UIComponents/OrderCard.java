@@ -7,6 +7,8 @@ public class OrderCard extends CoffeePanel{
 	public CoffeeLabel quantity = new CoffeeLabel("hehe");
 	public CoffeeLabel itemName = new CoffeeLabel("hehe");
 	public CoffeeLabel itemPrice = new CoffeeLabel("hehe");
+	public CoffeeButton plus = new CoffeeButton();
+	public CoffeeButton minus = new CoffeeButton();
 	public int index = 0;
 	
 	public OrderCard(String n, String q, String p, int i){

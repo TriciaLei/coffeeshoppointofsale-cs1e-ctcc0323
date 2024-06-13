@@ -35,7 +35,7 @@ public class Window extends JFrame {
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class
-		// ex: menuPage.setVisible(false);
+		// ex: menu Page.setVisible(false);
 		// ex: name.setVisible(true);
 		
 		
