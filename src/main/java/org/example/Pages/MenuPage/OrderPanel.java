@@ -136,7 +136,7 @@ public class OrderPanel extends CoffeePanel {
 	// Firstly, I removed the desired order item to the panel
 	// Then, I stored that state to a temporary variable
 	// I then remove all the components to the checkList panel
-	// adjusted all the position then add it to the check list panel
+	// adjusted all the position then add it to the checklist panel
 	public void RemoveOrderItem(int index, String name){
 		
 		boolean isDuplicate = false;

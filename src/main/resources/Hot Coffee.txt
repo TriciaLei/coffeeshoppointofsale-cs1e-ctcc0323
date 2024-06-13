@@ -1,13 +1,13 @@
 Espresso - Small
 src/main/resources/Menu/espresso.png
-null
+300000
 20
 10
 30
 
 Espresso - Medium
 src/main/resources/Menu/espresso.png
-null
+300
 260
 10
 25
