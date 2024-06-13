@@ -1,13 +1,13 @@
 Chicken Caesar Salad
 src/main/resources/Menu/espresso.png
-null
+300
 20
 10
 15
 
 Greek Salad
 src/main/resources/Menu/espresso.png
-null
+300
 260
 10
 50
