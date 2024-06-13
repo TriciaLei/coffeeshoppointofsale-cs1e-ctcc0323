@@ -7,9 +7,9 @@ import javax.swing.*;
 
 public class Window extends JFrame {
 	
-	public DebugPage debugPage = new DebugPage();
+	public static DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
-	public MenuPage menuPage = new MenuPage();
+	public static MenuPage menuPage = new MenuPage();
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
@@ -27,22 +27,23 @@ public class Window extends JFrame {
 		// ex: add(name);
 
 //		add(loginPage);
-//		add(debugPage);
 		add(menuPage);
+		add(debugPage);
 
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class
-		// ex: menuPage.setVisible(false);
+		// ex: menu Page.setVisible(false);
 		// ex: name.setVisible(true);
 		
 		
 		menuPage.setVisible(true);
+		debugPage.setVisible(false);
 		
 		setTitle("Coffee Shop sa tabe tabe");
-		
+		setLocationRelativeTo(null);
 		
 		
 		
@@ -50,7 +51,10 @@ public class Window extends JFrame {
 
 	//Temporary Code
 	public static void changePageToDebug(){
-//		debugPage.setVisible(true);
 //		loginPage.setVisible(false);
+		
+		debugPage.setVisible(true);
+		menuPage.setVisible(false);
+		System.out.println("Hello");
 	}
 }
