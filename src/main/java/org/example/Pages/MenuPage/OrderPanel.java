@@ -75,8 +75,8 @@ public class OrderPanel extends CoffeePanel {
 			}
 
 			//If the order list is full of items expand the checklistPanel
-			if(currentSale % 8 == 0){
-				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + (tmp.getHeight() * checkListPanel.getComponentCount()));
+			if(currentSale >= 8){
+				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + tmp.getHeight());
 				checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
 				System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
 			}
