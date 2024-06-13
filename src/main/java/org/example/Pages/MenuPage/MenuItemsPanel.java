@@ -88,9 +88,6 @@ public class MenuItemsPanel extends CoffeePanel {
 				MouseListener mouseListener = new MouseListener() {
 					@Override
 					public void mouseClicked(MouseEvent e) {
-						
-//						orderList.add(String.valueOf(orderList.size()) + coffeeCard.itemName.getText() + "          " + "Price: " + coffeeCard.itemPrice.getText());
-						
 						orderPanel.addOrderList("1", coffeeCard.itemName.getText(), coffeeCard.itemPrice.getText());
 						
 					}
