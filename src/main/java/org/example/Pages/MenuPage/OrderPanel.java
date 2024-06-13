@@ -76,14 +76,18 @@ public class OrderPanel extends CoffeePanel {
 	
 	private void calculateTotalItem(){
 		currentTotal = 0;
+		currentItems = 0;
 		
 		for (Component c :  checkListPanel.getComponents()){
 			if(c instanceof OrderCard){
 				currentTotal += Double.parseDouble(((OrderCard) c).itemPrice.getText().substring(1)) * Double.parseDouble(((OrderCard) c).quantity.getText());
+				currentItems += Integer.parseInt(((OrderCard) c).quantity.getText());
 			}
 		}
 		
 		totalLabel.setText("Total: " + currentTotal);
+		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
+		checkListPanel.updateUI();
 		totalLabel.updateUI();
 	}
 	
@@ -103,7 +107,6 @@ public class OrderPanel extends CoffeePanel {
 
 		if(!isDuplicate){
 			OrderCard tmp = new OrderCard(name, quantity, price, currentItems);
-			cardCounter++;
 			
 			if(currentItems != 0){
 				tmp.setLocation(tmp.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + tmp.getHeight()) + 10);
@@ -121,8 +124,17 @@ public class OrderPanel extends CoffeePanel {
 			tmp.addMouseListener(new MouseListener() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					// Remove the item
 					RemoveOrderItem(tmp.index, tmp.itemName.getText());
+					
+					// Adjust the index of each item
+					int i = 0;
+					for (Component c : checkListPanel.getComponents()){
+						
+						if(c instanceof OrderCard){
+							((OrderCard) c).index = i;
+						}
+						i++;
+					}
 				}
 
 				@Override
@@ -148,19 +160,12 @@ public class OrderPanel extends CoffeePanel {
 			
 			
 			checkListPanel.add(tmp);
+			cardCounter++;
 			
 			
 			
 		}
 		
-		currentItems = 0;
-		for(Component c : checkListPanel.getComponents()){
-			if(c instanceof OrderCard){
-				currentItems += Integer.parseInt(((OrderCard) c).quantity.getText());
-			}
-		}
-		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
-		checkListPanel.updateUI();
 		calculateTotalItem();
 		
 		
@@ -217,19 +222,11 @@ public class OrderPanel extends CoffeePanel {
 
 				checkListPanel.add(c);
 			}
-
 			
-			currentItems = 0;
-			for(Component c : checkListPanel.getComponents()){
-				if(c instanceof OrderCard){
-					currentItems -= Integer.parseInt(((OrderCard) c).quantity.getText());
-				}
-			}
-			currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
-			checkListPanel.updateUI();
-			//Calculate the price of the total orders
-			calculateTotalItem();
 		}
+		
+		//Calculate the price of the total orders
+		calculateTotalItem();
 
 	}
 }
