@@ -1,8 +1,10 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Page;
 import org.example.Settings;
 import org.example.UIComponents.CoffeeButton;
 import org.example.UIComponents.CoffeePanel;
+import org.example.Window;
 
 import javax.swing.*;
 import java.awt.*;
@@ -55,7 +57,7 @@ public class MenuPage extends CoffeePanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(menuTypeScroll.isVisible()){
-					//back to the dine in or take out page
+					Window.changePage(Page.DineInTakeOut);
 				}else if(!menuTypeScroll.isVisible()){
 					changeMenuPanelToTypes();
 				}

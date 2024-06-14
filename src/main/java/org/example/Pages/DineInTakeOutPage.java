@@ -1,9 +1,11 @@
 package org.example.Pages;
 
+import org.example.Page;
 import org.example.Settings;
 import org.example.UIComponents.CoffeeImage;
 import org.example.UIComponents.CoffeeLabel;
 import org.example.UIComponents.CoffeePanel;
+import org.example.Window;
 
 import javax.swing.*;
 import java.awt.*;
@@ -77,7 +79,7 @@ public class DineInTakeOutPage extends CoffeePanel {
 		takeOut.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-			
+				Window.changePage(Page.Menu);
 			}
 			
 			@Override

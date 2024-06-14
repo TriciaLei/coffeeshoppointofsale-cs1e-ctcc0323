@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="bugfix and refactor some code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -117,7 +120,7 @@
       <workItem from="1718282954615" duration="2575000" />
       <workItem from="1718286136445" duration="9037000" />
       <workItem from="1718334166471" duration="9232000" />
-      <workItem from="1718343757831" duration="1974000" />
+      <workItem from="1718343757831" duration="3577000" />
     </task>
     <task id="LOCAL-00001" summary="bugfix and refactor some code">
       <option name="closed" value="true" />

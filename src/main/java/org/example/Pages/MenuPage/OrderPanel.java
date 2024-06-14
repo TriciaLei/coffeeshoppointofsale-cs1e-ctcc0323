@@ -124,8 +124,8 @@ public class OrderPanel extends CoffeePanel {
 								//TODO: Go to the receipt page
 								chargeWindow.dispose();
 							}else{
-								JOptionPane.showMessageDialog(null, "Not Enough", " ", JOptionPane.WARNING_MESSAGE);
 								Toolkit.getDefaultToolkit().beep();
+								JOptionPane.showMessageDialog(null, "Not Enough", " ", JOptionPane.WARNING_MESSAGE);
 								
 							}
 						}
