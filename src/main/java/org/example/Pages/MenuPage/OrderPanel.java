@@ -101,7 +101,10 @@ public class OrderPanel extends CoffeePanel {
 					payButton.addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent e) {
-							if(paidAmount.getText() == null) return;
+							if(paidAmount.getText().isEmpty()){
+								Toolkit.getDefaultToolkit().beep();
+								return;
+							}
 							
 							String regex = "[a-zA-Z]";
 							
