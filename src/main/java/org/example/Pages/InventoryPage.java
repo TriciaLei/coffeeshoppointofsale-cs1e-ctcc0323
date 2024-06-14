@@ -17,17 +17,18 @@ import org.example.UIComponents.CoffeePanel;
 public class InventoryPage extends CoffeePanel {
 
 	
-	public CoffeeLabel InvLabel = new CoffeeLabel("Inventory");
+	public CoffeeLabel InvLabel = new CoffeeLabel("DASHBOARD");
 	public CoffeeButton InvBtn = new CoffeeButton("Inventory Items");
 	public CoffeeButton Sales = new CoffeeButton("Sales");
 	public CoffeeButton OrderHistory = new CoffeeButton("Order History");
 	public CoffeeButton Back = new CoffeeButton("Back ⬅");
 	public CoffeeImage InventoryItem = new CoffeeImage(new ImageIcon("coffeeshoppointofsale-cs1e-ctcc0323/src/InventoryItem.png"));
-	public CoffeeImage sale = new CoffeeImage(new ImageIcon("coffeeshoppointofsale-cs1e-ctcc0323/src/sales4.png"));
 	public CoffeeImage cart = new CoffeeImage(new ImageIcon("coffeeshoppointofsale-cs1e-ctcc0323/src/SCart.png"));
 
 	public CoffeePanel panel1 = new CoffeePanel();
 	public CoffeePanel panel2 = new CoffeePanel();
+	public CoffeePanel panel3 = new CoffeePanel();
+
 	
 	
 	
@@ -41,23 +42,19 @@ public class InventoryPage extends CoffeePanel {
 		panel2.setBounds(1120,0,150,720);
 		
 		//Inventory Header
-		InvLabel.setLocation(540,1);
+		InvLabel.setLocation(490,1);
 		InvLabel.setSize(800,70);
 		InvLabel.setFontSize(50);
 		
 		//Buttons Size and Location
-		InvBtn.setBounds(100,100,100,30);
+		InvBtn.setBounds(150,150,150,40);
 		InvBtn.setLocation(360,370);
 		InventoryItem.setBounds(200,200,200,128);
-		InventoryItem.setLocation(350,210);
-		Sales.setBounds(100,100,100,30);
-		Sales.setLocation(590,370);
-		sale.setBounds(200,200,200,128);
-		sale.setLocation(570,210);
-		OrderHistory.setBounds(100,100,100,30);
-		OrderHistory.setLocation(820,370);
+		InventoryItem.setLocation(370,210);
+		OrderHistory.setBounds(150,150,150,40);
+		OrderHistory.setLocation(760,370);
 		cart.setBounds(200,200,200,128);
-		cart.setLocation(800,210);
+		cart.setLocation(770,210);
 		
 			
 		
@@ -72,22 +69,14 @@ public class InventoryPage extends CoffeePanel {
 		InvBtn.setBorderThickness(2);
 		InvBtn.setBackground(new Color(228, 197, 158));
 		InvBtn.setFontColor(new Color(128, 61, 59));
-		InvBtn.setFontSize(11);
+		InvBtn.setFontSize(20);
 		InvBtn.setFocusable(false);
-		
-		Sales.setBorderColor(new Color(166, 123, 91));
-		Sales.setBorderThickness(2);
-		Sales.setBackground(new Color(228, 197, 158));
-		Sales.setFontColor(new Color(128, 61, 59));
-		Sales.setFontSize(11);
-		Sales.setFocusable(false);
-		
 		
 		OrderHistory.setBorderColor(new Color(166, 123, 91));
 		OrderHistory.setBorderThickness(2);
 		OrderHistory.setBackground(new Color(228, 197, 158));
 		OrderHistory.setFontColor(new Color(128, 61, 59));
-		OrderHistory.setFontSize(11);
+		OrderHistory.setFontSize(20);
 		OrderHistory.setFocusable(false);
 		
 		
@@ -109,15 +98,15 @@ public class InventoryPage extends CoffeePanel {
 		});
 		
 		add(cart);
-		add(sale);
 		add(InventoryItem);
 		add(Back);
 		add(OrderHistory);
-		add(Sales);
-		add(panel2);
-		add(panel1);
+
 		add(InvLabel);
 		add(InvBtn);
+		add(panel2);
+		add(panel1);
+		
 	}
 
 
