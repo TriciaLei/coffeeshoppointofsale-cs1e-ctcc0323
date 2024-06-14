@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="bugfix and refactor some code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuTypePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuTypePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeeButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeeCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeeCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/OrderCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/OrderCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +115,7 @@
       <workItem from="1718244495204" duration="2756000" />
       <workItem from="1718282954615" duration="2575000" />
       <workItem from="1718286136445" duration="9037000" />
-      <workItem from="1718334166471" duration="3679000" />
+      <workItem from="1718334166471" duration="7555000" />
     </task>
     <task id="LOCAL-00001" summary="bugfix and refactor some code">
       <option name="closed" value="true" />

@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class OrderPanel extends CoffeePanel {
 	
@@ -62,9 +64,78 @@ public class OrderPanel extends CoffeePanel {
 		
 		
 		charge.addActionListener(new ActionListener() {
+			
+			JFrame chargeWindow = null;
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			
+				if(chargeWindow == null && currentTotal > 0){
+					chargeWindow = new JFrame();
+					chargeWindow.setBackground(Settings.currentPalette[1]);
+					
+					chargeWindow.setBounds(0, 0, 400, 200);
+					chargeWindow.setLocationRelativeTo(null);
+					chargeWindow.getContentPane().setBackground(Settings.currentPalette[1]);
+					chargeWindow.setVisible(true);
+					chargeWindow.setLayout(null);
+					chargeWindow.setResizable(false);
+					
+					CoffeeLabel label = new CoffeeLabel("Enter Paid Amount: ");
+					label.setFontColor(Settings.currentPalette[2]);
+					label.setFontSize(16);
+					label.setBounds(10, 50, 200, 30);
+					
+					
+					CoffeeTextField paidAmount = new CoffeeTextField();
+					paidAmount.setBounds(150, 50, 200, 30);
+					paidAmount.setFontSize(16);
+					paidAmount.setBackground(Settings.currentPalette[1]);
+					paidAmount.setBorderColor(Settings.currentPalette[2]);
+					
+					CoffeeButton payButton = new CoffeeButton("Pay");
+					payButton.setBounds(100, 120, 200, 30);
+					payButton.setBackground(Settings.currentPalette[1]);
+					payButton.setBorderColor(Settings.currentPalette[2]);
+					payButton.setFontSize(24);
+					payButton.setBorderThickness(2);
+					
+					payButton.addActionListener(new ActionListener() {
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							if(paidAmount.getText() == null) return;
+							
+							String regex = "[a-zA-Z]";
+							
+							// Create a pattern object
+							Pattern pattern = Pattern.compile(regex);
+							
+							// Create a matcher object
+							Matcher matcher = pattern.matcher(paidAmount.getText());
+							
+							// Check if the matcher finds any letter in the input string
+							if (matcher.find()) {
+								Toolkit.getDefaultToolkit().beep();
+								return;
+							}
+							
+							if(Double.parseDouble(paidAmount.getText()) >= currentTotal){
+								//TODO: Go to the receipt page
+								chargeWindow.dispose();
+							}else{
+								JOptionPane.showMessageDialog(null, "Not Enough", " ", JOptionPane.WARNING_MESSAGE);
+								Toolkit.getDefaultToolkit().beep();
+								
+							}
+						}
+					});
+					
+					
+					chargeWindow.add(paidAmount);
+					chargeWindow.add(label);
+					chargeWindow.add(payButton);
+				}else{
+					Toolkit.getDefaultToolkit().beep();
+				}
+				
 			}
 		});
 		
@@ -88,7 +159,7 @@ public class OrderPanel extends CoffeePanel {
 			}
 		}
 		
-		totalLabel.setText("Total: " + currentTotal);
+		totalLabel.setText("Total: " + "P" + currentTotal);
 		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
 		checkListPanel.updateUI();
 		totalLabel.updateUI();
