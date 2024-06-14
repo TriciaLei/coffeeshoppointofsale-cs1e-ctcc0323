@@ -70,7 +70,7 @@ public class LoginPage extends CoffeePanel {
 		loginButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Window.changePageToDebug();
+//				Window.changePageToDebug();
 			}
 		});
 
