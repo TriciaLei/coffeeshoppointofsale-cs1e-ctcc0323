@@ -55,9 +55,8 @@ public class ReceiptPage extends CoffeePanel {
 		orderPanel = panel;
 		
 		receiptText.setBackground(Settings.currentPalette[1]);
-		receiptText.setBounds(0,0, 400, 400);
-		receiptText.setPreferredSize(new Dimension(400, 400));
-//		receiptText.setLineWrap(true);
+		receiptText.setBounds(0,0, 400, 470);
+		receiptText.setPreferredSize(new Dimension(400, 470));
 		receiptText.setEditable(false);
 		receiptText.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
 		
@@ -93,8 +92,8 @@ public class ReceiptPage extends CoffeePanel {
 			receipt += orders + "\n";
 			i++;
 			
-			if(i % 9 == 0){
-				receiptText.setSize(receiptText.getWidth(), receiptText.getHeight() + 20);
+			if(i > 6){
+				receiptText.setSize(receiptText.getWidth(), receiptText.getHeight() + 70);
 				receiptText.setPreferredSize(new Dimension(receiptText.getWidth(), receiptText.getHeight()));
 			}
 			
