@@ -7,8 +7,6 @@
     <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="bugfix and refactor some code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

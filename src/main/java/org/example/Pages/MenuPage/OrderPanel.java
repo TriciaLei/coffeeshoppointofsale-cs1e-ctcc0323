@@ -168,12 +168,14 @@ public class OrderPanel extends CoffeePanel {
 				
 				String orderPrice = ((OrderCard) order).itemPrice.getText();
 				
+				double combinedPrice = Double.parseDouble(orderPrice.substring(1)) * Double.parseDouble(orderQuantity);
+				
 				orderInfo += orderName + "\n" + orderQuantity + " pcs";
 				for (int i = 0; i < 45 - orderQuantity.length() - orderPrice.length(); i++){
 					orderInfo += ".";
 				}
 				
-				orderInfo += orderPrice;
+				orderInfo +=  "P" + combinedPrice;
 				
 				
 				ReceiptPage.currentOrders.add(orderInfo);
