@@ -70,7 +70,45 @@ public class OrderPanel extends CoffeePanel {
 				if(chargeWindow == null && currentTotal > 0){
 					chargeWindow = new JFrame();
 					chargeWindow.setBackground(Settings.currentPalette[1]);
-					chargeWindow.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+					chargeWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+					chargeWindow.addWindowListener(new WindowListener() {
+						@Override
+						public void windowOpened(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowClosing(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowClosed(WindowEvent e) {
+							chargeWindow.dispose();
+							chargeWindow = null;
+						}
+						
+						@Override
+						public void windowIconified(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowDeiconified(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowActivated(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowDeactivated(WindowEvent e) {
+						
+						}
+					});
+					
 					chargeWindow.setBounds(0, 0, 400, 200);
 					chargeWindow.setLocationRelativeTo(null);
 					chargeWindow.getContentPane().setBackground(Settings.currentPalette[1]);
