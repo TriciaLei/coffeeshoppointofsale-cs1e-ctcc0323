@@ -20,7 +20,7 @@ public class OrderCard extends CoffeePanel{
 		
 		index = i;
 
-		quantity.setBounds(10, 5, 10, 20);
+		quantity.setBounds(10, 5, 30, 20);
 		quantity.setFontSize(16);
 		quantity.setFontColor(Settings.currentPalette[2]);
 		
