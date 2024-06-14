@@ -17,7 +17,8 @@ public class DineInTakeOutPage extends CoffeePanel {
 	
 	private CoffeePanel dineIn = new CoffeePanel();
 	private CoffeePanel takeOut = new CoffeePanel();
-	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("coffee-cup.png"));
+	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("gree.png"));
+	private CoffeeImage takoOutImage = new CoffeeImage(new ImageIcon("gree.png"));
 	
 	
 	public DineInTakeOutPage(){
@@ -34,8 +35,10 @@ public class DineInTakeOutPage extends CoffeePanel {
 		dineInLabel.setFontColor(Settings.currentPalette[2]);
 		dineInLabel.setFontFormat(Font.ITALIC);
 		
-		dineIn.add(dineInLabel);
+		dineInImage.setBounds(64 ,64, 256, 256);
 		
+		dineIn.add(dineInLabel);
+		dineIn.add(dineInImage);
 		dineIn.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -74,6 +77,9 @@ public class DineInTakeOutPage extends CoffeePanel {
 		takeOutLabel.setFontColor(Settings.currentPalette[2]);
 		takeOutLabel.setFontFormat(Font.ITALIC);
 		
+		takoOutImage.setBounds(64 ,64, 256, 256);
+		
+		takeOut.add(takoOutImage);
 		takeOut.add(takeOutLabel);
 		
 		takeOut.addMouseListener(new MouseListener() {
