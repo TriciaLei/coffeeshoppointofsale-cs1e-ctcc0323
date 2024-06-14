@@ -1,5 +1,6 @@
 package org.example;
 import org.example.Pages.DebugPage;
+import org.example.Pages.InventoryPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
 
@@ -10,7 +11,7 @@ public class Window extends JFrame {
 	public DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
-	
+	public InventoryPage Inv = new InventoryPage();
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
 	
@@ -25,11 +26,11 @@ public class Window extends JFrame {
 		
 		//TODO#2: add it to the to frame
 		// ex: add(name);
-
-//		add(loginPage);
-//		add(debugPage);
+		add(Inv);
+		add(loginPage);
+		add(debugPage);
 		add(menuPage);
-
+		
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
 		
@@ -38,9 +39,10 @@ public class Window extends JFrame {
 		// ex: menuPage.setVisible(false);
 		// ex: name.setVisible(true);
 		
-		
-		menuPage.setVisible(true);
-		
+		menuPage.setVisible(false);
+		debugPage.setVisible(false);
+		loginPage.setVisible(false);
+		Inv.setVisible(true);
 		setTitle("Coffee Shop sa tabe tabe");
 		
 		
