@@ -24,7 +24,8 @@ public class OrderPanel extends CoffeePanel {
 	private CoffeePanel totalPanel = new CoffeePanel();
 	
 	
-	private double currentTotal = 0;
+	public double currentTotal = 0;
+	public double currentCashGiven = 0;
 	private CoffeeLabel totalLabel = new CoffeeLabel("Total: P" + currentTotal);
 	private JFrame chargeWindow = null;
 	
@@ -119,32 +120,12 @@ public class OrderPanel extends CoffeePanel {
 							}
 							
 							if(Double.parseDouble(paidAmount.getText()) >= currentTotal){
-								//TODO: Go to the receipt page
-								
-								for (Component order : checkListPanel.getComponents()){
-									if(order instanceof OrderCard){
-										String orderInfo = "";
-										
-										String orderName = ((OrderCard) order).itemName.getText();
-										
-										String orderQuantity = ((OrderCard) order).quantity.getText();
-										
-										String orderPrice = ((OrderCard) order).itemPrice.getText();
-										
-										orderInfo += orderName + "\n" + orderQuantity + " pcs";
-										for (int i = 0; i < 35 - orderQuantity.length() - orderPrice.length(); i++){
-											orderInfo += ".";
-										}
-										
-										orderInfo += orderPrice;
-										
-										
-										ReceiptPage.currentOrders.add(orderInfo);
-										ReceiptPage.SetReceipt();
-									}
-								}
+								SetUpReceipt();
 								
 								
+								ReceiptPage.cashPaid = paidAmount.getText();
+								
+								ReceiptPage.SetReceipt();
 								
 								chargeWindow.dispose();
 								chargeWindow = null;
@@ -161,9 +142,7 @@ public class OrderPanel extends CoffeePanel {
 					chargeWindow.add(label);
 					chargeWindow.add(payButton);
 				}else{
-//					chargeWindow = null;
 					Toolkit.getDefaultToolkit().beep();
-//					chargeWindow.dispose();
 				}
 				
 			}
@@ -178,6 +157,34 @@ public class OrderPanel extends CoffeePanel {
 		
 	}
 	
+	private void SetUpReceipt() {
+		for (Component order : checkListPanel.getComponents()){
+			if(order instanceof OrderCard){
+				String orderInfo = "";
+				
+				String orderName = ((OrderCard) order).itemName.getText();
+				
+				String orderQuantity = ((OrderCard) order).quantity.getText();
+				
+				String orderPrice = ((OrderCard) order).itemPrice.getText();
+				
+				orderInfo += orderName + "\n" + orderQuantity + " pcs";
+				for (int i = 0; i < 45 - orderQuantity.length() - orderPrice.length(); i++){
+					orderInfo += ".";
+				}
+				
+				orderInfo += orderPrice;
+				
+				
+				ReceiptPage.currentOrders.add(orderInfo);
+			}
+		}
+		
+		
+	
+		
+	}
+	
 	private void calculateTotalItem(){
 		currentTotal = 0;
 		currentItems = 0;
@@ -188,6 +195,8 @@ public class OrderPanel extends CoffeePanel {
 				currentItems += Integer.parseInt(((OrderCard) c).quantity.getText());
 			}
 		}
+		
+//		Double
 		
 		totalLabel.setText("Total: " + "P" + currentTotal);
 		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
@@ -281,7 +290,7 @@ public class OrderPanel extends CoffeePanel {
 	// like for example making the layout manager a box layout, but I'm too high rn so cant think lmao
 	
 	// So basically what I did here is
-	// Firstly, I removed the desired order item to the panel
+	// First, I removed the desired order item to the panel
 	// Then, I stored that state to a temporary variable
 	// I then remove all the components to the checkList panel
 	// adjusted all the position then add it to the checklist panel

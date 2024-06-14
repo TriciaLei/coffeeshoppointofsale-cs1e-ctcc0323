@@ -10,6 +10,10 @@ public class Settings {
 	// 1 - Secondary Color
 	// 2 - Text Color and Border Color
 	// 3 - Highlights
+	
+	public static String Cashier = "Sabrina Carpentero";
+	
+	
 	public static Color[] currentPalette = {
 			new Color(166, 138, 121),
 			new Color(240, 230, 214),
