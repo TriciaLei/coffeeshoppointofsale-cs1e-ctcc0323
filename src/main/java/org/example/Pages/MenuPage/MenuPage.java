@@ -1,5 +1,6 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Settings;
 import org.example.UIComponents.CoffeeButton;
 import org.example.UIComponents.CoffeePanel;
 
@@ -21,7 +22,7 @@ public class MenuPage extends CoffeePanel {
 	private int scrollSpeed = 16;
 	
 	public MenuPage(){
-		this.setBackground(new Color(166, 138, 121));
+		this.setBackground(Settings.currentPalette[0]);
 		
 		menuTypeScroll.setBounds(10, 60, 956, 600);
 		menuTypeScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -43,10 +44,10 @@ public class MenuPage extends CoffeePanel {
 		
 		
 		backButton.setText("Back");
-		backButton.setFontColor(new Color(59, 46, 37));
+		backButton.setFontColor(Settings.currentPalette[2]);
 		backButton.setBounds(10, 15, 100, 30);
-		backButton.setBackground(new Color(240, 230, 214));
-		backButton.setBorderColor(new Color(0, 0, 0));
+		backButton.setBackground(Settings.currentPalette[1]);
+		backButton.setBorderColor(Settings.currentPalette[2]);
 		backButton.setFontSize(scrollSpeed);
 		
 		

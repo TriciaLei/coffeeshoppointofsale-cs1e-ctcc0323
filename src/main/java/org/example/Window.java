@@ -1,5 +1,6 @@
 package org.example;
 import org.example.Pages.DebugPage;
+import org.example.Pages.DineInTakeOutPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
 
@@ -7,9 +8,10 @@ import javax.swing.*;
 
 public class Window extends JFrame {
 	
-	public static DebugPage debugPage = new DebugPage();
+	public DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
-	public static MenuPage menuPage = new MenuPage();
+	public MenuPage menuPage = new MenuPage();
+	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
@@ -27,9 +29,9 @@ public class Window extends JFrame {
 		// ex: add(name);
 
 //		add(loginPage);
-		add(menuPage);
-		add(debugPage);
-
+//		add(menuPage);
+//		add(debugPage);
+		add(dineInTakeOutPage);
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
 		
@@ -47,14 +49,5 @@ public class Window extends JFrame {
 		
 		
 		
-	}
-
-	//Temporary Code
-	public static void changePageToDebug(){
-//		loginPage.setVisible(false);
-		
-		debugPage.setVisible(true);
-		menuPage.setVisible(false);
-		System.out.println("Hello");
 	}
 }
