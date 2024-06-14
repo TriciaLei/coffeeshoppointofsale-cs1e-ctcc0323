@@ -36,7 +36,7 @@ public class Window extends JFrame {
 		
 		//TODO#2: add it to the to frame
 		// ex: add(name);
-<<<<<<< Updated upstream
+
 		
 		add(dineInTakeOutPage);
 		add(loginPage);
@@ -51,7 +51,7 @@ public class Window extends JFrame {
 		
 		debugPage.setVisible(false);
 
-=======
+
 
 //		add(loginPage);
 		add(menuPage);
@@ -59,7 +59,7 @@ public class Window extends JFrame {
 //   	add(dineInTakeOutPage);
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
->>>>>>> Stashed changes
+
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class

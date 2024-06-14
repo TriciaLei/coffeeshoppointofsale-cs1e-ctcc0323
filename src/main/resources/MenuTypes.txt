@@ -41,7 +41,7 @@ null
 55
 
 Salads
-/Users/trixiemaeb.alburo/Documents/GitHub/coffeeshoppointofsale-cs1e-ctcc0323/src/main/resources/Menu/salad.png
+src/main/resources/Menu/salad.png
 null
 490
 260
