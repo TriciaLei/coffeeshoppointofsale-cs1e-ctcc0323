@@ -106,25 +106,26 @@ public class OrderPanel extends CoffeePanel {
 		}
 
 		if(!isDuplicate){
-			OrderCard tmp = new OrderCard(name, quantity, price, currentItems);
+			OrderCard order = new OrderCard(name, quantity, price, cardCounter);
 			
-			if(currentItems != 0){
-				tmp.setLocation(tmp.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + tmp.getHeight()) + 10);
+			//determines if the order cards in the panel is the first one to add or not
+			if(cardCounter != 0){
+				order.setLocation(order.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + order.getHeight()) + 10);
 			}else{
-				tmp.setLocation(tmp.getX(), 20);
+				order.setLocation(order.getX(), 20);
 			}
 
 			//If the order list is full of items expand the checklistPanel
 			if(cardCounter >= 7){
-				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + tmp.getHeight() + 20);
+				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + order.getHeight() + 20);
 				checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
 				System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
 			}
 
-			tmp.addMouseListener(new MouseListener() {
+			order.addMouseListener(new MouseListener() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					RemoveOrderItem(tmp.index, tmp.itemName.getText());
+					RemoveOrderItem(order.index, order.itemName.getText());
 					
 					// Adjust the index of each item
 					int i = 0;
@@ -149,17 +150,17 @@ public class OrderPanel extends CoffeePanel {
 
 				@Override
 				public void mouseEntered(MouseEvent e) {
-					tmp.setBackground(Color.RED);
+					order.setBackground(Color.RED);
 				}
 
 				@Override
 				public void mouseExited(MouseEvent e) {
-					tmp.setBackground(Color.white);
+					order.setBackground(Color.white);
 				}
 			});
 			
 			
-			checkListPanel.add(tmp);
+			checkListPanel.add(order);
 			cardCounter++;
 			
 			
