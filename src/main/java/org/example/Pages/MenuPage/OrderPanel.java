@@ -1,5 +1,6 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Settings;
 import org.example.UIComponents.*;
 
 import javax.swing.*;
@@ -27,16 +28,16 @@ public class OrderPanel extends CoffeePanel {
 	
 	public OrderPanel(){
 		setBounds(976, 0, 304, 720);
-		setBackground(new Color(166, 138, 121));
+		setBackground(Settings.currentPalette[0]);
 		
 		currentItemLabel.setBounds(55 , 20, 200, 30);
 		currentItemLabel.setFontSize(24);
-		currentItemLabel.setFontColor(new Color(59, 46, 37));
+		currentItemLabel.setFontColor(Settings.currentPalette[2]);
 		
 		checkListPanel.setBounds(16, 60, 254, 440);
 		checkListPanel.setPreferredSize(new Dimension(254, 440));
-		checkListPanel.setBackground(new Color(240, 230, 214));
-		orderScroll.setBorder(BorderFactory.createLineBorder(new Color(50, 44, 43)));
+		checkListPanel.setBackground(Settings.currentPalette[1]);
+		orderScroll.setBorder(BorderFactory.createLineBorder(Settings.currentPalette[2]));
 		
 		orderScroll.setBounds(checkListPanel.getX(), checkListPanel.getY(), checkListPanel.getWidth(), checkListPanel.getHeight() + 20);
 		orderScroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
@@ -45,19 +46,21 @@ public class OrderPanel extends CoffeePanel {
 		orderScroll.getVerticalScrollBar().setUnitIncrement(16);
 		
 		totalPanel.setBounds(16, 530, 254, 40);
-		totalPanel.setBackground(new Color(240, 230, 214));
-		totalPanel.setBorderColor(new Color(50, 44, 43));
+		totalPanel.setBackground(Settings.currentPalette[1]);
+		totalPanel.setBorderColor(Settings.currentPalette[2]);
 		totalLabel.setBounds(10, 0, totalPanel.getWidth(), totalPanel.getHeight());
 		totalLabel.setFontSize(16);
 		
 		
 		
 		charge.setBounds(40, 600, 200, 40);
-		charge.setFontSize(24);
-		charge.setBackground(new Color(75, 56, 42) );
-		charge.setBorderColor(new Color(255, 245, 225));
-		charge.setFontColor(new Color(255, 245, 225));
+		charge.setBackground(Settings.currentPalette[1]);
+		charge.setFontColor(Settings.currentPalette[2]);
+		charge.setBorderColor(Settings.currentPalette[2]);
 		charge.setBorderThickness(2);
+		charge.setFontSize(24);
+		
+		
 		charge.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -109,7 +112,7 @@ public class OrderPanel extends CoffeePanel {
 			OrderCard order = new OrderCard(name, quantity, price, cardCounter);
 			
 			//determines if the order cards in the panel is the first one to add or not
-			if(cardCounter != 0){
+			if(currentItems != 0){
 				order.setLocation(order.getX(), (checkListPanel.getComponent(checkListPanel.getComponentCount() - 1).getY() + order.getHeight()) + 10);
 			}else{
 				order.setLocation(order.getX(), 20);
@@ -150,12 +153,12 @@ public class OrderPanel extends CoffeePanel {
 
 				@Override
 				public void mouseEntered(MouseEvent e) {
-					order.setBackground(Color.RED);
+					order.setBackground(new Color(128, 61, 59));
 				}
 
 				@Override
 				public void mouseExited(MouseEvent e) {
-					order.setBackground(Color.white);
+					order.setBackground(Settings.currentPalette[3]);
 				}
 			});
 			

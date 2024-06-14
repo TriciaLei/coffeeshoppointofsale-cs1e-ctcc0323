@@ -17,7 +17,7 @@ public class CoffeeButton extends JButton {
 
     public CoffeeButton(String text){
         setFont(new Font(m_fontFamily, Font.PLAIN, m_fontSize));
-        setBorder(BorderFactory.createLineBorder(m_borderColor, m_borderThickness));
+        setBorder(BorderFactory.createLineBorder(m_borderColor, m_borderThickness, true));
         setText(text);
     }
 
@@ -40,11 +40,11 @@ public class CoffeeButton extends JButton {
 
     public void setBorderColor(Color color){
         m_borderColor = color;
-        setBorder(BorderFactory.createLineBorder(m_borderColor));
+        setBorder(BorderFactory.createLineBorder(m_borderColor, m_borderThickness, true));
     }
 
     public void setBorderThickness(int thickness){
-        setBorder(BorderFactory.createLineBorder(m_borderColor, thickness));
+        setBorder(BorderFactory.createLineBorder(m_borderColor, thickness, true));
 
     }
 }

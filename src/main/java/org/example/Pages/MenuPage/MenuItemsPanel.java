@@ -1,5 +1,6 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Settings;
 import org.example.UIComponents.CoffeeCard;
 import org.example.UIComponents.CoffeePanel;
 
@@ -24,7 +25,7 @@ public class MenuItemsPanel extends CoffeePanel {
 	public MenuItemsPanel(OrderPanel panel){
 		setBounds(10, 60, 956, 720);
 		setPreferredSize(new Dimension(956, 720));
-		setBackground(new Color(240, 230, 214));
+		setBackground(Settings.currentPalette[1]);
 		
 		orderPanel = panel;
 		

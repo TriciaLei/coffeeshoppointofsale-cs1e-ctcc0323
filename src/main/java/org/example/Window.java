@@ -28,7 +28,7 @@ public class Window extends JFrame {
 
 //		add(loginPage);
 		add(menuPage);
-		add(debugPage);
+//		add(debugPage);
 
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);

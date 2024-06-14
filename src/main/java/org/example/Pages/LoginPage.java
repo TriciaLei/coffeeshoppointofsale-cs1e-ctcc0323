@@ -1,5 +1,6 @@
 package org.example.Pages;
 
+import org.example.Settings;
 import org.example.UIComponents.*;
 import org.example.Window;
 
@@ -42,24 +43,24 @@ public class LoginPage extends CoffeePanel {
 		passwordField.setBounds(415, 450, 400, 40);
 
 		loginButton.setBounds(565, 550, 100, 40);
-
-
-		appName.setFontColor(new Color(50, 44, 43));
-		employeeLabel.setFontColor(new Color(50, 44, 43));
-		passwordLabel.setFontColor(new Color(50, 44, 43));
-
-		this.setBackground(new Color(228, 197, 158));
 		
-		passwordField.setBackground(new Color(228, 197, 158));
-		employeeField.setBackground(new Color(228, 197, 158));
 		
-		passwordField.setBorderColor(new Color(50, 44, 43));
-		employeeField.setBorderColor(new Color(50, 44, 43));
+		setBackground(Settings.currentPalette[1]);
+		appName.setFontColor(Settings.currentPalette[2]);
+		employeeLabel.setFontColor(Settings.currentPalette[2]);
+		passwordLabel.setFontColor(Settings.currentPalette[2]);
+
 		
-		loginButton.setBorderColor(new Color(128, 61, 59));
+		passwordField.setBackground(Settings.currentPalette[1]);
+		employeeField.setBackground(Settings.currentPalette[1]);
+		
+		passwordField.setBorderColor(Settings.currentPalette[2]);
+		employeeField.setBorderColor(Settings.currentPalette[2]);
+		
+		loginButton.setBorderColor(Settings.currentPalette[2]);
+		loginButton.setBackground(Settings.currentPalette[1]);
+		loginButton.setFontColor(Settings.currentPalette[2]);
 		loginButton.setBorderThickness(3);
-		loginButton.setBackground(new Color(228, 197, 158));
-		loginButton.setFontColor(new Color(128, 61, 59));
 		loginButton.setFontSize(30);
 
 		
