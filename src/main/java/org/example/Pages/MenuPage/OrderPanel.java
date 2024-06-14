@@ -1,14 +1,13 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Page;
 import org.example.Settings;
 import org.example.UIComponents.*;
+import org.example.Window;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,9 +23,10 @@ public class OrderPanel extends CoffeePanel {
 	
 	private CoffeePanel totalPanel = new CoffeePanel();
 	
+	
 	private double currentTotal = 0;
 	private CoffeeLabel totalLabel = new CoffeeLabel("Total: P" + currentTotal);
-	
+	private JFrame chargeWindow = null;
 	
 	public OrderPanel(){
 		setBounds(976, 0, 304, 720);
@@ -53,8 +53,6 @@ public class OrderPanel extends CoffeePanel {
 		totalLabel.setBounds(10, 0, totalPanel.getWidth(), totalPanel.getHeight());
 		totalLabel.setFontSize(16);
 		
-		
-		
 		charge.setBounds(40, 600, 200, 40);
 		charge.setBackground(Settings.currentPalette[1]);
 		charge.setFontColor(Settings.currentPalette[2]);
@@ -65,13 +63,13 @@ public class OrderPanel extends CoffeePanel {
 		
 		charge.addActionListener(new ActionListener() {
 			
-			JFrame chargeWindow = null;
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(chargeWindow == null && currentTotal > 0){
 					chargeWindow = new JFrame();
 					chargeWindow.setBackground(Settings.currentPalette[1]);
-					
+					chargeWindow.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 					chargeWindow.setBounds(0, 0, 400, 200);
 					chargeWindow.setLocationRelativeTo(null);
 					chargeWindow.getContentPane().setBackground(Settings.currentPalette[1]);
@@ -122,7 +120,35 @@ public class OrderPanel extends CoffeePanel {
 							
 							if(Double.parseDouble(paidAmount.getText()) >= currentTotal){
 								//TODO: Go to the receipt page
+								
+								for (Component order : checkListPanel.getComponents()){
+									if(order instanceof OrderCard){
+										String orderInfo = "";
+										
+										String orderName = ((OrderCard) order).itemName.getText();
+										
+										String orderQuantity = ((OrderCard) order).quantity.getText();
+										
+										String orderPrice = ((OrderCard) order).itemPrice.getText();
+										
+										orderInfo += orderName + "\n" + orderQuantity + " pcs";
+										for (int i = 0; i < 35 - orderQuantity.length() - orderPrice.length(); i++){
+											orderInfo += ".";
+										}
+										
+										orderInfo += orderPrice;
+										
+										
+										ReceiptPage.currentOrders.add(orderInfo);
+										ReceiptPage.SetReceipt();
+									}
+								}
+								
+								
+								
 								chargeWindow.dispose();
+								chargeWindow = null;
+								Window.changePage(Page.Receipt);
 							}else{
 								Toolkit.getDefaultToolkit().beep();
 								JOptionPane.showMessageDialog(null, "Not Enough", " ", JOptionPane.WARNING_MESSAGE);
@@ -131,12 +157,13 @@ public class OrderPanel extends CoffeePanel {
 						}
 					});
 					
-					
 					chargeWindow.add(paidAmount);
 					chargeWindow.add(label);
 					chargeWindow.add(payButton);
 				}else{
+//					chargeWindow = null;
 					Toolkit.getDefaultToolkit().beep();
+//					chargeWindow.dispose();
 				}
 				
 			}
@@ -306,5 +333,16 @@ public class OrderPanel extends CoffeePanel {
 		//Calculate the price of the total orders
 		calculateTotalItem();
 
+	}
+	
+	public void Reset(){
+		currentTotal = 0;
+		cardCounter = 0;
+		currentItems = 0;
+		checkListPanel.removeAll();
+		totalLabel.setText("Total: " + "P" + currentTotal);
+		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
+		checkListPanel.updateUI();
+		totalLabel.updateUI();
 	}
 }

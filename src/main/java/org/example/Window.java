@@ -3,8 +3,10 @@ import org.example.Pages.DebugPage;
 import org.example.Pages.DineInTakeOutPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
+import org.example.Pages.MenuPage.ReceiptPage;
 import org.example.UIComponents.CoffeeLabel;
 import org.example.UIComponents.CoffeePanel;
+import org.example.UIComponents.OrderCard;
 
 import javax.swing.*;
 import java.util.ConcurrentModificationException;
@@ -17,6 +19,7 @@ public class Window extends JFrame {
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
 	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
+	public ReceiptPage receiptPage = new ReceiptPage(menuPage.orderPanel);
 	
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
@@ -41,25 +44,15 @@ public class Window extends JFrame {
 		add(dineInTakeOutPage);
 		add(loginPage);
 		add(menuPage);
-		add(debugPage);
+//		add(debugPage);
+		add(receiptPage);
 		
 		pages.put(Page.Login, loginPage);
 		pages.put(Page.Menu, menuPage);
 		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
+		pages.put(Page.Receipt, receiptPage);
 		
-		changePage(Page.DineInTakeOut);
-		
-		debugPage.setVisible(false);
-
-
-
-//		add(loginPage);
-		add(menuPage);
-//		add(debugPage);
-//   	add(dineInTakeOutPage);
-//		loginPage.setVisible(true);
-//		debugPage.setVisible(false);
-
+		changePage(Page.Menu);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class

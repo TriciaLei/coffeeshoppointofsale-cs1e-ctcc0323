@@ -6,5 +6,5 @@ public enum Page {
 	DineInTakeOut,
 	Table,
 	Menu,
-	
+	Receipt,
 }
