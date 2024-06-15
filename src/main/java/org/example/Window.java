@@ -7,12 +7,9 @@ import org.example.Pages.DineInTakeOutPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
 import org.example.Pages.MenuPage.ReceiptPage;
-import org.example.UIComponents.CoffeeLabel;
 import org.example.UIComponents.CoffeePanel;
-import org.example.UIComponents.OrderCard;
 
 import javax.swing.*;
-import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,16 +27,16 @@ public class Window extends JFrame {
 	
 	public static Page currentPage = Page.DineInTakeOut;
 
-	private MenuItemData itemDatas;
+	private MenuData menuData;
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
 	
 	public Window(int width, int height){
 
-		itemDatas = new MenuItemData();
+		menuData = new MenuData();
 
-		menuPage = new MenuPage();
+		menuPage = new MenuPage(menuData);
 		loginPage = new LoginPage();
 		debugPage = new DebugPage();
 		Inv = new InventoryPage();

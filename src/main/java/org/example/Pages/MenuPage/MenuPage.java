@@ -12,17 +12,27 @@ import java.awt.event.ActionListener;
 
 public class MenuPage extends CoffeePanel {
 	
-	public CoffeeButton backButton = new CoffeeButton();
-	public OrderPanel orderPanel = new OrderPanel();
-	public MenuTypePanel menuTypePanel = new MenuTypePanel(this);
-	public  MenuItemsPanel menuItemsPanel = new MenuItemsPanel(orderPanel);
+	public CoffeeButton backButton;
+	public OrderPanel orderPanel;
+	public MenuTypePanel menuTypePanel;
+	public  MenuItemsPanel menuItemsPanel;
 	
-	public JScrollPane menuTypeScroll = new JScrollPane(menuTypePanel);
-	public JScrollPane menuItemScroll = new JScrollPane(menuItemsPanel);
+	public JScrollPane menuTypeScroll;
+	public JScrollPane menuItemScroll;
 	
 	private int scrollSpeed = 16;
 	
-	public MenuPage(){
+	public MenuPage(MenuData data){
+		
+		
+		backButton = new CoffeeButton();
+		orderPanel = new OrderPanel();
+		menuTypePanel = new MenuTypePanel(this, data);
+		menuItemsPanel = new MenuItemsPanel(orderPanel, data);
+		menuTypeScroll = new JScrollPane(menuTypePanel);
+		menuItemScroll = new JScrollPane(menuItemsPanel);
+		
+		
 		this.setBackground(Settings.currentPalette[0]);
 		
 		menuTypeScroll.setBounds(10, 60, 956, 600);
