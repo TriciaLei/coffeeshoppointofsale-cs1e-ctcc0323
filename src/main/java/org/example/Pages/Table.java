@@ -6,11 +6,25 @@ import javax.swing.*;
 import java.awt.*;
 public class Table extends CoffeePanel {
     public Table() {
-        CoffeeImage image1 = new CoffeeImage(new ImageIcon("/Users/trixiemaeb.alburo/Documents/GitHub/coffeeshoppointofsale-cs1e-ctcc0323/src/kopiii.png"));
+        CoffeeImage image1 = new CoffeeImage(new ImageIcon("/Users/trixiemaeb.alburo/Documents/GitHub/coffeeshoppointofsale-cs1e-ctcc0323/src/lameisa1.png"));
        add(image1);
        image1.setLocation(200,15);
-       image1.setSize(50,50);
+       image1.setSize(150,150);
+
+       CoffeeImage image2 = new CoffeeImage(new ImageIcon("/Users/trixiemaeb.alburo/Documents/GitHub/coffeeshoppointofsale-cs1e-ctcc0323/src/lameisa1.png"));
+        add(image2);
+        image2.setLocation(330,15);
+        image2.setSize(150,150);
+        CoffeeImage image3 = new CoffeeImage(new ImageIcon("/Users/trixiemaeb.alburo/Documents/GitHub/coffeeshoppointofsale-cs1e-ctcc0323/src/lameisa1.png"));
+        add(image3);
+        image3.setLocation(460,15);
+        image3.setSize(150,150);
+        CoffeeImage image4 = new CoffeeImage(new ImageIcon("/Users/trixiemaeb.alburo/Documents/GitHub/coffeeshoppointofsale-cs1e-ctcc0323/src/lameisa1.png"));
+        add(image4);
+        image4.setLocation(200,145);
+        image4.setSize(150,150);
 
 
     }
+
 }
