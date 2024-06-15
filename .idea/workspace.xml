@@ -4,87 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/BlackTea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/Crossiant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/Hibiscus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/OolongT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/bran.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/coldbrew.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/coldiceda.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/dineeinn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/greenTea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/icedlatte.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/icedmocha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/muffb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/muffc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/peppermint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/table1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/takeoutt.png" afterDir="false" />
+
+
+    <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="bugfix and refactor some code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/Table.java" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Leimesa" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 8
-}</component>
-  <component name="ProjectId" id="2hh6Xkst5XWF1APRSt3VQQHPBw2" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
+
+
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Table&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+
+
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -102,6 +50,15 @@
       </method>
     </configuration>
   </component>
+
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+      </set>
+    </attachedChunks>
+  </component>
+
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,10 +69,42 @@
       <updated>1718034006872</updated>
       <workItem from="1718034008397" duration="113000" />
       <workItem from="1718080139727" duration="1823000" />
+      <workItem from="1718116470185" duration="1215000" />
+      <workItem from="1718119608453" duration="121000" />
+      <workItem from="1718119734929" duration="6000" />
+      <workItem from="1718119769636" duration="3118000" />
+      <workItem from="1718122938313" duration="5258000" />
+      <workItem from="1718155946901" duration="3646000" />
+      <workItem from="1718159904831" duration="6013000" />
+      <workItem from="1718166445161" duration="1082000" />
+      <workItem from="1718167900406" duration="18366000" />
+      <workItem from="1718197610053" duration="715000" />
+      <workItem from="1718244495204" duration="2756000" />
+      <workItem from="1718282954615" duration="2575000" />
+      <workItem from="1718286136445" duration="9037000" />
+      <workItem from="1718334166471" duration="9232000" />
+      <workItem from="1718343757831" duration="3577000" />
     </task>
+    <task id="LOCAL-00001" summary="bugfix and refactor some code">
+      <option name="closed" value="true" />
+      <created>1718326934367</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718326934368</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="bugfix and refactor some code" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix and refactor some code" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/coffeeshoppointofsale_cs1e_ctcc0323$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1718347235115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

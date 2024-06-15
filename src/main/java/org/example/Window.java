@@ -1,18 +1,26 @@
 package org.example;
 import org.example.Pages.DebugPage;
+import org.example.Pages.DineInTakeOutPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
-import org.example.Pages.Table;
+import org.example.UIComponents.CoffeeLabel;
+import org.example.UIComponents.CoffeePanel;
 
 import javax.swing.*;
-import java.awt.*;
+import java.util.ConcurrentModificationException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Window extends JFrame {
 	
 	public DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
-	public Table table = new Table();
+	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
+	
+	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
+	
+	public static Page currentPage = Page.DineInTakeOut;
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
@@ -28,32 +36,50 @@ public class Window extends JFrame {
 		
 		//TODO#2: add it to the to frame
 		// ex: add(name);
-		
-//		add(debugPage);
-//		add(loginPage);
-       add(table);
 
+		
+		add(dineInTakeOutPage);
+		add(loginPage);
+		add(menuPage);
+		add(debugPage);
+		
+		pages.put(Page.Login, loginPage);
+		pages.put(Page.Menu, menuPage);
+		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
+		
+		changePage(Page.DineInTakeOut);
+		
+		debugPage.setVisible(false);
+
+
+
+//		add(loginPage);
+		add(menuPage);
+//		add(debugPage);
+//   	add(dineInTakeOutPage);
 //		loginPage.setVisible(true);
 //		debugPage.setVisible(false);
+
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class
-		// ex: menuPage.setVisible(false);
+		// ex: menu Page.setVisible(false);
 		// ex: name.setVisible(true);
 		
-		
-		menuPage.setVisible(true);
-		
 		setTitle("Coffee Shop sa tabe tabe");
-		
+		setLocationRelativeTo(null);
 		
 		
 		
 	}
-
-	//Temporary Code
-	public static void changePageToDebug(){
-//		debugPage.setVisible(true);
-//		loginPage.setVisible(false);
+	
+	public static void changePage(Page nextPage){
+		for (Map.Entry<Page, CoffeePanel> set : pages.entrySet()){
+			if(set.getKey() == nextPage){
+				set.getValue().setVisible(true);
+			}else{
+				set.getValue().setVisible(false);
+			}
+		}
 	}
 }
