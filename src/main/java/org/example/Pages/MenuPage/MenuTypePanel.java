@@ -1,5 +1,6 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Settings;
 import org.example.UIComponents.CoffeeCard;
 import org.example.UIComponents.CoffeePanel;
 
@@ -20,8 +21,9 @@ public class MenuTypePanel extends CoffeePanel {
 	public MenuTypePanel(MenuPage page){
 		setBounds(10, 60, 956, 720);
 		setPreferredSize(new Dimension(956, 720));
-		setBackground(new Color(240, 230, 214));
-		
+		setBackground(Settings.currentPalette[1]);
+		setBorderColor(Settings.currentPalette[2]);
+		setBorder(BorderFactory.createLineBorder(Settings.currentPalette[2], 2, true));
 		SetUpCards();
 		
 		
