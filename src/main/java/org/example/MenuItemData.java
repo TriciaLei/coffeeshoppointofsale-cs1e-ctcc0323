@@ -28,18 +28,18 @@ public class MenuItemData {
 //        System.out.println("");
     }
 
-    public ArrayList<ItemData> getItems(){
-        ArrayList<ItemData> tmp = new ArrayList<>();
+    // public ArrayList<ItemData> getItems(){
+    //     ArrayList<ItemData> tmp = new ArrayList<>();
 
-        for (Map.Entry<ItemData, String> set : items.entrySet()){
+    //     for (Map.Entry<ItemData, String> set : items.entrySet()){
 
-            tmp.add(set.getKey());
-        }
+    //         tmp.add(set.getKey());
+    //     }
 
 
-        return tmp;
+    //     return tmp;
 
-    }
+    // }
 
     private void readItems() {
         for (String t : types) {
@@ -90,6 +90,50 @@ public class MenuItemData {
     }
 
     private void readTypes() {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/MenuTypes.txt"))) {
+        getMenuTypes();
+        getItems();
+
+        for(Map.Entry<ItemData, String> set : items.entrySet()){
+            System.out.println(set.getKey().name + set.getKey().price);
+        }
+    }
+
+    private void getItems() {
+        for (String t : types) {
+            try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/items/" + t + ".txt"))) {
+
+
+                String line = "";
+                int i = 0;
+                ItemData data = new ItemData();
+                while ((line = reader.readLine()) != null) {
+                    switch (i) {
+                        case 0:
+                            data.name = line;
+                            i++;
+                            break;
+                        case 1, 3, 4, 5:
+                            i++;
+                            break;
+                        case 2:
+                            data.price = line;
+                            i++;
+                            break;
+                        default:
+                            items.put(data, t);
+                            i = 0;
+                            break;
+
+                    }
+                }
+            }catch (IOException e){
+
+            }
+        }
+    }
+
+    private void getMenuTypes() {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/MenuTypes.txt"))) {
 
             String line = "";

@@ -10,4 +10,5 @@ public class ItemData {
     public String yPos = "";
     public String xItemPos = "";
     public String imagePath = "";
+    public String path = "";
 }
