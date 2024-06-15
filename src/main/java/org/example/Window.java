@@ -47,7 +47,7 @@ public class Window extends JFrame {
 		pages.put(Page.Menu, menuPage);
 		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
 		
-		changePage(Page.DineInTakeOut);
+		changePage(Page.Menu);
 		
 		debugPage.setVisible(false);
 
