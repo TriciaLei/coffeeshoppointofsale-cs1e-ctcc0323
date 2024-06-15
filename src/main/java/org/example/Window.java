@@ -1,5 +1,8 @@
 package org.example;
 import org.example.Pages.DebugPage;
+import org.example.Pages.InventoryPage;
+import org.example.Pages.ItemPage;
+
 import org.example.Pages.DineInTakeOutPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
@@ -18,6 +21,8 @@ public class Window extends JFrame {
 	public DebugPage debugPage = new DebugPage();
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
+	public InventoryPage Inv = new InventoryPage();
+	public ItemPage itempage = new ItemPage();
 	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
 	public ReceiptPage receiptPage = new ReceiptPage(menuPage.orderPanel);
 	
@@ -39,7 +44,6 @@ public class Window extends JFrame {
 		
 		//TODO#2: add it to the to frame
 		// ex: add(name);
-
 		
 		add(dineInTakeOutPage);
 		add(loginPage);
