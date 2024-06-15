@@ -11,6 +11,7 @@ import java.awt.event.MouseListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.channels.ScatteringByteChannel;
 import java.util.ArrayList;
 
 public class MenuItemsPanel extends CoffeePanel {
@@ -32,8 +33,8 @@ public class MenuItemsPanel extends CoffeePanel {
 	}
 	
 	public void SetUpCards(String type) {
-		try(BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/" + type  + ".txt"))){
-			
+		try(BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/items/" + type  + ".txt"))){
+
 			int i = 0;
 			String line;
 			String path = "";
@@ -43,7 +44,7 @@ public class MenuItemsPanel extends CoffeePanel {
 			String yLocation = "";
 			String xItemPos = "";
 			while((line = reader.readLine()) != null){
-				
+
 				switch (i){
 					case 0:
 						itemName = line;
@@ -80,8 +81,9 @@ public class MenuItemsPanel extends CoffeePanel {
 						i = 0;
 						break;
 				}
-				
+
 			}
+
 			
 			
 			for (CoffeeCard coffeeCard : coffeeCards) {

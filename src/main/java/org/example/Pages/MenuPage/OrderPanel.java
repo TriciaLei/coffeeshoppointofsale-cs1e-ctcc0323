@@ -84,7 +84,7 @@ public class OrderPanel extends CoffeePanel {
 						
 						@Override
 						public void windowClosed(WindowEvent e) {
-							chargeWindow.dispose();
+//							chargeWindow.dispose();
 							chargeWindow = null;
 						}
 						

@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="bugfix and refactor some code">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ItemData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Cold Coffee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Cold Coffee.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Hot Coffee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Hot Coffee.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Pastries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Pastries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Salads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Salads.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Sandwiches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Sandwiches.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Smoothies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Smoothies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Specialty Drinks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Specialty Drinks.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Tea.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Tea.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +66,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Receipt&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.C:/Dev/Java/coffeeshoppointofsale-cs1e-ctcc0323 [Main.main()].executor": "Run",
+    "Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Receipt",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\src\main\resources\items" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -89,7 +104,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
       </set>
     </attachedChunks>
   </component>
@@ -119,6 +134,8 @@
       <workItem from="1718334166471" duration="9232000" />
       <workItem from="1718343757831" duration="3577000" />
       <workItem from="1718367792856" duration="6360000" />
+      <workItem from="1718413307596" duration="111000" />
+      <workItem from="1718416111263" duration="4046000" />
     </task>
     <task id="LOCAL-00001" summary="bugfix and refactor some code">
       <option name="closed" value="true" />
@@ -149,6 +166,37 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="bugfix and refactor some code" />
     <option name="LAST_COMMIT_MESSAGE" value="bugfix and refactor some code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coffeeshoppointofsale_cs1e_ctcc0323$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1718347235115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

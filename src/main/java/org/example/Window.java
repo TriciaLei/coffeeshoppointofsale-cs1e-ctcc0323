@@ -29,12 +29,16 @@ public class Window extends JFrame {
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
 	public static Page currentPage = Page.DineInTakeOut;
+
+	private MenuItemData itemDatas;
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
 	
 	public Window(int width, int height){
-		
+
+		itemDatas = new MenuItemData();
+
 		setSize(width, height);
 		setVisible(true);
 		setLayout(null);

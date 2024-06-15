@@ -91,7 +91,7 @@ public class InventoryPage extends CoffeePanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Window.changePageToDebug();
+//				Window.changePageToDebug();
 				
 			}
 			
