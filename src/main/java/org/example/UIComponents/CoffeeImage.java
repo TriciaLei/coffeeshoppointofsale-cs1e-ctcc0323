@@ -9,7 +9,7 @@ import java.awt.event.MouseListener;
 public class CoffeeImage extends JLabel{
     public CoffeeImage(Icon image){
        setIcon(image);
-       setBounds(getX(),getY(),1280,720);
+       setBounds(getX(),getY(),getIcon().getIconWidth(),getIcon().getIconHeight());
        addMouseListener(new MouseListener() {
            @Override
            public void mouseClicked(MouseEvent e) {
@@ -28,12 +28,12 @@ public class CoffeeImage extends JLabel{
 
            @Override
            public void mouseEntered(MouseEvent e) {
-           setBackground(Color.pink);
+//           setBackground(Color.pink);
            }
 
            @Override
            public void mouseExited(MouseEvent e) {
-               setBackground(Color.black);
+//               setBackground(Color.black);
 
            }
        });

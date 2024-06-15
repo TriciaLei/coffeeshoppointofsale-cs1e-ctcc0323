@@ -1,0 +1,196 @@
+Espresso - Small
+src/main/resources/Menu/espresso.png
+300
+20
+10
+30
+
+Espresso - Medium
+src/main/resources/Menu/espresso.png
+300
+260
+10
+25
+
+Espresso - Large
+src/main/resources/Menu/espresso.png
+300
+490
+10
+30
+
+Espresso - Grande
+src/main/resources/Menu/espresso.png
+300
+720
+10
+30
+
+Americano - Small
+src/main/resources/Menu/Americano.png
+300
+20
+260
+20
+
+Americano - Medium
+src/main/resources/Menu/Americano.png
+300
+260
+260
+15
+
+Americano - Large
+src/main/resources/Menu/Americano.png
+300
+490
+260
+20
+
+Americano - Grande
+src/main/resources/Menu/Americano.png
+300
+720
+260
+20
+
+Cappuccino - Small
+src/main/resources/Menu/Cappucino.png
+300
+20
+490
+15
+
+Cappuccino - Medium
+src/main/resources/Menu/Cappucino.png
+300
+260
+490
+10
+
+Cappuccino - Large
+src/main/resources/Menu/Cappucino.png
+300
+490
+490
+15
+
+Cappuccino - Grande
+src/main/resources/Menu/Cappucino.png
+300
+720
+490
+15
+
+Latte - Small
+src/main/resources/Menu/Spanish Latte.png
+300
+20
+720
+45
+
+Latte - Medium
+src/main/resources/Menu/Spanish Latte.png
+300
+260
+720
+35
+
+Latte - Large
+src/main/resources/Menu/Spanish Latte.png
+300
+490
+720
+45
+
+Latte - Grande
+src/main/resources/Menu/Spanish Latte.png
+300
+720
+720
+45
+
+Flat White - Small
+src/main/resources/Menu/flatwhite.png
+300
+20
+970
+20
+
+Flat White - Medium
+src/main/resources/Menu/flatwhite.png
+300
+260
+970
+10
+
+Flat White - Large
+src/main/resources/Menu/flatwhite.png
+300
+490
+970
+20
+
+Flat White - Grande
+src/main/resources/Menu/flatwhite.png
+300
+720
+970
+20
+
+Mocha - Small
+src/main/resources/Menu/mocha.png
+300
+20
+1220
+30
+
+Mocha - Medium
+src/main/resources/Menu/mocha.png
+300
+260
+1220
+35
+
+Mocha - Large
+src/main/resources/Menu/mocha.png
+300
+490
+1220
+30
+
+Mocha - Grande
+src/main/resources/Menu/mocha.png
+300
+720
+1220
+30
+
+Macchiato - Small
+src/main/resources/Menu/Caramel Macchiato.png
+300
+20
+1470
+20
+
+Macchiato - Medium
+src/main/resources/Menu/Caramel Macchiato.png
+300
+260
+1470
+15
+
+Macchiato - Large
+src/main/resources/Menu/Caramel Macchiato.png
+300
+490
+1470
+25
+
+Macchiato - Grande
+src/main/resources/Menu/Caramel Macchiato.png
+300
+720
+1470
+20
+
