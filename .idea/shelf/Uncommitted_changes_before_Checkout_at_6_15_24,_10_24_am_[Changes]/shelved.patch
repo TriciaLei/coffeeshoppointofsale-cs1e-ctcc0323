@@ -1,0 +1,365 @@
+Index: src/main/resources/Pastries.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Croissant\nsrc/main/resources/Menu/espresso.png\n300\n20\n10\n60\n\nMuffin - Blueberry\nsrc/main/resources/Menu/espresso.png\n300\n260\n10\n25\n\nMuffin - Chocolate\nsrc/main/resources/Menu/espresso.png\n300\n490\n10\n25\n\nMuffin - Bran\nsrc/main/resources/Menu/espresso.png\n300\n720\n10\n50\n\nBagel\nsrc/main/resources/Menu/espresso.png\n300\n20\n260\n70\n\nScone\nsrc/main/resources/Menu/espresso.png\n300\n260\n260\n75\n\nCookies\nsrc/main/resources/Menu/espresso.png\n300\n490\n260\n70\n\nBrownies\nsrc/main/resources/Menu/espresso.png\n300\n720\n260\n60
+===================================================================
+diff --git a/src/main/resources/Pastries.txt b/src/main/resources/Pastries.txt
+--- a/src/main/resources/Pastries.txt	
++++ b/src/main/resources/Pastries.txt	
+@@ -1,26 +1,26 @@
+ Croissant
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/Crossiant.png
+ 300
+ 20
+ 10
+ 60
+ 
+ Muffin - Blueberry
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/muffb.png
+ 300
+ 260
+ 10
+ 25
+ 
+ Muffin - Chocolate
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/muffc.png
+ 300
+ 490
+ 10
+ 25
+ 
+ Muffin - Bran
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/bran.png
+ 300
+ 720
+ 10
+Index: src/main/resources/Tea.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Chai Latte - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n10\n25\n\nChai Latte - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n10\n20\n\nChai Latte - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n10\n25\n\nChai Latte - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n10\n25\n\nMatcha Latte - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n260\n20\n\nMatcha Latte - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n260\n5\n\nMatcha Latte - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n260\n15\n\nMatcha Latte - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n260\n10\n\nHerbal Tea - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n490\n20\n\nHerbal Tea - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n490\n10\n\nHerbal Tea - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n490\n20\n\nHerbal Tea - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n490\n15\n\nIced Tea - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n720\n30\n\nIced Tea - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n720\n25\n\nIced Tea - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n720\n35\n\nIced Tea - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n720\n30\n\n
+===================================================================
+diff --git a/src/main/resources/Tea.txt b/src/main/resources/Tea.txt
+--- a/src/main/resources/Tea.txt	
++++ b/src/main/resources/Tea.txt	
+@@ -1,110 +1,110 @@
+-Chai Latte - Small
+-src/main/resources/Menu/espresso.png
++Green Tea - Small
++src/main/resources/Menu/greenTea.png
+ 300
+ 20
+ 10
+ 25
+ 
+-Chai Latte - Medium
+-src/main/resources/Menu/espresso.png
++Green Tea - Medium
++src/main/resources/Menu/greenTea.png
+ 300
+ 260
+ 10
+ 20
+ 
+-Chai Latte - Large
+-src/main/resources/Menu/espresso.png
++Green Tea - Large
++src/main/resources/Menu/greenTea.png
+ 300
+ 490
+ 10
+ 25
+ 
+-Chai Latte - Grande
+-src/main/resources/Menu/espresso.png
++Green Tea - Grande
++src/main/resources/Menu/greenTea.png
+ 300
+ 720
+ 10
+ 25
+ 
+-Matcha Latte - Small
+-src/main/resources/Menu/espresso.png
++Oolong Tea - Small
++src/main/resources/Menu/OolongT.png
+ 300
+ 20
+ 260
+ 20
+ 
+-Matcha Latte - Medium
+-src/main/resources/Menu/espresso.png
++Oolong Tea - Medium
++src/main/resources/Menu/OolongT.png
+ 300
+ 260
+ 260
+ 5
+ 
+-Matcha Latte - Large
+-src/main/resources/Menu/espresso.png
++Oolong Tea - Large
++src/main/resources/Menu/OolongT.png
+ 300
+ 490
+ 260
+ 15
+ 
+-Matcha Latte - Grande
+-src/main/resources/Menu/espresso.png
++Oolong Tea - Grande
++src/main/resources/Menu/OolongT.png
+ 300
+ 720
+ 260
+ 10
+ 
+-Herbal Tea - Small
+-src/main/resources/Menu/espresso.png
++Hibiscus Tea - Small
++src/main/resources/Menu/Hibiscus.png
+ 300
+ 20
+ 490
+ 20
+ 
+-Herbal Tea - Medium
+-src/main/resources/Menu/espresso.png
++Hibiscus Tea - Medium
++src/main/resources/Menu/Hibiscus.png
+ 300
+ 260
+ 490
+ 10
+ 
+-Herbal Tea - Large
+-src/main/resources/Menu/espresso.png
++Hibiscus Tea - Large
++src/main/resources/Menu/Hibiscus.png
+ 300
+ 490
+ 490
+ 20
+ 
+-Herbal Tea - Grande
+-src/main/resources/Menu/espresso.png
++Hibiscus Tea - Grande
++src/main/resources/Menu/Hibiscus.png
+ 300
+ 720
+ 490
+ 15
+ 
+-Iced Tea - Small
+-src/main/resources/Menu/espresso.png
++Black Tea - Small
++src/main/resources/Menu/BlackTea.png
+ 300
+ 20
+ 720
+ 30
+ 
+-Iced Tea - Medium
+-src/main/resources/Menu/espresso.png
++Black Tea - Medium
++src/main/resources/Menu/BlackTea.png
+ 300
+ 260
+ 720
+ 25
+ 
+-Iced Tea - Large
+-src/main/resources/Menu/espresso.png
++Black Tea - Large
++src/main/resources/Menu/BlackTea.png
+ 300
+ 490
+ 720
+ 35
+ 
+-Iced Tea - Grande
+-src/main/resources/Menu/espresso.png
++Black Tea - Grande
++src/main/resources/Menu/BlackTea.png
+ 300
+ 720
+ 720
+Index: src/main/resources/Cold Coffee.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Iced Americano - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n10\n5\n\nIced Americano - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n10\n5\n\nIced Americano - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n10\n5\n\nIced Americano - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n10\n5\n\nIced Latte - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n260\n30\n\nIced Latte - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n260\n20\n\nIced Latte - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n260\n30\n\nIced Latte - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n260\n30\n\nIced Mocha - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n490\n20\n\nIced Mocha - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n490\n15\n\nIced Mocha - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n490\n25\n\nIced Mocha - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n490\n20\n\nCold Brew - Small\nsrc/main/resources/Menu/espresso.png\n300\n20\n720\n20\n\nCold Brew - Medium\nsrc/main/resources/Menu/espresso.png\n300\n260\n720\n15\n\nCold Brew - Large\nsrc/main/resources/Menu/espresso.png\n300\n490\n720\n25\n\nCold Brew - Grande\nsrc/main/resources/Menu/espresso.png\n300\n720\n720\n25\n\n
+===================================================================
+diff --git a/src/main/resources/Cold Coffee.txt b/src/main/resources/Cold Coffee.txt
+--- a/src/main/resources/Cold Coffee.txt	
++++ b/src/main/resources/Cold Coffee.txt	
+@@ -1,110 +1,110 @@
+ Iced Americano - Small
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldiceda.png
+ 300
+ 20
+ 10
+ 5
+ 
+ Iced Americano - Medium
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldiceda.png
+ 300
+ 260
+ 10
+ 5
+ 
+ Iced Americano - Large
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldiceda.png
+ 300
+ 490
+ 10
+ 5
+ 
+ Iced Americano - Grande
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldiceda.png
+ 300
+ 720
+ 10
+ 5
+ 
+ Iced Latte - Small
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedlatte.png
+ 300
+ 20
+ 260
+ 30
+ 
+ Iced Latte - Medium
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedlatte.png
+ 300
+ 260
+ 260
+ 20
+ 
+ Iced Latte - Large
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedlatte.png
+ 300
+ 490
+ 260
+ 30
+ 
+ Iced Latte - Grande
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedlatte.png
+ 300
+ 720
+ 260
+ 30
+ 
+ Iced Mocha - Small
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedmocha.png
+ 300
+ 20
+ 490
+ 20
+ 
+ Iced Mocha - Medium
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedmocha.png
+ 300
+ 260
+ 490
+ 15
+ 
+ Iced Mocha - Large
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedmocha.png
+ 300
+ 490
+ 490
+ 25
+ 
+ Iced Mocha - Grande
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/icedmocha.png
+ 300
+ 720
+ 490
+ 20
+ 
+ Cold Brew - Small
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldbrew.png
+ 300
+ 20
+ 720
+ 20
+ 
+ Cold Brew - Medium
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldbrew.png
+ 300
+ 260
+ 720
+ 15
+ 
+ Cold Brew - Large
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldbrew.png
+ 300
+ 490
+ 720
+ 25
+ 
+ Cold Brew - Grande
+-src/main/resources/Menu/espresso.png
++src/main/resources/Menu/coldbrew.png
+ 300
+ 720
+ 720
+Index: src/main/java/org/example/Pages/DineInTakeOutPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.Pages;\n\nimport org.example.Page;\nimport org.example.Settings;\nimport org.example.UIComponents.CoffeeImage;\nimport org.example.UIComponents.CoffeeLabel;\nimport org.example.UIComponents.CoffeePanel;\nimport org.example.Window;\n\nimport javax.swing.*;\nimport java.awt.*;\nimport java.awt.event.MouseEvent;\nimport java.awt.event.MouseListener;\n\npublic class DineInTakeOutPage extends CoffeePanel {\n\t\n\t\n\tprivate CoffeePanel dineIn = new CoffeePanel();\n\tprivate CoffeePanel takeOut = new CoffeePanel();\n\tprivate CoffeeImage dineInImage = new CoffeeImage(new ImageIcon(\"coffee-cup.png\"));\n\t\n\t\n\tpublic DineInTakeOutPage(){\n\t\tsetBackground(Settings.currentPalette[0]);\n\t\t\n\t\tdineIn.setBackground(Settings.currentPalette[1]);\n\t\tdineIn.setBorderColor(Settings.currentPalette[2]);\n\t\tdineIn.setBorderThickness(3);\n\t\tdineIn.setBounds(200, 80, 384, 512);\n\t\t\n\t\tCoffeeLabel dineInLabel = new CoffeeLabel(\"Dine In\");\n\t\tdineInLabel.setBounds(142, 412, 150, 60);\n\t\tdineInLabel.setFontSize(32);\n\t\tdineInLabel.setFontColor(Settings.currentPalette[2]);\n\t\tdineInLabel.setFontFormat(Font.ITALIC);\n\t\t\n\t\tdineIn.add(dineInLabel);\n\t\t\n\t\tdineIn.addMouseListener(new MouseListener() {\n\t\t\t@Override\n\t\t\tpublic void mouseClicked(MouseEvent e) {\n\t\t\t\t// Go to the table page\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mousePressed(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mouseReleased(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mouseEntered(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mouseExited(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t});\n\t\t\n\t\ttakeOut.setBackground(Settings.currentPalette[1]);\n\t\ttakeOut.setBorderColor(Settings.currentPalette[2]);\n\t\ttakeOut.setBorderThickness(3);\n\t\ttakeOut.setBounds(704, 80, 384, 512);\n\t\t\n\t\tCoffeeLabel takeOutLabel = new CoffeeLabel(\"Take Out\");\n\t\ttakeOutLabel.setBounds(142, 412, 150, 60);\n\t\ttakeOutLabel.setFontSize(32);\n\t\ttakeOutLabel.setFontColor(Settings.currentPalette[2]);\n\t\ttakeOutLabel.setFontFormat(Font.ITALIC);\n\t\t\n\t\ttakeOut.add(takeOutLabel);\n\t\t\n\t\ttakeOut.addMouseListener(new MouseListener() {\n\t\t\t@Override\n\t\t\tpublic void mouseClicked(MouseEvent e) {\n\t\t\t\tWindow.changePage(Page.Menu);\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mousePressed(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mouseReleased(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mouseEntered(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t\t\n\t\t\t@Override\n\t\t\tpublic void mouseExited(MouseEvent e) {\n\t\t\t\n\t\t\t}\n\t\t});\n\t\t\n\t\tadd(dineIn);\n\t\tadd(takeOut);\n\t}\n}\n
+===================================================================
+diff --git a/src/main/java/org/example/Pages/DineInTakeOutPage.java b/src/main/java/org/example/Pages/DineInTakeOutPage.java
+--- a/src/main/java/org/example/Pages/DineInTakeOutPage.java	
++++ b/src/main/java/org/example/Pages/DineInTakeOutPage.java	
+@@ -17,7 +17,8 @@
+ 	
+ 	private CoffeePanel dineIn = new CoffeePanel();
+ 	private CoffeePanel takeOut = new CoffeePanel();
+-	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("coffee-cup.png"));
++	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("gree.png"));
++	private CoffeeImage takoOutImage = new CoffeeImage(new ImageIcon("gree.png"));
+ 	
+ 	
+ 	public DineInTakeOutPage(){
+@@ -34,8 +35,10 @@
+ 		dineInLabel.setFontColor(Settings.currentPalette[2]);
+ 		dineInLabel.setFontFormat(Font.ITALIC);
+ 		
++		dineInImage.setBounds(64 ,64, 256, 256);
++		
+ 		dineIn.add(dineInLabel);
+-		
++		dineIn.add(dineInImage);
+ 		dineIn.addMouseListener(new MouseListener() {
+ 			@Override
+ 			public void mouseClicked(MouseEvent e) {
+@@ -74,6 +77,9 @@
+ 		takeOutLabel.setFontColor(Settings.currentPalette[2]);
+ 		takeOutLabel.setFontFormat(Font.ITALIC);
+ 		
++		takoOutImage.setBounds(64 ,64, 256, 256);
++		
++		takeOut.add(takoOutImage);
+ 		takeOut.add(takeOutLabel);
+ 		
+ 		takeOut.addMouseListener(new MouseListener() {
