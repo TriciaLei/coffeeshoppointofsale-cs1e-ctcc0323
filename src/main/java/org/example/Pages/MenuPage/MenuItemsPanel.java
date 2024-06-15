@@ -1,5 +1,7 @@
 package org.example.Pages.MenuPage;
 
+import org.example.ItemData;
+import org.example.MenuItemData;
 import org.example.Settings;
 import org.example.UIComponents.CoffeeCard;
 import org.example.UIComponents.CoffeePanel;

@@ -18,13 +18,13 @@ import java.util.Map;
 
 public class Window extends JFrame {
 	
-	public DebugPage debugPage = new DebugPage();
-	public LoginPage loginPage = new LoginPage();
-	public MenuPage menuPage = new MenuPage();
-	public InventoryPage Inv = new InventoryPage();
-	public ItemPage itempage = new ItemPage();
-	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
-	public ReceiptPage receiptPage = new ReceiptPage(menuPage.orderPanel);
+	public DebugPage debugPage;
+	public LoginPage loginPage;
+	public MenuPage menuPage;
+	public InventoryPage Inv;
+	public ItemPage itempage;
+	public DineInTakeOutPage dineInTakeOutPage;
+	public ReceiptPage receiptPage;
 	
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
@@ -38,6 +38,14 @@ public class Window extends JFrame {
 	public Window(int width, int height){
 
 		itemDatas = new MenuItemData();
+
+		menuPage = new MenuPage();
+		loginPage = new LoginPage();
+		debugPage = new DebugPage();
+		Inv = new InventoryPage();
+		itempage = new ItemPage();
+		dineInTakeOutPage = new DineInTakeOutPage();
+		receiptPage = new ReceiptPage(menuPage.orderPanel);
 
 		setSize(width, height);
 		setVisible(true);

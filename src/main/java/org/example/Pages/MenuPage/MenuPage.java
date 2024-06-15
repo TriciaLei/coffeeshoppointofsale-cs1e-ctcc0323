@@ -1,7 +1,6 @@
 package org.example.Pages.MenuPage;
 
-import org.example.Page;
-import org.example.Settings;
+import org.example.*;
 import org.example.UIComponents.CoffeeButton;
 import org.example.UIComponents.CoffeePanel;
 import org.example.Window;

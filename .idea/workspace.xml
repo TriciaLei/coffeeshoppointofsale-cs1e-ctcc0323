@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="bugfix and refactor some code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ItemData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ItemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Cold Coffee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Cold Coffee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Hot Coffee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Hot Coffee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Pastries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Pastries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Salads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Salads.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Sandwiches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Sandwiches.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Smoothies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Smoothies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Specialty Drinks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Specialty Drinks.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Tea.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Tea.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +61,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Gradle.C:/Dev/Java/coffeeshoppointofsale-cs1e-ctcc0323 [Main.main()].executor": "Run",
-    "Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor": "Debug",
+    "Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -166,37 +157,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="bugfix and refactor some code" />
     <option name="LAST_COMMIT_MESSAGE" value="bugfix and refactor some code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/MenuItemData.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/coffeeshoppointofsale_cs1e_ctcc0323$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1718347235115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
