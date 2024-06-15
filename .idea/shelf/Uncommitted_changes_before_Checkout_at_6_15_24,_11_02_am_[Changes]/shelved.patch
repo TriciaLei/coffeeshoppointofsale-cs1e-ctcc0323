@@ -1,0 +1,83 @@
+Index: src/main/java/org/example/Window.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\nimport org.example.Pages.DebugPage;\nimport org.example.Pages.LoginPage;\nimport org.example.Pages.MenuPage.MenuPage;\n\nimport javax.swing.*;\n\npublic class Window extends JFrame {\n\t\n\tpublic DebugPage debugPage = new DebugPage();\n\tpublic LoginPage loginPage = new LoginPage();\n\tpublic MenuPage menuPage = new MenuPage();\n\t\n\t//TODO#1: Make an instance of your class here\n\t// ex: public ExampleClass name = new ExampleClass();\n\t\n\tpublic Window(int width, int height){\n\t\t\n\t\tsetSize(width, height);\n\t\tsetVisible(true);\n\t\tsetLayout(null);\n\t\t\n\t\tsetDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\n\t\tsetResizable(false);\n\t\t\n\t\t//TODO#2: add it to the to frame\n\t\t// ex: add(name);\n\n//\t\tadd(loginPage);\n//\t\tadd(debugPage);\n\t\tadd(menuPage);\n\n//\t\tloginPage.setVisible(true);\n//\t\tdebugPage.setVisible(false);\n\t\t\n\t\t//TODO#3: make sure to setVisible() to true\n\t\t// and set this to false so that you can see own class\n\t\t// ex: menuPage.setVisible(false);\n\t\t// ex: name.setVisible(true);\n\t\t\n\t\t\n\t\tmenuPage.setVisible(true);\n\t\t\n\t\tsetTitle(\"Coffee Shop sa tabe tabe\");\n\t\t\n\t\t\n\t\t\n\t\t\n\t}\n\n\t//Temporary Code\n\tpublic static void changePageToDebug(){\n//\t\tdebugPage.setVisible(true);\n//\t\tloginPage.setVisible(false);\n\t}\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Window.java b/src/main/java/org/example/Window.java
+--- a/src/main/java/org/example/Window.java	(revision 0e8ff49b7dce43dfdc8a8e40c47335299ebc0fad)
++++ b/src/main/java/org/example/Window.java	(date 1718420564207)
+@@ -2,6 +2,7 @@
+ import org.example.Pages.DebugPage;
+ import org.example.Pages.LoginPage;
+ import org.example.Pages.MenuPage.MenuPage;
++import org.example.Pages.Table;
+ 
+ import javax.swing.*;
+ 
+@@ -10,6 +11,7 @@
+ 	public DebugPage debugPage = new DebugPage();
+ 	public LoginPage loginPage = new LoginPage();
+ 	public MenuPage menuPage = new MenuPage();
++	public Table table = new Table();
+ 	
+ 	//TODO#1: Make an instance of your class here
+ 	// ex: public ExampleClass name = new ExampleClass();
+@@ -28,7 +30,7 @@
+ 
+ //		add(loginPage);
+ //		add(debugPage);
+-		add(menuPage);
++//		add(menuPage);
+ 
+ //		loginPage.setVisible(true);
+ //		debugPage.setVisible(false);
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"d0cfb17c-0910-4e63-a458-2fe500a35935\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/kopiii.png\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuHeader.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Pages/Table.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeeImage.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/example/Window.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Window.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <projects_view>\n          <tree_state>\n            <expand />\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 8\n}</component>\n  <component name=\"ProjectId\" id=\"2hh6Xkst5XWF1APRSt3VQQHPBw2\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"Table\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Unnamed\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Main\" />\n      <module name=\"coffeeshoppointofsale-cs1e-ctcc0323.main\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"d0cfb17c-0910-4e63-a458-2fe500a35935\" name=\"Changes\" comment=\"\" />\n      <created>1718034006872</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1718034006872</updated>\n      <workItem from=\"1718034008397\" duration=\"113000\" />\n      <workItem from=\"1718080139727\" duration=\"1823000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0e8ff49b7dce43dfdc8a8e40c47335299ebc0fad)
++++ b/.idea/workspace.xml	(date 1718420509227)
+@@ -5,12 +5,22 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="d0cfb17c-0910-4e63-a458-2fe500a35935" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/kopiii.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuHeader.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/Table.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/CoffeeImage.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/BlackTea.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/Crossiant.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/Hibiscus.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/OolongT.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/bran.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/coldbrew.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/coldiceda.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/dineeinn.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/greenTea.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/icedlatte.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/icedmocha.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/muffb.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/muffc.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/peppermint.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/table1.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/takeoutt.png" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -61,7 +71,7 @@
+     "Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor": "Run",
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "Table",
++    "git-widget-placeholder": "Leimesa",
+     "kotlin-language-version-configured": "true",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
