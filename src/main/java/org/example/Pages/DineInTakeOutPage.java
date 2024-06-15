@@ -17,8 +17,8 @@ public class DineInTakeOutPage extends CoffeePanel {
 	
 	private CoffeePanel dineIn = new CoffeePanel();
 	private CoffeePanel takeOut = new CoffeePanel();
-	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("gree.png"));
-	private CoffeeImage takoOutImage = new CoffeeImage(new ImageIcon("gree.png"));
+	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("src/main/resources/Menu/dineeinn.png"));
+	private CoffeeImage takoOutImage = new CoffeeImage(new ImageIcon("src/main/resources/Menu/takeoutt.png"));
 	
 	
 	public DineInTakeOutPage(){
