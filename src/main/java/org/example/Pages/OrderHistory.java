@@ -1,12 +1,16 @@
 package org.example.Pages;
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-import javax.swing.ImageIcon;
+import javax.swing.*;
 
 import org.example.Page;
+import org.example.Settings;
 import org.example.Window;
 import org.example.UIComponents.CoffeeButton;
 import org.example.UIComponents.CoffeeImage;
@@ -35,7 +39,11 @@ public class OrderHistory extends CoffeePanel {
 	public CoffeePanel panel2 = new CoffeePanel();
 	public CoffeePanel panel3 = new CoffeePanel();
 	public CoffeePanel panel4 = new CoffeePanel();
+	
+	public JTextArea receiptView = new JTextArea();
 
+	private int currentReceipt = 1;
+	
 
 	
 	
@@ -92,13 +100,26 @@ public class OrderHistory extends CoffeePanel {
 		orderHeader.setFontSize(50);
 		
 		panel1.setBackground(new Color(166, 123, 91));
-		panel1.setBounds(0,0,400,720);
+		panel1.setBounds(0,0,440,720);
 		panel2.setBackground(new Color(166, 123, 91));
-		panel2.setBounds(860,0,440,720);
+		panel2.setBounds(820,0,480,720);
 		panel3.setBackground(new Color(166, 123, 91));
 		panel3.setBounds(30,70,1270,50);
 		panel4.setBackground(new Color(166, 123, 91));
 		panel4.setBounds(30,620,1270,70);
+		
+		receiptView.setBounds(0, 0, 400, 0);
+		receiptView.setPreferredSize(new Dimension(400, 0));
+		receiptView.setBackground(Settings.currentPalette[1]);
+		receiptView.setEditable(false);
+		receiptView.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
+		receiptView.setText(readReceipt());
+//		receiptView.setLineWrap(true);
+		
+		JScrollPane receiptScroll = new JScrollPane(receiptView);
+		receiptScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		receiptScroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		receiptScroll.setBounds(440, 120, 400, 500);
 		
 
 		this.setBackground(new Color(228, 197, 158));
@@ -111,24 +132,75 @@ public class OrderHistory extends CoffeePanel {
 				
 			}
 		});
+		
+		next.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(currentReceipt < Settings.countReceipt()){
+					currentReceipt++;
+					System.out.println(currentReceipt);
+					receiptView.setText(readReceipt());
+				}
+			}
+		});
+		
+		previous.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(currentReceipt > 1){
+					currentReceipt--;
+					System.out.println(currentReceipt);
+					receiptView.setText(readReceipt());
+				}
+			}
+		});
+		
+		add(receiptScroll);
+		add(exit);
+		add(next);
+		add(previous);
+		add(icedlatte);
+		add(greeksalad);
+		add(chickenseasar);
+		add(coldbrew);
+		add(affogato);
+		add(caprese);
+		add(Crossiant);
+		add(Americano);
+		add(orderHeader);
+		add(panel4);
+		add(panel3);
+		add(panel1);
+		add(panel2);
+
+
+	}
+	
+	
+	
+	
+	public String readReceipt(){
+		String receiptText = "";
+		int receiptViewHeight  = 0;
+		if(currentReceipt <= Settings.countReceipt()){
+			try(BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/Reciepts/" + currentReceipt + ".txt"))){
 				
-				add(exit);
-				add(next);
-				add(previous);
-				add(icedlatte);
-				add(greeksalad);
-				add(chickenseasar);
-				add(coldbrew);
-				add(affogato);
-				add(caprese);
-				add(Crossiant);
-				add(Americano);
-				add(orderHeader);
-				add(panel4);
-				add(panel3);
-				add(panel2);
-				add(panel1);
-
-
+				String line = "";
+				while((line = reader.readLine()) != null){
+					receiptText += line;
+					receiptText += "\n";
+					receiptViewHeight += 20;
+					
+				}
+				
+			}catch (IOException e){
+			
+			}
+		}
+		
+		receiptView.setSize(getWidth(), receiptViewHeight);
+		receiptView.setPreferredSize(new Dimension(receiptView.getWidth(), receiptView.getHeight()));
+		
+		return receiptText;
 	}
 }
