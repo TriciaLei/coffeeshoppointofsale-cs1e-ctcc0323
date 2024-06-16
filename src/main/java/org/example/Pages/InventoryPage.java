@@ -222,7 +222,7 @@ public class InventoryPage extends CoffeePanel {
 							
 							
 							
-							file.renameTo(new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png"));
+							file.renameTo(new File(System.getProperty("user.dir") + "/src/main/resources/Menu/" + nameTextField.getText() + ".png"));
 							
 						}
 					}

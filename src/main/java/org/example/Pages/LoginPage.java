@@ -30,7 +30,7 @@ public class LoginPage extends CoffeePanel {
 	public LoginPage(){
 	
 		// Sets up the location and sizes of all components of this page
-		appName.setLocation(120, 50);
+		appName.setLocation(340, 50);
 		appName.setSize(1000, 120);
 		appName.setFontSize(100);
 		

@@ -95,7 +95,7 @@ public class MenuData {
     }
 	
 	// Reading and creating the menu items for the Menu page.
-    private void readItems() {
+    public void readItems() {
         for (String t : menuCategories) {
 			
             try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/items/" + t + ".txt"))) {

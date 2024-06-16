@@ -6,6 +6,7 @@ import org.example.Pages.MenuPage.ReceiptPage;
 import org.example.UIComponents.CoffeePanel;
 
 import javax.swing.*;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +33,12 @@ public class Window extends JFrame {
 	// ex: public ExampleClass name = new ExampleClass();
 	
 	public Window(int width, int height){
+		System.out.println(System.getProperty("user.dir") + "/src/main\\resources\\Menu\\");
+	//	System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png"));
+
+		File file = new File(".");
+
+		System.out.println(file.getAbsolutePath());
 		
 		Settings.ReadAccounts();
 		
@@ -79,7 +86,7 @@ public class Window extends JFrame {
 		pages.put(Page.EditInventoryItems, inventoryItemPage);
 		pages.put(Page.Table,tablePage);
 		
-		changePage(Page.OrderHistory);
+		changePage(Page.Login);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class
