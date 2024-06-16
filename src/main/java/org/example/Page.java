@@ -1,7 +1,8 @@
 package org.example;
 
 public enum Page {
-	
+
+	OrderHistory,
 	Login,
 	DineInTakeOut,
 	Table,

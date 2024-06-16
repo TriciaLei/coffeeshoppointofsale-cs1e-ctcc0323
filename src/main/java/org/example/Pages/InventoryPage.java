@@ -54,7 +54,13 @@ public class InventoryPage extends CoffeePanel {
 		InvLabel.setLocation(490,1);
 		InvLabel.setSize(800,70);
 		InvLabel.setFontSize(50);
-		
+
+		OrderHistory.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Window.changePage(Page.OrderHistory);
+			}
+		});
 		//Buttons Size and Location
 		InvBtn.setBounds(150,150,150,40);
 		InvBtn.setLocation(360,370);

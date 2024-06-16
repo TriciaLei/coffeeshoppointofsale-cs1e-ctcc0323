@@ -230,7 +230,7 @@ public class TablePage extends CoffeePanel {
         image7.addMouseListener(new MouseListener() {
          @Override
          public void mouseClicked(MouseEvent e) {
-          ReceiptPage.tablenumber = image1.label.getText();
+          ReceiptPage.tablenumber = image7.label.getText();
           ReceiptPage.isTakeout = false;
           Window.changePage(Page.Menu);
          }

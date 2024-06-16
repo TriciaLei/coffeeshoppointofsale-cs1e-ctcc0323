@@ -20,7 +20,8 @@ public class Window extends JFrame {
 	public ReceiptPage receiptPage;
 	public InventoryItemPage inventoryItemPage;
 	public TablePage tablePage;
-	
+	public OrderHistory orderHistory;
+
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
 	public static Page currentPage = Page.DineInTakeOut;
@@ -36,6 +37,7 @@ public class Window extends JFrame {
 		
 		menuData = new MenuData();
 
+
 		menuPage = new MenuPage(menuData);
 		loginPage = new LoginPage();
 		debugPage = new DebugPage();
@@ -45,6 +47,7 @@ public class Window extends JFrame {
 		receiptPage = new ReceiptPage(menuPage.orderPanel);
 		inventoryItemPage = new InventoryItemPage(menuData);
 		tablePage = new TablePage();
+		orderHistory = new OrderHistory();
 
 		setSize(width, height);
 		setVisible(true);
@@ -55,7 +58,8 @@ public class Window extends JFrame {
 		
 		//TODO#2: add it to the to frame
 		// ex: add(name);
-		
+
+
 		add(dineInTakeOutPage);
 		add(loginPage);
 		add(menuPage);
@@ -64,7 +68,9 @@ public class Window extends JFrame {
 		add(inventoryPage);
 		add(inventoryItemPage);
 		add(tablePage);
-		
+		add(orderHistory);
+
+		pages.put(Page.OrderHistory, orderHistory);
 		pages.put(Page.Login, loginPage);
 		pages.put(Page.Menu, menuPage);
 		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
@@ -73,7 +79,7 @@ public class Window extends JFrame {
 		pages.put(Page.EditInventoryItems, inventoryItemPage);
 		pages.put(Page.Table,tablePage);
 		
-		changePage(Page.DineInTakeOut);
+		changePage(Page.OrderHistory);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class

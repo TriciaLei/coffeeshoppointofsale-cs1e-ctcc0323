@@ -10,6 +10,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -108,9 +111,23 @@ public class ReceiptPage extends CoffeePanel {
 		receiptText.setText(header + receipt + seperator + totalText + "P" + orderPanel.currentTotal + "\n" + cashText + "P" +cash
 				+  "\n" + changeText + "P" + change + "\n" + seperator + footNoteText);
 		
-		
-		System.out.println(receiptText.getText());
+
+//		System.out.println(receiptText.getText());
+
+		writeReceipt(receiptText.getText());
 	}
-	
+
+
+	public static void writeReceipt(String receipt) {
+
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/Reciepts/" + (Settings.countReceipt() + 1) + ".txt"))){
+
+			writer.write(receipt);
+			writer.newLine();
+
+		}catch (IOException e){
+
+		}
+	}
 	
 }

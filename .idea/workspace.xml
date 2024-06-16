@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f16307e-2fbf-4d2d-984d-5931429e0863" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Reciepts/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Reciepts/2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/DineInTakeOutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
+    </list>
+    <list id="6f520438-ed17-438a-8fe6-a13c2a8cd97b" name="Changes by mendo" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/TablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/TablePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
+    </list>
+    <list id="06a94b19-4f30-4c9b-9a5b-8499f6b12a59" name="Changes by trixiemaeb.alburo" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +54,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/example/Settings.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="6f520438-ed17-438a-8fe6-a13c2a8cd97b" />
+        <range start1="11" end1="12" start2="12" end2="14" changelist="06a94b19-4f30-4c9b-9a5b-8499f6b12a59" />
+        <range start1="16" end1="17" start2="18" end2="20" changelist="8f16307e-2fbf-4d2d-984d-5931429e0863" />
+        <range start1="21" end1="23" start2="24" end2="29" changelist="8f16307e-2fbf-4d2d-984d-5931429e0863" />
+        <range start1="68" end1="68" start2="74" end2="90" changelist="6f520438-ed17-438a-8fe6-a13c2a8cd97b" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -56,16 +80,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Unnamed.executor": "Run",
     "Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Testing",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Dev/coffeeshoppointofsale-cs1e-ctcc0323",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

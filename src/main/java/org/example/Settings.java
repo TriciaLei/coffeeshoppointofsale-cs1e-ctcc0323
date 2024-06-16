@@ -3,24 +3,30 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
 public class Settings {
 	
-	
+
+
 	// 0 - Base Color
 	// 1 - Secondary Color
 	// 2 - Text Color and Border Color
 	// 3 - Highlights
-	
+
+
 	public static String loggedCashier = "";
 	public static String tableNumber ="";
 	
 	public static HashMap<String, String> credentials = new HashMap<>();
-	
-	
+
+	public static String receiptDirectory = "src/main/resources/Reciepts";
+
+	private static int receiptCount = 0;
+
 	
 	
 	public static Color[] currentPalette = {
@@ -66,6 +72,22 @@ public class Settings {
 			return false;
 		}
 	}
+
+
+	public static int countReceipt(){
+		receiptCount = 0;
+		File directory = new File(receiptDirectory);
+
+		File[] files = directory.listFiles();
+
+		for (File f : files){
+			receiptCount++;
+		}
+
+		return receiptCount;
+	}
+
+
 	
 	public static String getLoggedCashier(){
 		return loggedCashier;
