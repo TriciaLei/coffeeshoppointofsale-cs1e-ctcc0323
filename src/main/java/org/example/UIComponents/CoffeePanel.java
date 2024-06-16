@@ -7,6 +7,7 @@ public class CoffeePanel extends JPanel {
 	
 	private Color m_borderColor = Color.BLACK;
 	private int m_borderThickness = 1;
+
 	
 	public CoffeePanel(){
 		setBounds(0, 0, 1280, 720);
@@ -27,4 +28,7 @@ public class CoffeePanel extends JPanel {
 		setBorder(BorderFactory.createLineBorder(m_borderColor, m_borderThickness, true));
 		
 	}
+
+
 }
+
