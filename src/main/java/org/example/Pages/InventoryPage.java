@@ -220,7 +220,6 @@ public class InventoryPage extends CoffeePanel {
 						if(fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
 							File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
 							
-							System.out.println(file.getAbsoluteFile());
 							
 							
 							file.renameTo(new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png"));

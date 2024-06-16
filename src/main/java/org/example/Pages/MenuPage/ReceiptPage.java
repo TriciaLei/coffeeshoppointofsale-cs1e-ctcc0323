@@ -112,7 +112,6 @@ public class ReceiptPage extends CoffeePanel {
 				+  "\n" + changeText + "P" + change + "\n" + seperator + footNoteText);
 		
 
-//		System.out.println(receiptText.getText());
 
 		writeReceipt(receiptText.getText());
 	}

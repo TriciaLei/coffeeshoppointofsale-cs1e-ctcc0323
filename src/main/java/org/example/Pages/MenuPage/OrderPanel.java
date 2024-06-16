@@ -272,7 +272,6 @@ public class OrderPanel extends CoffeePanel {
 			if(cardCounter >= 7){
 				checkListPanel.setSize(checkListPanel.getWidth(), checkListPanel.getHeight() + order.getHeight() + 20);
 				checkListPanel.setPreferredSize(new Dimension(checkListPanel.getWidth(), checkListPanel.getHeight()));
-				System.out.println(checkListPanel.getWidth() + " : " + checkListPanel.getHeight());
 			}
 
 			order.addMouseListener(new MouseListener() {
@@ -372,7 +371,6 @@ public class OrderPanel extends CoffeePanel {
 				}
 				i++;
 
-				System.out.println(c.getX() +" : " + c.getY());
 
 				checkListPanel.add(c);
 			}

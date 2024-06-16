@@ -101,12 +101,6 @@ public class MenuItemsPanel extends CoffeePanel {
 		setSize(getX(),greatestYLocation + 270);
 		setPreferredSize(new Dimension(getWidth(), greatestYLocation  + 270));
 		
-		System.out.println(greatestYLocation);
-		
-		for (CoffeeCard c : coffeeCards){
-//			System.out.println(c.getX() + " : " + c.getY());
-		}
-		
 	}
 	
 	public void RemoveCards(){

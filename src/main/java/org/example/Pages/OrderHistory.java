@@ -138,7 +138,6 @@ public class OrderHistory extends CoffeePanel {
 			public void actionPerformed(ActionEvent e) {
 				if(currentReceipt < Settings.countReceipt()){
 					currentReceipt++;
-					System.out.println(currentReceipt);
 					receiptView.setText(readReceipt());
 				}
 			}
@@ -149,7 +148,6 @@ public class OrderHistory extends CoffeePanel {
 			public void actionPerformed(ActionEvent e) {
 				if(currentReceipt > 1){
 					currentReceipt--;
-					System.out.println(currentReceipt);
 					receiptView.setText(readReceipt());
 				}
 			}

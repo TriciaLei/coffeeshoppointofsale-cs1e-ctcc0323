@@ -18,21 +18,14 @@ public class MenuData {
         readTypes();
         readItems();
 
-
-        for(Map.Entry<CardData, String> set : itemCards.entrySet()){
-            System.out.println(set.getKey().name + " : "+ set.getValue());
-        }
-
     }
     
     private void readTypes() {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/MenuTypes.txt"))) {
             getMenuTypes();
             readItems();
-            
-            for (Map.Entry<CardData, String> set : itemCards.entrySet()) {
-                System.out.println(set.getKey().name + set.getKey().price);
-            }
+			
+			
         } catch (IOException e) {
 	        throw new RuntimeException(e);
         }
