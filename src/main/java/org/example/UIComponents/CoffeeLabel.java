@@ -11,7 +11,7 @@ public class CoffeeLabel extends JLabel {
 	public CoffeeLabel(String text){
 		
 		setText(text);
-		setFont(new Font(m_fontFamily, Font.PLAIN, m_fontSize));
+		setFont(new Font("", Font.PLAIN, m_fontSize));
 		
 		
 		

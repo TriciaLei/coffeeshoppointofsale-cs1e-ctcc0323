@@ -1,0 +1,112 @@
+Iced Americano - Small
+src/main/resources/Menu/coldiceda.png
+300
+20
+10
+5
+
+Iced Americano - Medium
+src/main/resources/Menu/coldiceda.png
+300
+260
+10
+5
+
+Iced Americano - Large
+src/main/resources/Menu/coldiceda.png
+300
+490
+10
+5
+
+Iced Americano - Grande
+src/main/resources/Menu/coldiceda.png
+300
+720
+10
+5
+
+Iced Latte - Small
+src/main/resources/Menu/icedlatte.png
+300
+20
+260
+30
+
+Iced Latte - Medium
+src/main/resources/Menu/icedlatte.png
+300
+260
+260
+20
+
+Iced Latte - Large
+src/main/resources/Menu/icedlatte.png
+300
+490
+260
+30
+
+Iced Latte - Grande
+src/main/resources/Menu/icedlatte.png
+300
+720
+260
+30
+
+Iced Mocha - Small
+src/main/resources/Menu/icedmocha.png
+300
+20
+490
+20
+
+Iced Mocha - Medium
+src/main/resources/Menu/icedmocha.png
+300
+260
+490
+15
+
+Iced Mocha - Large
+src/main/resources/Menu/icedmocha.png
+300
+490
+490
+25
+
+Iced Mocha - Grande
+src/main/resources/Menu/icedmocha.png
+300
+720
+490
+20
+
+Cold Brew - Small
+src/main/resources/Menu/coldbrew.png
+300
+20
+720
+20
+
+Cold Brew - Medium
+src/main/resources/Menu/coldbrew.png
+300
+260
+720
+15
+
+Cold Brew - Large
+src/main/resources/Menu/coldbrew.png
+300
+490
+720
+25
+
+Cold Brew - Grande
+src/main/resources/Menu/coldbrew.png
+300
+720
+720
+25
+
