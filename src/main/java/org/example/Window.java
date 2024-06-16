@@ -3,11 +3,10 @@ import org.example.Pages.DebugPage;
 import org.example.Pages.DineInTakeOutPage;
 import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
-import org.example.UIComponents.CoffeeLabel;
+import org.example.Pages.TablePage;
 import org.example.UIComponents.CoffeePanel;
 
 import javax.swing.*;
-import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +16,8 @@ public class Window extends JFrame {
 	public LoginPage loginPage = new LoginPage();
 	public MenuPage menuPage = new MenuPage();
 	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
-	
+    public TablePage table =new TablePage();
+
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
 	public static Page currentPage = Page.DineInTakeOut;
@@ -37,28 +37,29 @@ public class Window extends JFrame {
 		//TODO#2: add it to the to frame
 		// ex: add(name);
 
-		
-		add(dineInTakeOutPage);
-		add(loginPage);
+		add(table);
+//		add(dineInTakeOutPage);
+//		add(loginPage);
 		add(menuPage);
-		add(debugPage);
+//		add(debugPage);
 		
 		pages.put(Page.Login, loginPage);
 		pages.put(Page.Menu, menuPage);
 		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
+		pages.put(Page.Table,table);
 		
-		changePage(Page.DineInTakeOut);
+		changePage(Page.Table);
 		
 		debugPage.setVisible(false);
 
 
 
-//		add(loginPage);
+		add(loginPage);
 		add(menuPage);
-//		add(debugPage);
-//   	add(dineInTakeOutPage);
-//		loginPage.setVisible(true);
-//		debugPage.setVisible(false);
+		add(debugPage);
+     	add(dineInTakeOutPage);
+		loginPage.setVisible(false);
+		debugPage.setVisible(false);
 
 		
 		//TODO#3: make sure to setVisible() to true

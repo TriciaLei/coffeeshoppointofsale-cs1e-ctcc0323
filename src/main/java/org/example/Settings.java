@@ -15,6 +15,8 @@ public class Settings {
 			new Color(240, 230, 214),
 			new Color(50, 44, 43),
 			new Color(250, 238, 209),
+
+
 	};
 	
 }

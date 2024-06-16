@@ -39,7 +39,7 @@ public class DineInTakeOutPage extends CoffeePanel {
 		dineIn.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// Go to the table page
+				Window.changePage(Page.Table);
 			}
 			
 			@Override
