@@ -53,28 +53,28 @@ public class OrderHistory extends CoffeePanel {
 		//BUTTONS
 		previous.setBounds(100,100,170,70);
 		previous.setLocation(100,380);
-		previous.setBorderColor(new Color(166, 123, 91));
+		previous.setBorderColor(Settings.currentPalette[2]);
 		previous.setBorderThickness(1);
 		previous.setBackground(new Color(228, 197, 158));
-		previous.setFontColor(new Color(128, 61, 59));
+		previous.setFontColor(Settings.currentPalette[2]);
 		previous.setFontSize(30);
 		previous.setFocusable(false);
 		
 		next.setBounds(100,100,170,70);
 		next.setLocation(990,380);
-		next.setBorderColor(new Color(166, 123, 91));
+		next.setBorderColor(Settings.currentPalette[2]);
 		next.setBorderThickness(1);
 		next.setBackground(new Color(228, 197, 158));
-		next.setFontColor(new Color(128, 61, 59));
+		next.setFontColor(Settings.currentPalette[2]);
 		next.setFontSize(30);
 		next.setFocusable(false);
 		
 		exit.setBounds(100,100,170,40);
 		exit.setLocation(550,630);
-		exit.setBorderColor(new Color(166, 123, 91));
+		exit.setBorderColor(Settings.currentPalette[2]);
 		exit.setBorderThickness(1);
 		exit.setBackground(new Color(228, 197, 158));
-		exit.setFontColor(new Color(128, 61, 59));
+		exit.setFontColor(Settings.currentPalette[2]);
 		exit.setFontSize(20);
 		exit.setFocusable(false);
 		

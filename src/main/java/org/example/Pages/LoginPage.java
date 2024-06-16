@@ -88,7 +88,8 @@ public class LoginPage extends CoffeePanel {
 					Settings.loggedCashier = employeeField.getText();
 					Window.changePage(Page.DineInTakeOut);
 				}else{
-					JOptionPane.showInputDialog("Wrong Username or Password");
+					JOptionPane.showMessageDialog(null,"Wrong Username or Password","Wrong Username or Password",JOptionPane.ERROR_MESSAGE);
+
 				}
 			}
 		});
