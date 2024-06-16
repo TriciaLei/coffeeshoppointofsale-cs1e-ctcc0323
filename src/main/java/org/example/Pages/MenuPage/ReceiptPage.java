@@ -19,9 +19,9 @@ public class ReceiptPage extends CoffeePanel {
 	static LocalDateTime dateTime = LocalDateTime.now();
 	static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 	private static OrderPanel orderPanel;
-	private static String tablenumber = "Take Out";
+	public static String tablenumber = "Take Out";
 	
-	private static boolean isTakeout = true;
+	public static boolean isTakeout = true;
 	
 	private static String seperator = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
 	

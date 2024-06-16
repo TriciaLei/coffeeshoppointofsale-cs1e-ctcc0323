@@ -19,6 +19,7 @@ public class Window extends JFrame {
 	public DineInTakeOutPage dineInTakeOutPage;
 	public ReceiptPage receiptPage;
 	public InventoryItemPage inventoryItemPage;
+	public TablePage tablePage;
 	
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
@@ -43,6 +44,7 @@ public class Window extends JFrame {
 		dineInTakeOutPage = new DineInTakeOutPage();
 		receiptPage = new ReceiptPage(menuPage.orderPanel);
 		inventoryItemPage = new InventoryItemPage(menuData);
+		tablePage = new TablePage();
 
 		setSize(width, height);
 		setVisible(true);
@@ -61,6 +63,7 @@ public class Window extends JFrame {
 		add(receiptPage);
 		add(inventoryPage);
 		add(inventoryItemPage);
+		add(tablePage);
 		
 		pages.put(Page.Login, loginPage);
 		pages.put(Page.Menu, menuPage);
@@ -68,8 +71,9 @@ public class Window extends JFrame {
 		pages.put(Page.Receipt, receiptPage);
 		pages.put(Page.Inventory, inventoryPage);
 		pages.put(Page.EditInventoryItems, inventoryItemPage);
+		pages.put(Page.Table,tablePage);
 		
-//		changePage(Page.Table);
+		changePage(Page.DineInTakeOut);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class

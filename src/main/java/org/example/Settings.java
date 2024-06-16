@@ -16,6 +16,7 @@ public class Settings {
 	// 3 - Highlights
 	
 	public static String loggedCashier = "";
+	public static String tableNumber ="";
 	
 	public static HashMap<String, String> credentials = new HashMap<>();
 	
@@ -69,5 +70,5 @@ public class Settings {
 	public static String getLoggedCashier(){
 		return loggedCashier;
 	}
-	
+	public static String getTableNumber(){return tableNumber;}
 }

@@ -1,6 +1,7 @@
 package org.example.Pages;
 
 import org.example.Page;
+import org.example.Pages.MenuPage.ReceiptPage;
 import org.example.Settings;
 import org.example.UIComponents.CoffeeImage;
 import org.example.UIComponents.CoffeeLabel;
@@ -23,7 +24,10 @@ public class DineInTakeOutPage extends CoffeePanel {
 	
 	public DineInTakeOutPage(){
 		setBackground(Settings.currentPalette[0]);
-		
+		 dineInImage.setLocation(64,100);
+		 takeOutImage.setLocation(64,100);
+
+
 		dineIn.setBackground(Settings.currentPalette[1]);
 		dineIn.setBorderColor(Settings.currentPalette[2]);
 		dineIn.setBorderThickness(3);
@@ -82,9 +86,10 @@ public class DineInTakeOutPage extends CoffeePanel {
 		takeOut.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				ReceiptPage.isTakeout = true;
 				Window.changePage(Page.Menu);
 			}
-			
+
 			@Override
 			public void mousePressed(MouseEvent e) {
 			

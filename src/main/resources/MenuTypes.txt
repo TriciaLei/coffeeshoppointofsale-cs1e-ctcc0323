@@ -27,7 +27,7 @@ null
 35
 
 Pastries
-src/main/resources/Menu/Pastriess.png
+src/main/resources/Menu/pastries.png
 null
 20
 260
