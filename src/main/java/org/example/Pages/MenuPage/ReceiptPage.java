@@ -82,7 +82,7 @@ public class ReceiptPage extends CoffeePanel {
 	public static void SetReceipt(){
 		
 		String header =    "|------------------------------------------------------|\n" +
-				"|                 Coffee Shop sa Tabe Tabe             |\n" +
+				"|                 DEJA BREW             |\n" +
 				"|        #420 Caramel Street Balanga City, Bataan      |\n" +
 				"|                   " + dateTime.format(formatter) + "                |\n" +
 				"|------------------------------------------------------|\n" +

@@ -1,3 +1,11 @@
+/*
+	A Utility Class for storing all the important data throughout the application cycle
+	
+ */
+
+
+
+
 package org.example;
 
 import javax.swing.*;
@@ -73,7 +81,7 @@ public class Settings {
 		}
 	}
 
-
+	// Count how many receipt are there stored (in disk) in the application
 	public static int countReceipt(){
 		receiptCount = 0;
 		File directory = new File(receiptDirectory);
@@ -88,7 +96,7 @@ public class Settings {
 	}
 
 
-	
+
 	public static String getLoggedCashier(){
 		return loggedCashier;
 	}

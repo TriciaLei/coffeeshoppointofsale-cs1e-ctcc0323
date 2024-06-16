@@ -13,21 +13,22 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+// Class for TablePage extends with Coffee Panel
 public class TablePage extends CoffeePanel {
  CoffeeLabel coffeeLabel = new CoffeeLabel("TABLES");
 
  public TablePage() {
+       //Set the Background Color Syntax
        setBackground(Settings.currentPalette[0]);
        coffeeLabel.setLocation(550,1);
        coffeeLabel.setSize(800,70);
        coffeeLabel.setFontSize(50);
+       add(coffeeLabel);
 
-
-  add(coffeeLabel);
-
-
-
-        Table image1 = new Table("1","src/main/resources/Menu/tabol.png");
+      // Added some picture for the Tables
+     Table image1 = new Table("1","src/main/resources/Menu/tabol.png");
+     
+     //Added  action listener for going to Menu Page
         image1.addMouseListener(new MouseListener() {
          @Override
          public void mouseClicked(MouseEvent e) {

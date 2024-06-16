@@ -6,14 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="8f16307e-2fbf-4d2d-984d-5931429e0863" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MenuData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MenuData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuTypePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuTypePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/OrderHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/OrderHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
     </list>
-    <list id="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" name="Changes by Nathaniel" comment="" />
+    <list id="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" name="Changes by Nathaniel" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/ItemPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/ItemPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/OrderHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/OrderHistory.java" afterDir="false" />
+    </list>
+    <list id="209e9b9a-79f5-4dcb-b871-c5f76895a24d" name="Changes by trixiemaeb.alburo" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/TablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/TablePage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +53,34 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/example/Pages/OrderHistory.java">
+      <ranges>
+        <range start1="19" end1="19" start2="19" end2="20" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="21" end1="21" start2="22" end2="23" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="26" end1="26" start2="28" end2="29" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="27" end1="27" start2="30" end2="32" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="36" end1="37" start2="41" end2="42" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="42" end1="42" start2="47" end2="48" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="52" end1="53" start2="58" end2="59" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="62" end1="62" start2="68" end2="69" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="71" end1="71" start2="78" end2="79" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="80" end1="80" start2="88" end2="89" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="97" end1="97" start2="106" end2="107" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="101" end1="101" start2="111" end2="112" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="110" end1="110" start2="121" end2="122" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="116" end1="117" start2="128" end2="128" changelist="8f16307e-2fbf-4d2d-984d-5931429e0863" />
+        <range start1="118" end1="118" start2="129" end2="130" changelist="8f16307e-2fbf-4d2d-984d-5931429e0863" />
+        <range start1="123" end1="124" start2="135" end2="136" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="126" end1="126" start2="138" end2="139" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="127" end1="128" start2="140" end2="141" changelist="8f16307e-2fbf-4d2d-984d-5931429e0863" />
+        <range start1="135" end1="135" start2="148" end2="149" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="145" end1="145" start2="159" end2="160" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="155" end1="155" start2="170" end2="171" changelist="e1a00a7c-0d96-4b5f-a89d-40c6b49a3199" />
+        <range start1="178" end1="179" start2="194" end2="196" changelist="8f16307e-2fbf-4d2d-984d-5931429e0863" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -77,7 +112,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -107,7 +142,8 @@
       <workItem from="1718453081950" duration="1598000" />
       <workItem from="1718500821688" duration="7708000" />
       <workItem from="1718519554408" duration="5164000" />
-      <workItem from="1718532417269" duration="1164000" />
+      <workItem from="1718532417269" duration="2089000" />
+      <workItem from="1718544854092" duration="3070000" />
     </task>
     <servers />
   </component>

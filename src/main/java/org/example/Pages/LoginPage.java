@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class LoginPage extends CoffeePanel {
 	
-	public CoffeeLabel appName = new CoffeeLabel("Coffee Shop sa tabe tabe");
+	public CoffeeLabel appName = new CoffeeLabel("DEJA BREW");
 	public CoffeeLabel employeeLabel = new CoffeeLabel("Employee name");
 	public CoffeeTextField employeeField = new CoffeeTextField();
 	public CoffeeLabel passwordLabel = new CoffeeLabel("Password");
@@ -29,7 +29,7 @@ public class LoginPage extends CoffeePanel {
 	
 	public LoginPage(){
 	
-		
+		// Sets up the location and sizes of all components of this page
 		appName.setLocation(120, 50);
 		appName.setSize(1000, 120);
 		appName.setFontSize(100);
@@ -73,14 +73,16 @@ public class LoginPage extends CoffeePanel {
 		goToDashBoard.setBorderThickness(3);
 		goToDashBoard.setFontSize(30);
 		
-
+		
+		// Added a action listener for going to Inventory Page
 		goToDashBoard.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Window.changePage(Page.Inventory);
 			}
 		});
-
+		
+		// Added a action listener for logging in
 		loginButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

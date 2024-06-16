@@ -86,7 +86,7 @@ public class Window extends JFrame {
 		// ex: menu Page.setVisible(false);
 		// ex: name.setVisible(true);
 		
-		setTitle("Coffee Shop sa tabe tabe");
+		setTitle("Deja Brew");
 		setLocationRelativeTo(null);
 		
 		

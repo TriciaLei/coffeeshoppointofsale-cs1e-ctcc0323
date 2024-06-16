@@ -38,8 +38,8 @@ public class MenuTypePanel extends CoffeePanel {
 		
 	}
 	
+	// Sets Up and place the menu category cards and add it to the panel
 	private void SetUpCards() {
-		
 		for (int i = 0; i < data.categoryCards.size(); i++){
 			CoffeeCard coffeeCard = new CoffeeCard(new ImageIcon(data.categoryCards.get(i).imagePath), data.categoryCards.get(i).name, data.categoryCards.get(i).price);
 			coffeeCard.setLocation(Integer.parseInt(data.categoryCards.get(i).xPos), Integer.parseInt(data.categoryCards.get(i).yPos));
@@ -68,7 +68,7 @@ public class MenuTypePanel extends CoffeePanel {
 				
 				@Override
 				public void mouseEntered(MouseEvent e) {
-//				setBackground(Color.PINK);
+
 				}
 				
 				@Override

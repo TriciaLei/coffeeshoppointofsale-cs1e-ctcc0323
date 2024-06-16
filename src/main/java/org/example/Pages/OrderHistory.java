@@ -17,14 +17,19 @@ import org.example.UIComponents.CoffeeImage;
 import org.example.UIComponents.CoffeeLabel;
 import org.example.UIComponents.CoffeePanel;
 
+//Class for OrderHistory extends with CoffeePanel
 public class OrderHistory extends CoffeePanel {
 
+	//Methods for Buttons
 	public CoffeeButton previous = new CoffeeButton("◄ Previous");
 	public CoffeeButton next = new CoffeeButton("Next ►");
 	public CoffeeButton exit = new CoffeeButton("Exit");
 
 	
+	// Order History Page Header Method
 	public CoffeeLabel orderHeader = new CoffeeLabel("Order History");
+	
+	// Methods for Images Using CoffeeImage
 	public CoffeeImage Americano = new CoffeeImage(new ImageIcon("src/main/resources/Menu/Americano.png"));
 	public CoffeeImage icedlatte = new CoffeeImage(new ImageIcon("src/main/resources/Menu/Spanish Latte.png"));
 	public CoffeeImage greeksalad = new CoffeeImage(new ImageIcon("src/main/resources/Menu/greeksalad.png"));
@@ -34,11 +39,12 @@ public class OrderHistory extends CoffeePanel {
 	public CoffeeImage caprese = new CoffeeImage(new ImageIcon("src/main/resources/Menu/caprese.png"));
 	public CoffeeImage Crossiant = new CoffeeImage(new ImageIcon("src/main/resources/Menu/Crossiant.png"));
 
-	
+	//Methods for CoffeePanel
 	public CoffeePanel panel1 = new CoffeePanel();
 	public CoffeePanel panel2 = new CoffeePanel();
 	public CoffeePanel panel3 = new CoffeePanel();
 	public CoffeePanel panel4 = new CoffeePanel();
+	
 	
 	public JTextArea receiptView = new JTextArea();
 
@@ -50,7 +56,7 @@ public class OrderHistory extends CoffeePanel {
 	
 	public OrderHistory() {
 		
-		//BUTTONS
+		//Implement Button for Layout of Previous Button
 		previous.setBounds(100,100,170,70);
 		previous.setLocation(100,380);
 		previous.setBorderColor(Settings.currentPalette[2]);
@@ -60,6 +66,7 @@ public class OrderHistory extends CoffeePanel {
 		previous.setFontSize(30);
 		previous.setFocusable(false);
 		
+		//Implement Button Syntax for Layout of Next Button
 		next.setBounds(100,100,170,70);
 		next.setLocation(990,380);
 		next.setBorderColor(Settings.currentPalette[2]);
@@ -69,6 +76,7 @@ public class OrderHistory extends CoffeePanel {
 		next.setFontSize(30);
 		next.setFocusable(false);
 		
+		//Implement Button Syntax for Layout of Exit Button
 		exit.setBounds(100,100,170,40);
 		exit.setLocation(550,630);
 		exit.setBorderColor(Settings.currentPalette[2]);
@@ -78,6 +86,7 @@ public class OrderHistory extends CoffeePanel {
 		exit.setFontSize(20);
 		exit.setFocusable(false);
 		
+		//Implement the Syntax for Image Layout
 		icedlatte.setBounds(200,200,200,128);
 		icedlatte.setLocation(220,180);
 		Americano.setBounds(200,200,200,128);
@@ -95,10 +104,12 @@ public class OrderHistory extends CoffeePanel {
 		Crossiant.setBounds(200,200,200,128);
 		Crossiant.setLocation(920,180);
 		
+		//Implement the Syntax of Order History Page Header
 		orderHeader.setLocation(490,1);
 		orderHeader.setSize(800,70);
 		orderHeader.setFontSize(50);
 		
+		//Implement the Syntax for Panels of Order history page
 		panel1.setBackground(new Color(166, 123, 91));
 		panel1.setBounds(0,0,440,720);
 		panel2.setBackground(new Color(166, 123, 91));
@@ -108,24 +119,26 @@ public class OrderHistory extends CoffeePanel {
 		panel4.setBackground(new Color(166, 123, 91));
 		panel4.setBounds(30,620,1270,70);
 		
+		//Implement the Syntax for Receipt View
 		receiptView.setBounds(0, 0, 400, 0);
 		receiptView.setPreferredSize(new Dimension(400, 0));
 		receiptView.setBackground(Settings.currentPalette[1]);
 		receiptView.setEditable(false);
 		receiptView.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
 		receiptView.setText(readReceipt());
-//		receiptView.setLineWrap(true);
 		
+		//Implement the Syntax for JScrollPane of Receipt
 		JScrollPane receiptScroll = new JScrollPane(receiptView);
 		receiptScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		receiptScroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		receiptScroll.setBounds(440, 120, 400, 500);
 		
-
+		//Set the Background Color Syntax Order History Page
 		this.setBackground(new Color(228, 197, 158));
 		
+		//Add the Action Listener Syntax for Exit Button
 		exit.addActionListener(new ActionListener() {
-
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Window.changePage(Page.Inventory);
@@ -133,6 +146,7 @@ public class OrderHistory extends CoffeePanel {
 			}
 		});
 		
+		//Add the Action Listener Syntax for Next Button
 		next.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -143,6 +157,7 @@ public class OrderHistory extends CoffeePanel {
 			}
 		});
 		
+		//Add the Action Listener Syntax for Previous Button
 		previous.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -153,6 +168,7 @@ public class OrderHistory extends CoffeePanel {
 			}
 		});
 		
+		//Add all variables to be visible
 		add(receiptScroll);
 		add(exit);
 		add(next);
@@ -176,7 +192,8 @@ public class OrderHistory extends CoffeePanel {
 	
 	
 	
-	
+	// This method reads the txt receipt file relative to the currentReceipt variable
+	// And returns its content
 	public String readReceipt(){
 		String receiptText = "";
 		int receiptViewHeight  = 0;

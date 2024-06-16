@@ -1,3 +1,8 @@
+/*
+	Utility Class for reading and writing the menu items of the application
+ */
+
+
 package org.example;
 
 import java.io.*;
@@ -31,7 +36,8 @@ public class MenuData {
         }
 	    
     }
-        
+	
+	// Reading and creating the menu types for the Menu page.
     private void getMenuTypes() {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/MenuTypes.txt"))) {
                 
@@ -87,7 +93,8 @@ public class MenuData {
             throw new RuntimeException(e);
         }
     }
-    
+	
+	// Reading and creating the menu items for the Menu page.
     private void readItems() {
         for (String t : menuCategories) {
 			
@@ -143,42 +150,9 @@ public class MenuData {
             }
         }
     }
-	
-	public void editItemName(String oldName, String newName, String type){
-		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
-			if(set.getKey().name.equals(oldName)){
-				set.getKey().name = newName;
-			}
-		}
-		
-//		updateItemFile(type);
-	}
-	
-	public void editItemImage(String oldPath, String newPath, String type){
-		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
-			if(set.getKey().name.equals(oldPath)){
-				set.getKey().name = newPath;
-			}
-		}
-		
-//		updateItemFile(type);
-	}
-	
-	public void editItemPrice(String oldPrice, String newPrice, String type){
-		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
-			if(set.getKey().name.equals(oldPrice)){
-				set.getKey().name = newPrice;
-			}
-		}
-		
-//		updateItemFile(type);
-	}
-	
-	
 
 	
-	
-	
+	// This adds/appends the menu items in the txt to the corresponding menu type
 	public void updateItemFile(String type, String name, String imagePath, String price, String xPos, String yPos, String xItemPos){
 		
 		
