@@ -23,8 +23,8 @@ public class OrderHistory extends CoffeePanel {
 	public CoffeeLabel orderHeader = new CoffeeLabel("Order History");
 	public CoffeeImage Americano = new CoffeeImage(new ImageIcon("src/main/resources/Menu/Americano.png"));
 	public CoffeeImage icedlatte = new CoffeeImage(new ImageIcon("src/main/resources/Menu/Spanish Latte.png"));
-	public CoffeeImage Cappucino = new CoffeeImage(new ImageIcon("src/main/resources/Menu/Cappucino.png"));
-	public CoffeeImage flatwhite = new CoffeeImage(new ImageIcon("src/main/resources/Menu/flatwhite.png"));
+	public CoffeeImage greeksalad = new CoffeeImage(new ImageIcon("src/main/resources/Menu/greeksalad.png"));
+	public CoffeeImage chickenseasar = new CoffeeImage(new ImageIcon("src/main/resources/Menu/chickenseasar.png"));
 	public CoffeeImage coldbrew = new CoffeeImage(new ImageIcon("src/main/resources/Menu/coldbrew.png"));
 	public CoffeeImage affogato = new CoffeeImage(new ImageIcon("src/main/resources/Menu/affogato.png"));
 	public CoffeeImage caprese = new CoffeeImage(new ImageIcon("src/main/resources/Menu/caprese.png"));
@@ -74,10 +74,10 @@ public class OrderHistory extends CoffeePanel {
 		icedlatte.setLocation(220,180);
 		Americano.setBounds(200,200,200,128);
 		Americano.setLocation(20,180);
-		Cappucino.setBounds(200,200,200,128);
-		Cappucino.setLocation(20,500);
-		flatwhite.setBounds(200,200,200,128);
-		flatwhite.setLocation(220,500);
+		greeksalad.setBounds(200,200,200,128);
+		greeksalad.setLocation(20,500);
+		chickenseasar.setBounds(200,200,200,128);
+		chickenseasar.setLocation(220,500);
 		coldbrew.setBounds(200,200,200,128);
 		coldbrew.setLocation(920,500);
 		affogato.setBounds(200,200,200,128);
@@ -116,8 +116,8 @@ public class OrderHistory extends CoffeePanel {
 				add(next);
 				add(previous);
 				add(icedlatte);
-				add(Cappucino);
-				add(flatwhite);
+				add(greeksalad);
+				add(chickenseasar);
 				add(coldbrew);
 				add(affogato);
 				add(caprese);
