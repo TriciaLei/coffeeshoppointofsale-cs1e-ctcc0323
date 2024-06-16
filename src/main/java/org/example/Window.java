@@ -1,32 +1,49 @@
 package org.example;
-import org.example.Pages.DebugPage;
-import org.example.Pages.DineInTakeOutPage;
-import org.example.Pages.LoginPage;
+import org.example.Pages.*;
+
 import org.example.Pages.MenuPage.MenuPage;
-import org.example.UIComponents.CoffeeLabel;
+import org.example.Pages.MenuPage.ReceiptPage;
 import org.example.UIComponents.CoffeePanel;
 
 import javax.swing.*;
-import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Window extends JFrame {
 	
-	public DebugPage debugPage = new DebugPage();
-	public LoginPage loginPage = new LoginPage();
-	public MenuPage menuPage = new MenuPage();
-	public DineInTakeOutPage dineInTakeOutPage = new DineInTakeOutPage();
+	public DebugPage debugPage;
+	public LoginPage loginPage;
+	public MenuPage menuPage;
+	public InventoryPage inventoryPage;
+	public ItemPage itempage;
+	public DineInTakeOutPage dineInTakeOutPage;
+	public ReceiptPage receiptPage;
+	public InventoryItemPage inventoryItemPage;
 	
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
 	public static Page currentPage = Page.DineInTakeOut;
+
+	private MenuData menuData;
 	
 	//TODO#1: Make an instance of your class here
 	// ex: public ExampleClass name = new ExampleClass();
 	
 	public Window(int width, int height){
 		
+		Settings.ReadAccounts();
+		
+		menuData = new MenuData();
+
+		menuPage = new MenuPage(menuData);
+		loginPage = new LoginPage();
+		debugPage = new DebugPage();
+		inventoryPage = new InventoryPage(menuData);
+		itempage = new ItemPage();
+		dineInTakeOutPage = new DineInTakeOutPage();
+		receiptPage = new ReceiptPage(menuPage.orderPanel);
+		inventoryItemPage = new InventoryItemPage(menuData);
+
 		setSize(width, height);
 		setVisible(true);
 		setLayout(null);
@@ -36,30 +53,23 @@ public class Window extends JFrame {
 		
 		//TODO#2: add it to the to frame
 		// ex: add(name);
-
 		
 		add(dineInTakeOutPage);
 		add(loginPage);
 		add(menuPage);
-		add(debugPage);
+//		add(debugPage);
+		add(receiptPage);
+		add(inventoryPage);
+		add(inventoryItemPage);
 		
 		pages.put(Page.Login, loginPage);
 		pages.put(Page.Menu, menuPage);
 		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
+		pages.put(Page.Receipt, receiptPage);
+		pages.put(Page.Inventory, inventoryPage);
+		pages.put(Page.EditInventoryItems, inventoryItemPage);
 		
-		changePage(Page.DineInTakeOut);
-		
-		debugPage.setVisible(false);
-
-
-
-//		add(loginPage);
-		add(menuPage);
-//		add(debugPage);
-//   	add(dineInTakeOutPage);
-//		loginPage.setVisible(true);
-//		debugPage.setVisible(false);
-
+		changePage(Page.Inventory);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class

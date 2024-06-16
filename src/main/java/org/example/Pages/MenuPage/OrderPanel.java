@@ -1,14 +1,13 @@
 package org.example.Pages.MenuPage;
 
+import org.example.Page;
 import org.example.Settings;
 import org.example.UIComponents.*;
+import org.example.Window;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,9 +23,11 @@ public class OrderPanel extends CoffeePanel {
 	
 	private CoffeePanel totalPanel = new CoffeePanel();
 	
-	private double currentTotal = 0;
-	private CoffeeLabel totalLabel = new CoffeeLabel("Total: P" + currentTotal);
 	
+	public double currentTotal = 0;
+	public double currentCashGiven = 0;
+	private CoffeeLabel totalLabel = new CoffeeLabel("Total: P" + currentTotal);
+	private JFrame chargeWindow = null;
 	
 	public OrderPanel(){
 		setBounds(976, 0, 304, 720);
@@ -53,8 +54,6 @@ public class OrderPanel extends CoffeePanel {
 		totalLabel.setBounds(10, 0, totalPanel.getWidth(), totalPanel.getHeight());
 		totalLabel.setFontSize(16);
 		
-		
-		
 		charge.setBounds(40, 600, 200, 40);
 		charge.setBackground(Settings.currentPalette[1]);
 		charge.setFontColor(Settings.currentPalette[2]);
@@ -65,12 +64,50 @@ public class OrderPanel extends CoffeePanel {
 		
 		charge.addActionListener(new ActionListener() {
 			
-			JFrame chargeWindow = null;
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(chargeWindow == null && currentTotal > 0){
 					chargeWindow = new JFrame();
 					chargeWindow.setBackground(Settings.currentPalette[1]);
+					chargeWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+					chargeWindow.addWindowListener(new WindowListener() {
+						@Override
+						public void windowOpened(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowClosing(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowClosed(WindowEvent e) {
+//							chargeWindow.dispose();
+							chargeWindow = null;
+						}
+						
+						@Override
+						public void windowIconified(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowDeiconified(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowActivated(WindowEvent e) {
+						
+						}
+						
+						@Override
+						public void windowDeactivated(WindowEvent e) {
+						
+						}
+					});
 					
 					chargeWindow.setBounds(0, 0, 400, 200);
 					chargeWindow.setLocationRelativeTo(null);
@@ -121,8 +158,16 @@ public class OrderPanel extends CoffeePanel {
 							}
 							
 							if(Double.parseDouble(paidAmount.getText()) >= currentTotal){
-								//TODO: Go to the receipt page
+								SetUpReceipt();
+								
+								
+								ReceiptPage.cashPaid = paidAmount.getText();
+								
+								ReceiptPage.SetReceipt();
+								
 								chargeWindow.dispose();
+								chargeWindow = null;
+								Window.changePage(Page.Receipt);
 							}else{
 								Toolkit.getDefaultToolkit().beep();
 								JOptionPane.showMessageDialog(null, "Not Enough", " ", JOptionPane.WARNING_MESSAGE);
@@ -130,7 +175,6 @@ public class OrderPanel extends CoffeePanel {
 							}
 						}
 					});
-					
 					
 					chargeWindow.add(paidAmount);
 					chargeWindow.add(label);
@@ -151,6 +195,36 @@ public class OrderPanel extends CoffeePanel {
 		
 	}
 	
+	private void SetUpReceipt() {
+		for (Component order : checkListPanel.getComponents()){
+			if(order instanceof OrderCard){
+				String orderInfo = "";
+				
+				String orderName = ((OrderCard) order).itemName.getText();
+				
+				String orderQuantity = ((OrderCard) order).quantity.getText();
+				
+				String orderPrice = ((OrderCard) order).itemPrice.getText();
+				
+				double combinedPrice = Double.parseDouble(orderPrice.substring(1)) * Double.parseDouble(orderQuantity);
+				
+				orderInfo += orderName + "\n" + orderQuantity + " pcs";
+				for (int i = 0; i < 45 - orderQuantity.length() - orderPrice.length(); i++){
+					orderInfo += ".";
+				}
+				
+				orderInfo +=  "P" + combinedPrice;
+				
+				
+				ReceiptPage.currentOrders.add(orderInfo);
+			}
+		}
+		
+		
+	
+		
+	}
+	
 	private void calculateTotalItem(){
 		currentTotal = 0;
 		currentItems = 0;
@@ -161,6 +235,8 @@ public class OrderPanel extends CoffeePanel {
 				currentItems += Integer.parseInt(((OrderCard) c).quantity.getText());
 			}
 		}
+		
+//		Double
 		
 		totalLabel.setText("Total: " + "P" + currentTotal);
 		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
@@ -202,14 +278,14 @@ public class OrderPanel extends CoffeePanel {
 			order.addMouseListener(new MouseListener() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					RemoveOrderItem(order.index, order.itemName.getText());
+					RemoveOrderItem(order.id, order.itemName.getText());
 					
 					// Adjust the index of each item
 					int i = 0;
 					for (Component c : checkListPanel.getComponents()){
 						
 						if(c instanceof OrderCard){
-							((OrderCard) c).index = i;
+							((OrderCard) c).id = i;
 						}
 						i++;
 					}
@@ -254,7 +330,7 @@ public class OrderPanel extends CoffeePanel {
 	// like for example making the layout manager a box layout, but I'm too high rn so cant think lmao
 	
 	// So basically what I did here is
-	// Firstly, I removed the desired order item to the panel
+	// First, I removed the desired order item to the panel
 	// Then, I stored that state to a temporary variable
 	// I then remove all the components to the checkList panel
 	// adjusted all the position then add it to the checklist panel
@@ -306,5 +382,16 @@ public class OrderPanel extends CoffeePanel {
 		//Calculate the price of the total orders
 		calculateTotalItem();
 
+	}
+	
+	public void Reset(){
+		currentTotal = 0;
+		cardCounter = 0;
+		currentItems = 0;
+		checkListPanel.removeAll();
+		totalLabel.setText("Total: " + "P" + currentTotal);
+		currentItemLabel.setText("Current Items " + "(" + currentItems + ")");
+		checkListPanel.updateUI();
+		totalLabel.updateUI();
 	}
 }

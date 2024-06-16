@@ -1,0 +1,112 @@
+Green Tea - Small
+src/main/resources/Menu/greenTea.png
+300
+20
+10
+25
+
+Green Tea - Medium
+src/main/resources/Menu/greenTea.png
+300
+260
+10
+20
+
+Green Tea - Large
+src/main/resources/Menu/greenTea.png
+300
+490
+10
+25
+
+Green Tea - Grande
+src/main/resources/Menu/greenTea.png
+300
+720
+10
+25
+
+Hibiscus Tea - Small
+src/main/resources/Menu/Hibiscus.png
+300
+20
+260
+20
+
+Hibiscus Tea - Medium
+src/main/resources/Menu/Hibiscus.png
+300
+260
+260
+5
+
+Hibiscus Tea - Large
+src/main/resources/Menu/Hibiscus.png
+300
+490
+260
+15
+
+Hibiscus Tea - Grande
+src/main/resources/Menu/Hibiscus.png
+300
+720
+260
+10
+
+Oolong Tea - Small
+src/main/resources/Menu/OolongT.png
+300
+20
+490
+20
+
+Oolong Tea - Medium
+src/main/resources/Menu/OolongT.png
+300
+260
+490
+10
+
+Oolong Tea - Large
+src/main/resources/Menu/OolongT.png
+300
+490
+490
+20
+
+Oolong Tea - Grande
+src/main/resources/Menu/OolongT.png
+300
+720
+490
+15
+
+Black Tea - Small
+src/main/resources/Menu/BlackTea.png
+300
+20
+720
+30
+
+Black Tea - Medium
+src/main/resources/Menu/BlackTea.png
+300
+260
+720
+25
+
+Black Tea - Large
+src/main/resources/Menu/BlackTea.png
+300
+490
+720
+35
+
+Black Tea - Grande
+src/main/resources/Menu/BlackTea.png
+300
+720
+720
+30
+
