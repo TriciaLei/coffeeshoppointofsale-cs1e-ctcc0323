@@ -278,14 +278,14 @@ public class OrderPanel extends CoffeePanel {
 			order.addMouseListener(new MouseListener() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
-					RemoveOrderItem(order.index, order.itemName.getText());
+					RemoveOrderItem(order.id, order.itemName.getText());
 					
 					// Adjust the index of each item
 					int i = 0;
 					for (Component c : checkListPanel.getComponents()){
 						
 						if(c instanceof OrderCard){
-							((OrderCard) c).index = i;
+							((OrderCard) c).id = i;
 						}
 						i++;
 					}

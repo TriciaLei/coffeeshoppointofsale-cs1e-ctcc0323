@@ -194,3 +194,17 @@ src/main/resources/Menu/Caramel Macchiato.png
 1470
 20
 
+Example
+
+300
+720
+1470
+75
+
+asd
+
+300
+720
+1470
+75
+

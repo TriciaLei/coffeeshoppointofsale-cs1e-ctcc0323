@@ -1,54 +1,54 @@
 Croissant
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/Crossiant.png
 300
 20
 10
 60
 
 Muffin - Blueberry
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/muffb.png
 300
 260
 10
 25
 
 Muffin - Chocolate
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/muffc.png
 300
 490
 10
 25
 
 Muffin - Bran
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/bran.png
 300
 720
 10
 50
 
 Bagel
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/bagel.png
 300
 20
 260
 70
 
 Scone
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/scone.png
 300
 260
 260
 75
 
 Cookies
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/cookies.png
 300
 490
 260
 70
 
 Brownies
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/brownies.png
 300
 720
 260

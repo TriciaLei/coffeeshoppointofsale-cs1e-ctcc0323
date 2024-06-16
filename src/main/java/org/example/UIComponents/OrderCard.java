@@ -2,8 +2,6 @@ package org.example.UIComponents;
 
 import org.example.Settings;
 
-import java.awt.*;
-
 public class OrderCard extends CoffeePanel{
 	
 	public CoffeeLabel quantity = new CoffeeLabel("");
@@ -11,14 +9,14 @@ public class OrderCard extends CoffeePanel{
 	public CoffeeLabel itemPrice = new CoffeeLabel("");
 	public CoffeeButton plus = new CoffeeButton();
 	public CoffeeButton minus = new CoffeeButton();
-	public int index = 0;
+	public int id = 0;
 	
 	public OrderCard(String n, String q, String p, int i){
 		setBounds(10, 10, 224, 50);
 		setBackground(Settings.currentPalette[3]);
 		setBorderColor(Settings.currentPalette[2]);
 		
-		index = i;
+		id = i;
 
 		quantity.setBounds(10, 5, 30, 20);
 		quantity.setFontSize(16);

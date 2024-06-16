@@ -150,4 +150,82 @@ public class MenuData {
             }
         }
     }
+	
+	public void editItemName(String oldName, String newName, String type){
+		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
+			if(set.getKey().name.equals(oldName)){
+				set.getKey().name = newName;
+			}
+		}
+		
+//		updateItemFile(type);
+	}
+	
+	public void editItemImage(String oldPath, String newPath, String type){
+		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
+			if(set.getKey().name.equals(oldPath)){
+				set.getKey().name = newPath;
+			}
+		}
+		
+//		updateItemFile(type);
+	}
+	
+	public void editItemPrice(String oldPrice, String newPrice, String type){
+		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
+			if(set.getKey().name.equals(oldPrice)){
+				set.getKey().name = newPrice;
+			}
+		}
+		
+//		updateItemFile(type);
+	}
+	
+	
+
+	
+	
+	
+	public void updateItemFile(String type, String name, String imagePath, String price){
+		String xPos = "";
+		String yPos = "";
+		String xItemPos = "";
+		
+		int x = 0;
+		int y = 0;
+		int xItem = 0;
+		
+		
+		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
+			x = Math.max(x, Integer.parseInt(set.getKey().xPos));
+			y = Math.max(y, Integer.parseInt(set.getKey().yPos));
+			xItem = Math.max(xItem, Integer.parseInt(set.getKey().xItemPos));
+		}
+		
+		xPos = String.valueOf(x);
+		yPos = String.valueOf(y);
+		xItemPos = String.valueOf(xItem);
+		
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/items/" + type + ".txt", true))){
+			
+			writer.write(name);
+			writer.newLine();
+			writer.write(imagePath);
+			writer.newLine();
+			writer.write(price);
+			writer.newLine();
+			writer.write(xPos);
+			writer.newLine();
+			writer.write(yPos);
+			writer.newLine();
+			writer.write(xItemPos);
+			writer.newLine();
+			writer.newLine();
+			
+		}catch (IOException ignored){
+		
+		}
+	}
+	
+	
 }

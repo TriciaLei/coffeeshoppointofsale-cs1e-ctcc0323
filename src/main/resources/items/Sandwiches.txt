@@ -1,19 +1,19 @@
-Ham & Cheese Croissant
-src/main/resources/Menu/espresso.png
+Ham & Cheese
+src/main/resources/Menu/handc.png
 300
 20
 10
 5
 
 Turkey Club Sandwich
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/turkeyclub.png
 300
 260
 10
 10
 
 Caprese Sandwich
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/caprese.png
 300
 490
 10

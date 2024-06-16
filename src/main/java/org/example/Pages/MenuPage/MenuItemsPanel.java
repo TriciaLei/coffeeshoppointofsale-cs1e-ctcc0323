@@ -38,14 +38,7 @@ public class MenuItemsPanel extends CoffeePanel {
 	}
 	
 	public void SetUpCards(String type) {
-	
-//		for (int i = 0; i < data.categoryCards.size(); i++){
-//			CoffeeCard coffeeCard = new CoffeeCard(new ImageIcon(data.categoryCards.get(i).imagePath), data.categoryCards.get(i).name, data.categoryCards.get(i).price);
-//			coffeeCard.setLocation(Integer.parseInt(data.categoryCards.get(i).xPos), Integer.parseInt(data.categoryCards.get(i).yPos));
-//			coffeeCard.itemName.setLocation(Integer.parseInt(data.categoryCards.get(i).xItemPos), coffeeCard.itemName.getY());
-//			add(coffeeCard);
-//			coffeeCards.add(coffeeCard);
-//		}
+		
 		int greatestYLocation = 0;
 		int currentYLocation = 0;
 		
@@ -97,21 +90,21 @@ public class MenuItemsPanel extends CoffeePanel {
 			add(coffeeCard);
 			
 			if(i >= 1){
-				greatestYLocation = Math.max(coffeeCard.getY(), currentYLocation);
+				greatestYLocation = Math.max(greatestYLocation, coffeeCard.getY());
 			}else{
-				currentYLocation = coffeeCard.getY();
+				greatestYLocation = coffeeCard.getY();
 			}
 
 			i++;
 		}
 		
 		setSize(getX(),greatestYLocation + 270);
-		setPreferredSize(new Dimension(getWidth(), greatestYLocation + 270));
+		setPreferredSize(new Dimension(getWidth(), greatestYLocation  + 270));
 		
-		
+		System.out.println(greatestYLocation);
 		
 		for (CoffeeCard c : coffeeCards){
-			System.out.println(c.getX() + " : " + c.getY());
+//			System.out.println(c.getX() + " : " + c.getY());
 		}
 		
 	}

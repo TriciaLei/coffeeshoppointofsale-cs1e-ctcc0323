@@ -1,39 +1,47 @@
 package org.example.Pages;
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.File;
+import java.nio.file.CopyOption;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+import javax.swing.*;
 
+import org.example.MenuData;
+import org.example.Settings;
+import org.example.UIComponents.*;
 import org.example.Window;
-import org.example.UIComponents.CoffeeButton;
-import org.example.UIComponents.CoffeeCard;
-import org.example.UIComponents.CoffeeImage;
-import org.example.UIComponents.CoffeeLabel;
-import org.example.UIComponents.CoffeePanel;
+
+import static org.example.UIComponents.InventoryItemCard.frame;
 
 public class InventoryPage extends CoffeePanel {
 
 	
 	public CoffeeLabel InvLabel = new CoffeeLabel("DASHBOARD");
-	public CoffeeButton InvBtn = new CoffeeButton("Inventory Items");
+	public CoffeeButton InvBtn = new CoffeeButton("Add Menu Items");
 	public CoffeeButton Sales = new CoffeeButton("Sales");
 	public CoffeeButton OrderHistory = new CoffeeButton("Order History");
 	public CoffeeButton Back = new CoffeeButton("Back ⬅");
-	public CoffeeImage InventoryItem = new CoffeeImage(new ImageIcon("coffeeshoppointofsale-cs1e-ctcc0323/src/InventoryItem.png"));
-	public CoffeeImage cart = new CoffeeImage(new ImageIcon("coffeeshoppointofsale-cs1e-ctcc0323/src/SCart.png"));
+	public CoffeeImage InventoryItem = new CoffeeImage(new ImageIcon("src/InventoryItem.png"));
+	public CoffeeImage cart = new CoffeeImage(new ImageIcon("src/SCart.png"));
 
 	public CoffeePanel panel1 = new CoffeePanel();
 	public CoffeePanel panel2 = new CoffeePanel();
-	public CoffeePanel panel3 = new CoffeePanel();
-
+	
+	private MenuData data;
 	
 	
 	
 	
-	public InventoryPage() {
+	
+	public InventoryPage(MenuData data) {
+		
+		this.data = data;
 		
 		//Corner Frames
 		panel1.setBackground(new Color(166, 123, 91));
@@ -91,11 +99,14 @@ public class InventoryPage extends CoffeePanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				Window.changePageToDebug();
+				
+				setUpPopUpWindow();
 				
 			}
 			
 		});
+		
+		
 		
 		add(cart);
 		add(InventoryItem);
@@ -114,6 +125,162 @@ public class InventoryPage extends CoffeePanel {
 	private void add(ImageIcon box2) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	
+	
+	private void setUpPopUpWindow(){
+		
+		
+		if(frame == null){
+			frame = new JFrame("Edit Item");
+			frame.setVisible(true);
+			frame.setSize(500, 300);
+			frame.setLocationRelativeTo(null);
+			frame.setLayout(null);
+			frame.getContentPane().setBackground(Settings.currentPalette[0]);
+			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+			frame.setResizable(false);
+			
+			
+			CoffeePanel panel = new CoffeePanel();
+			panel.setBounds(20, 20, 440, 220);
+			panel.setBackground(Settings.currentPalette[1]);
+			
+			CoffeeLabel newName = new CoffeeLabel("Item Name: ");
+			CoffeeTextField nameTextField = new CoffeeTextField();
+			
+			newName.setBounds(20, 20, panel.getWidth(), 30);
+			nameTextField.setBounds(120, 20, 250, 30);
+			
+			
+			String[] categ = new String[data.menuCategories.size()];
+			for (int i = 0; i < data.menuCategories.size(); i++) {
+				categ[i] = data.menuCategories.get(i);
+			}
+			
+			CoffeeLabel newCategory = new CoffeeLabel("Category: ");
+			JComboBox dropDown = new JComboBox(categ);
+			
+			newCategory.setBounds(20, 60, panel.getWidth(), 30);
+			dropDown.setBounds(120, 60, 250, 30);
+			
+			CoffeeLabel newPrice = new CoffeeLabel("Item Price: ");
+			CoffeeTextField priceTextField = new CoffeeTextField();
+			
+			newPrice.setBounds(20, 100, panel.getWidth(), 30);
+			priceTextField.setBounds(120, 100, 250, 30);
+			
+			
+			CoffeeLabel newImage = new CoffeeLabel("Choose new Image: ");
+			CoffeeButton editImageButton = new CoffeeButton("Choose file");
+			
+			
+			newImage.setBounds(20, 140, 140, 30);
+			editImageButton.setBounds(150, 140, 250, 30);
+			
+			String imagePath = "";
+			
+			
+			
+			CoffeeButton confirmButton = new CoffeeButton("Confirm");
+			confirmButton.setBounds(150, 180, 150, 30);
+			
+			
+			confirmButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					String imagePath = "";
+					JFileChooser fileChooser = new JFileChooser();
+					
+					if(e.getSource() == editImageButton){
+						if(fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+							File file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+							
+							System.out.println(file.getAbsoluteFile());
+							
+//							Files.copy(file.getAbsoluteFile(), new File(System.getProperty("user.dir") + "\\Menu\\" + nameTextField.getText() + ".png"), StandardCopyOption.REPLACE_EXISTING);
+							
+							file.renameTo(new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png"));
+							imagePath = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png").getPath();
+						}
+					}
+					
+					if(e.getSource() == confirmButton){
+						if(!nameTextField.getText().isEmpty() || !priceTextField.getText().isEmpty() || !imagePath.isEmpty()){
+							data.updateItemFile((String) dropDown.getSelectedItem(), nameTextField.getText(), imagePath, priceTextField.getText());
+						}else{
+							Toolkit.getDefaultToolkit().beep();
+						}
+					}
+					
+				}
+			});
+			
+			editImageButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+				
+				}
+			});
+			
+			dropDown.addActionListener(confirmButton.getActionListeners()[0]);
+			editImageButton.addActionListener(confirmButton.getActionListeners()[0]);
+			
+			
+			
+			
+			panel.add(newName);
+			panel.add(nameTextField);
+			panel.add(newPrice);
+			panel.add(priceTextField);
+			panel.add(newImage);
+			panel.add(editImageButton);
+			panel.add(confirmButton);
+			panel.add(newCategory);
+			panel.add(dropDown);
+			
+			frame.add(panel);
+			
+			frame.addWindowListener(new WindowListener() {
+				@Override
+				public void windowOpened(WindowEvent e) {
+				
+				}
+				
+				@Override
+				public void windowClosing(WindowEvent e) {
+				
+				}
+				
+				@Override
+				public void windowClosed(WindowEvent e) {
+					frame = null;
+				}
+				
+				@Override
+				public void windowIconified(WindowEvent e) {
+				
+				}
+				
+				@Override
+				public void windowDeiconified(WindowEvent e) {
+				
+				}
+				
+				@Override
+				public void windowActivated(WindowEvent e) {
+				
+				}
+				
+				@Override
+				public void windowDeactivated(WindowEvent e) {
+				
+				}
+			});
+		}else{
+			Toolkit.getDefaultToolkit().beep();
+		}
 	}
 }
 

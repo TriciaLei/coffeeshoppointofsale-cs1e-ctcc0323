@@ -7,4 +7,6 @@ public enum Page {
 	Table,
 	Menu,
 	Receipt,
+	Inventory,
+	EditInventoryItems,
 }

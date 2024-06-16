@@ -1,26 +1,26 @@
 Berry Blast
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/berryblast.png
 300
 20
 10
 50
 
 Tropical Mango
-src/main/resources/Menu/espresso.png
+src/main/resources/Menu/trpclm.png
 300
 260
 10
 40
 
-Green Detox
-src/main/resources/Menu/espresso.png
+Strawberry
+src/main/resources/Menu/strawberry.png
 300
 490
 10
 50
 
-Peanut Butter Banana
-src/main/resources/Menu/espresso.png
+Cucumber
+src/main/resources/Menu/cucumber.png
 300
 720
 10

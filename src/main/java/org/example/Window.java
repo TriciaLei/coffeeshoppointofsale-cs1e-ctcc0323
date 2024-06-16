@@ -1,10 +1,6 @@
 package org.example;
-import org.example.Pages.DebugPage;
-import org.example.Pages.InventoryPage;
-import org.example.Pages.ItemPage;
+import org.example.Pages.*;
 
-import org.example.Pages.DineInTakeOutPage;
-import org.example.Pages.LoginPage;
 import org.example.Pages.MenuPage.MenuPage;
 import org.example.Pages.MenuPage.ReceiptPage;
 import org.example.UIComponents.CoffeePanel;
@@ -18,10 +14,11 @@ public class Window extends JFrame {
 	public DebugPage debugPage;
 	public LoginPage loginPage;
 	public MenuPage menuPage;
-	public InventoryPage Inv;
+	public InventoryPage inventoryPage;
 	public ItemPage itempage;
 	public DineInTakeOutPage dineInTakeOutPage;
 	public ReceiptPage receiptPage;
+	public InventoryItemPage inventoryItemPage;
 	
 	public static HashMap<Page, CoffeePanel> pages = new HashMap<>();
 	
@@ -39,10 +36,11 @@ public class Window extends JFrame {
 		menuPage = new MenuPage(menuData);
 		loginPage = new LoginPage();
 		debugPage = new DebugPage();
-		Inv = new InventoryPage();
+		inventoryPage = new InventoryPage(menuData);
 		itempage = new ItemPage();
 		dineInTakeOutPage = new DineInTakeOutPage();
 		receiptPage = new ReceiptPage(menuPage.orderPanel);
+		inventoryItemPage = new InventoryItemPage(menuData);
 
 		setSize(width, height);
 		setVisible(true);
@@ -59,13 +57,17 @@ public class Window extends JFrame {
 		add(menuPage);
 //		add(debugPage);
 		add(receiptPage);
+		add(inventoryPage);
+		add(inventoryItemPage);
 		
 		pages.put(Page.Login, loginPage);
 		pages.put(Page.Menu, menuPage);
 		pages.put(Page.DineInTakeOut, dineInTakeOutPage);
 		pages.put(Page.Receipt, receiptPage);
+		pages.put(Page.Inventory, inventoryPage);
+		pages.put(Page.EditInventoryItems, inventoryItemPage);
 		
-		changePage(Page.Menu);
+		changePage(Page.Inventory);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class
