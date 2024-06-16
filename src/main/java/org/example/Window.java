@@ -69,7 +69,7 @@ public class Window extends JFrame {
 		pages.put(Page.Inventory, inventoryPage);
 		pages.put(Page.EditInventoryItems, inventoryItemPage);
 		
-		changePage(Page.Inventory);
+//		changePage(Page.Table);
 		
 		//TODO#3: make sure to setVisible() to true
 		// and set this to false so that you can see own class
