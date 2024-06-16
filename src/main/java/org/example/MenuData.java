@@ -186,25 +186,8 @@ public class MenuData {
 	
 	
 	
-	public void updateItemFile(String type, String name, String imagePath, String price){
-		String xPos = "";
-		String yPos = "";
-		String xItemPos = "";
+	public void updateItemFile(String type, String name, String imagePath, String price, String xPos, String yPos, String xItemPos){
 		
-		int x = 0;
-		int y = 0;
-		int xItem = 0;
-		
-		
-		for (Map.Entry<CardData, String> set : itemCards.entrySet()){
-			x = Math.max(x, Integer.parseInt(set.getKey().xPos));
-			y = Math.max(y, Integer.parseInt(set.getKey().yPos));
-			xItem = Math.max(xItem, Integer.parseInt(set.getKey().xItemPos));
-		}
-		
-		xPos = String.valueOf(x);
-		yPos = String.valueOf(y);
-		xItemPos = String.valueOf(xItem);
 		
 		try(BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/items/" + type + ".txt", true))){
 			

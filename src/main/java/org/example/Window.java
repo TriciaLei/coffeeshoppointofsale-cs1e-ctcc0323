@@ -30,7 +30,9 @@ public class Window extends JFrame {
 	// ex: public ExampleClass name = new ExampleClass();
 	
 	public Window(int width, int height){
-
+		
+		Settings.ReadAccounts();
+		
 		menuData = new MenuData();
 
 		menuPage = new MenuPage(menuData);

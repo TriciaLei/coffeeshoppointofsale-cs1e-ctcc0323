@@ -13,6 +13,7 @@ import java.nio.file.StandardCopyOption;
 import javax.swing.*;
 
 import org.example.MenuData;
+import org.example.Page;
 import org.example.Settings;
 import org.example.UIComponents.*;
 import org.example.Window;
@@ -68,6 +69,13 @@ public class InventoryPage extends CoffeePanel {
 		
 		Back.setBounds(200,100,100,30);
 		Back.setLocation(590,620);
+		
+		Back.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Window.changePage(Page.Login);
+			}
+		});
 		
 		
 		this.setBackground(new Color(228, 197, 158));
@@ -135,7 +143,7 @@ public class InventoryPage extends CoffeePanel {
 		if(frame == null){
 			frame = new JFrame("Edit Item");
 			frame.setVisible(true);
-			frame.setSize(500, 300);
+			frame.setSize(700, 300);
 			frame.setLocationRelativeTo(null);
 			frame.setLayout(null);
 			frame.getContentPane().setBackground(Settings.currentPalette[0]);
@@ -144,7 +152,7 @@ public class InventoryPage extends CoffeePanel {
 			
 			
 			CoffeePanel panel = new CoffeePanel();
-			panel.setBounds(20, 20, 440, 220);
+			panel.setBounds(20, 20, 640, 220);
 			panel.setBackground(Settings.currentPalette[1]);
 			
 			CoffeeLabel newName = new CoffeeLabel("Item Name: ");
@@ -175,16 +183,25 @@ public class InventoryPage extends CoffeePanel {
 			CoffeeLabel newImage = new CoffeeLabel("Choose new Image: ");
 			CoffeeButton editImageButton = new CoffeeButton("Choose file");
 			
-			
 			newImage.setBounds(20, 140, 140, 30);
 			editImageButton.setBounds(150, 140, 250, 30);
 			
 			String imagePath = "";
 			
-			
-			
 			CoffeeButton confirmButton = new CoffeeButton("Confirm");
 			confirmButton.setBounds(150, 180, 150, 30);
+			
+			CoffeeLabel locationLabel = new CoffeeLabel("Location: ");
+			CoffeeTextField xTextField = new CoffeeTextField();
+			CoffeeTextField yTextField = new CoffeeTextField();
+			CoffeeTextField xItemTextField = new CoffeeTextField();
+			
+			locationLabel.setBounds(450, 20, 150, 30);
+			xTextField.setBounds(450, 50, 150, 30);
+			yTextField.setBounds(450, 80, 150, 30);
+			xItemTextField.setBounds(450, 110, 150, 30);
+			
+			
 			
 			
 			confirmButton.addActionListener(new ActionListener() {
@@ -199,19 +216,21 @@ public class InventoryPage extends CoffeePanel {
 							
 							System.out.println(file.getAbsoluteFile());
 							
-//							Files.copy(file.getAbsoluteFile(), new File(System.getProperty("user.dir") + "\\Menu\\" + nameTextField.getText() + ".png"), StandardCopyOption.REPLACE_EXISTING);
 							
 							file.renameTo(new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png"));
-							imagePath = new File(System.getProperty("user.dir") + "\\src\\main\\resources\\Menu\\" + nameTextField.getText() + ".png").getPath();
+							
 						}
 					}
 					
 					if(e.getSource() == confirmButton){
-						if(!nameTextField.getText().isEmpty() || !priceTextField.getText().isEmpty() || !imagePath.isEmpty()){
-							data.updateItemFile((String) dropDown.getSelectedItem(), nameTextField.getText(), imagePath, priceTextField.getText());
+						if(!nameTextField.getText().isEmpty() || !priceTextField.getText().isEmpty()){
+							imagePath = "src/main/resources/Menu/" + nameTextField.getText() + ".png";
+							data.updateItemFile((String) dropDown.getSelectedItem(), nameTextField.getText(), imagePath, priceTextField.getText(), xTextField.getText(), yTextField.getText(), xItemTextField.getText());
+							frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 						}else{
 							Toolkit.getDefaultToolkit().beep();
 						}
+						
 					}
 					
 				}
@@ -239,6 +258,10 @@ public class InventoryPage extends CoffeePanel {
 			panel.add(confirmButton);
 			panel.add(newCategory);
 			panel.add(dropDown);
+			panel.add(locationLabel);
+			panel.add(xTextField);
+			panel.add(yTextField);
+			panel.add(xItemTextField);
 			
 			frame.add(panel);
 			

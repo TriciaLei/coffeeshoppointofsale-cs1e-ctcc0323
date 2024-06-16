@@ -24,13 +24,6 @@ public class ReceiptPage extends CoffeePanel {
 	private static boolean isTakeout = true;
 	
 	private static String seperator = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-	private static String header =    "|------------------------------------------------------|\n" +
-							          "|                 Coffee Shop sa Tabe Tabe             |\n" +
-									  "|        #420 Caramel Street Balanga City, Bataan      |\n" +
-			                          "|                   " + dateTime.format(formatter) + "                |\n" +
-			                          "|------------------------------------------------------|\n" +
-									  "                       " + (isTakeout? "Take Out" : "Table " + tablenumber) + "\n" +
-			                          "             Cashier: " + Settings.Cashier + "   \n";
 	
 	
 	public static ArrayList<String> currentOrders = new ArrayList<>();
@@ -84,6 +77,14 @@ public class ReceiptPage extends CoffeePanel {
 	}
 	
 	public static void SetReceipt(){
+		
+		String header =    "|------------------------------------------------------|\n" +
+				"|                 Coffee Shop sa Tabe Tabe             |\n" +
+				"|        #420 Caramel Street Balanga City, Bataan      |\n" +
+				"|                   " + dateTime.format(formatter) + "                |\n" +
+				"|------------------------------------------------------|\n" +
+				"                       " + (isTakeout? "Take Out" : "Table " + tablenumber) + "\n" +
+				"                   Cashier: " + Settings.getLoggedCashier() + "   \n";
 		String receipt = "\n";
 		int i = 0;
 		

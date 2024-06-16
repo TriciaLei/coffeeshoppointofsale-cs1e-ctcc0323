@@ -5,59 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f16307e-2fbf-4d2d-984d-5931429e0863" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryItemPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/InventoryItemCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/BlackTea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/Crossiant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/Hibiscus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/OolongT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/affogato.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/bagel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/berryblast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/bran.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/brownies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/caprese.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/chickenseasar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/coldbrew.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/coldiceda.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/cookies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/cucumber.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/dineeinn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/goldenmilk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/greeksalad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/greenTea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/handc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/hotchoku.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/icedlatte.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/icedmocha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/muffb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/muffc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/scone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/strawberry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/table1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/takeoutt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/trpclm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/turkeyclub.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Menu/turmeric.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/accounts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MenuData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MenuData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/InventoryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/MenuItemsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/OrderPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/OrderCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UIComponents/OrderCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Pages/MenuPage/ReceiptPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Cold Coffee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Cold Coffee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Hot Coffee.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Hot Coffee.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Pastries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Pastries.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Salads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Salads.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Sandwiches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Sandwiches.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Smoothies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Smoothies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Specialty Drinks.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Specialty Drinks.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/Tea.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/Tea.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Menu/.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Menu/asd.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,22 +60,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Receipt&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.coffeeshoppointofsale-cs1e-ctcc0323 [:Main.main()].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Receipt",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Dev\Java\coffeeshoppointofsale-cs1e-ctcc0323\src\main\resources\items" />
@@ -143,7 +100,7 @@
       <updated>1718437668575</updated>
       <workItem from="1718437670558" duration="5774000" />
       <workItem from="1718453081950" duration="1598000" />
-      <workItem from="1718500821688" duration="3666000" />
+      <workItem from="1718500821688" duration="7708000" />
     </task>
     <servers />
   </component>
@@ -163,5 +120,26 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Settings.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Pages/LoginPage.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
