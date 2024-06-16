@@ -1,7 +1,9 @@
 package org.example.Pages;
 
 import org.example.Page;
+import org.example.Pages.MenuPage.ReceiptPage;
 import org.example.Settings;
+import org.example.UIComponents.CoffeeButton;
 import org.example.UIComponents.CoffeeImage;
 import org.example.UIComponents.CoffeeLabel;
 import org.example.UIComponents.CoffeePanel;
@@ -9,6 +11,8 @@ import org.example.Window;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -17,12 +21,18 @@ public class DineInTakeOutPage extends CoffeePanel {
 	
 	private CoffeePanel dineIn = new CoffeePanel();
 	private CoffeePanel takeOut = new CoffeePanel();
-	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("coffee-cup.png"));
+	private CoffeeImage dineInImage = new CoffeeImage(new ImageIcon("src/main/resources/Menu/dineeinn.png"));
+	private CoffeeImage takeOutImage = new CoffeeImage(new ImageIcon("src/main/resources/Menu/takeoutt.png"));
+	
+	private CoffeeButton logOutButton = new CoffeeButton("Log out");
 	
 	
 	public DineInTakeOutPage(){
 		setBackground(Settings.currentPalette[0]);
-		
+		 dineInImage.setLocation(64,100);
+		 takeOutImage.setLocation(64,100);
+
+
 		dineIn.setBackground(Settings.currentPalette[1]);
 		dineIn.setBorderColor(Settings.currentPalette[2]);
 		dineIn.setBorderThickness(3);
@@ -34,12 +44,26 @@ public class DineInTakeOutPage extends CoffeePanel {
 		dineInLabel.setFontColor(Settings.currentPalette[2]);
 		dineInLabel.setFontFormat(Font.ITALIC);
 		
+		logOutButton.setBounds(20, 20, 200, 50);
+		logOutButton.setBackground(Settings.currentPalette[1]);
+		logOutButton.setBorderColor(Settings.currentPalette[2]);
+		logOutButton.setBorderThickness(2);
+		logOutButton.setFontColor(Settings.currentPalette[2]);
+		logOutButton.setFontSize(18);
+		logOutButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Window.changePage(Page.Login);
+			}
+		});
+		
 		dineIn.add(dineInLabel);
+		dineIn.add(dineInImage);
 		
 		dineIn.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				// Go to the table page
+				Window.changePage(Page.Table);
 			}
 			
 			@Override
@@ -75,13 +99,15 @@ public class DineInTakeOutPage extends CoffeePanel {
 		takeOutLabel.setFontFormat(Font.ITALIC);
 		
 		takeOut.add(takeOutLabel);
+		takeOut.add(takeOutImage);
 		
 		takeOut.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				ReceiptPage.isTakeout = true;
 				Window.changePage(Page.Menu);
 			}
-			
+
 			@Override
 			public void mousePressed(MouseEvent e) {
 			
@@ -105,5 +131,6 @@ public class DineInTakeOutPage extends CoffeePanel {
 		
 		add(dineIn);
 		add(takeOut);
+		add(logOutButton);
 	}
 }

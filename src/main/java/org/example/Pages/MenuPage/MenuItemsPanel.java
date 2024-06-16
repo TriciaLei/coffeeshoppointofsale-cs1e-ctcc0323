@@ -1,5 +1,7 @@
 package org.example.Pages.MenuPage;
 
+import org.example.CardData;
+import org.example.MenuData;
 import org.example.Settings;
 import org.example.UIComponents.CoffeeCard;
 import org.example.UIComponents.CoffeePanel;
@@ -12,17 +14,21 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class MenuItemsPanel extends CoffeePanel {
 	
-	private String type;
 	
 	private ArrayList<CoffeeCard> coffeeCards = new ArrayList<>();
 	private OrderPanel orderPanel;
-	private String[] order = new String[1024];
-	private ArrayList<String> orderList = new ArrayList<>();
 	
-	public MenuItemsPanel(OrderPanel panel){
+	
+	private MenuData data;
+	
+	public MenuItemsPanel(OrderPanel panel, MenuData data){
+		
+		this.data = data;
+		
 		setBounds(10, 60, 956, 720);
 		setPreferredSize(new Dimension(956, 720));
 		setBackground(Settings.currentPalette[1]);
@@ -32,100 +38,69 @@ public class MenuItemsPanel extends CoffeePanel {
 	}
 	
 	public void SetUpCards(String type) {
-		try(BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/" + type  + ".txt"))){
+		
+		int greatestYLocation = 0;
+		int currentYLocation = 0;
+		
+		for (Map.Entry<CardData, String> set : data.itemCards.entrySet()){
 			
-			int i = 0;
-			String line;
-			String path = "";
-			String itemName = "";
-			String price = "";
-			String xLocation = "";
-			String yLocation = "";
-			String xItemPos = "";
-			while((line = reader.readLine()) != null){
+			if(type.equals(set.getValue())){
+				CoffeeCard coffeeCard = new CoffeeCard(new ImageIcon(set.getKey().imagePath), set.getKey().name, set.getKey().price);
+				coffeeCard.setLocation(Integer.parseInt(set.getKey().xPos), Integer.parseInt(set.getKey().yPos));
+				coffeeCard.itemName.setLocation(Integer.parseInt(set.getKey().xItemPos), coffeeCard.itemName.getY());
 				
-				switch (i){
-					case 0:
-						itemName = line;
-						i++;
-						break;
-					case 1:
-						path = line;
-						i++;
-						break;
-					case 2:
-						if(line.equals("null")){
-							price = null;
-						}else{
-							price = line;
-						}
-						i++;
-						break;
-					case 3:
-						xLocation = line;
-						i++;
-						break;
-					case 4:
-						yLocation = line;
-						i++;
-						break;
-					case 5:
-						xItemPos = line;
-						i++;
-						break;
-					default:
-						coffeeCards.add(new CoffeeCard(new ImageIcon(path), itemName, price));
-						coffeeCards.get(coffeeCards.size() - 1).setLocation(Integer.parseInt(xLocation), Integer.parseInt(yLocation));
-						coffeeCards.get(coffeeCards.size() - 1).itemName.setLocation(Integer.parseInt(xItemPos), coffeeCards.get(coffeeCards.size() - 1).itemName.getY());
-						i = 0;
-						break;
-				}
-				
+				coffeeCards.add(coffeeCard);
 			}
-			
-			
-			for (CoffeeCard coffeeCard : coffeeCards) {
-				
-				MouseListener mouseListener = new MouseListener() {
-					@Override
-					public void mouseClicked(MouseEvent e) {
-						orderPanel.addOrderList("1", coffeeCard.itemName.getText(), coffeeCard.itemPrice.getText());
-						
-					}
-					
-					@Override
-					public void mousePressed(MouseEvent e) {
-					
-					}
-					
-					@Override
-					public void mouseReleased(MouseEvent e) {
-					
-					}
-					
-					@Override
-					public void mouseEntered(MouseEvent e) {
-					
-					}
-					
-					@Override
-					public void mouseExited(MouseEvent e) {
-					
-					}
-				};
-				
-				coffeeCard.addMouseListener(mouseListener);
-				coffeeCard.image.addMouseListener(mouseListener);
-				add(coffeeCard);
-			}
-			
-			setSize(getX(), Integer.parseInt(yLocation) + 270);
-			setPreferredSize(new Dimension(getWidth(), Integer.parseInt(yLocation) + 270));
-			
-			
-		} catch (IOException e) {
-			throw new RuntimeException(e);
 		}
+
+			
+		int i = 0;
+		for (CoffeeCard coffeeCard : coffeeCards) {
+				
+			MouseListener mouseListener = new MouseListener() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					orderPanel.addOrderList("1", coffeeCard.itemName.getText(), coffeeCard.itemPrice.getText());
+						
+				}
+					
+				@Override
+				public void mousePressed(MouseEvent e) {
+				
+				}
+					
+				@Override
+				public void mouseReleased(MouseEvent e) {
+					
+				}
+					
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					
+				}
+					
+				@Override
+				public void mouseExited(MouseEvent e) {
+					
+				}
+			};
+				
+			coffeeCard.addMouseListener(mouseListener);
+			coffeeCard.image.addMouseListener(mouseListener);
+			add(coffeeCard);
+			
+			if(i >= 1){
+				greatestYLocation = Math.max(greatestYLocation, coffeeCard.getY());
+			}else{
+				greatestYLocation = coffeeCard.getY();
+			}
+
+			i++;
+		}
+		
+		setSize(getX(),greatestYLocation + 270);
+		setPreferredSize(new Dimension(getWidth(), greatestYLocation  + 270));
+		
 	}
 	
 	public void RemoveCards(){

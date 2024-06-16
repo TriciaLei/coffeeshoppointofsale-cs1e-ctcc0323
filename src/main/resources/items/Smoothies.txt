@@ -1,0 +1,28 @@
+Berry Blast
+src/main/resources/Menu/berryblast.png
+300
+20
+10
+50
+
+Tropical Mango
+src/main/resources/Menu/trpclm.png
+300
+260
+10
+40
+
+Strawberry
+src/main/resources/Menu/strawberry.png
+300
+490
+10
+50
+
+Cucumber
+src/main/resources/Menu/cucumber.png
+300
+720
+10
+15
+
