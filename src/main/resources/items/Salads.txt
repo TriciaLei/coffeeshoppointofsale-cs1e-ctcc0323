@@ -12,3 +12,10 @@ src/main/resources/Menu/greeksalad.png
 10
 50
 
+Italian Salad
+src/main/resources/Menu/Italian Salad.png
+200
+490
+10
+60
+

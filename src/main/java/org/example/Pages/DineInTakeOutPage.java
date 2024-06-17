@@ -53,7 +53,7 @@ public class DineInTakeOutPage extends CoffeePanel {
 		logOutButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "Do you wis to log out?", "Log Out?", JOptionPane.YES_NO_OPTION) == 0){
+				if(JOptionPane.showConfirmDialog(null, "Do you wish to log out?", "Log Out?", JOptionPane.YES_NO_OPTION) == 0){
 					Window.changePage(Page.Login);
 				}
 				
